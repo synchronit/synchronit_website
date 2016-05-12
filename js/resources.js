@@ -44,3 +44,7 @@ $.extend({
 $(function () {
     $.resourceView.initialize();
 });
+
+$('#form_modal').on('shown.bs.modal', function () {
+    $('#title').focus()
+})
