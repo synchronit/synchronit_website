@@ -32,7 +32,7 @@ $.extend({
                          
                         
                         var element = panelBlock + panel + panelHead + panelImage + panelFooter + closedDiv + closedDiv;  
-                        $('#resourceStore').html(element)
+                        $('#resourceStore').append(element)
                     }
                 }
             });
