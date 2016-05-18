@@ -1,6 +1,7 @@
 $.extend({
     indexView: new function () {
         var self = this;
+        var smController = new ScrollMagic.Controller();
         
         self.initialize = function () {            
             attachBehavior();
@@ -34,6 +35,9 @@ $.extend({
                         var element = panelBlock + block + closedDiv;
                         $('.row', '#team-section ').append(element);
                     }
+                    
+                    var tween = TweenMax.staggerFrom(".team-item", 0.8, { opacity: 0, delay: 0.3, ease: Circ.easeOut }, 0.03);
+                    var scene = new ScrollMagic.Scene({ triggerElement: "#team-section" }).setTween(tween).addTo(smController);
                 }
             });
         }
