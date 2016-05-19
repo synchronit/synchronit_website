@@ -18,6 +18,37 @@
       background-attachment: fixed;
 }
 
+#about a {
+    color:#fff;
+    }
+#modals-values .modal-content .modal-header, #modals-values .modal-content .modal-body   {
+    margin-left:200px;
+    }
+#youandi_dialog {
+    background-image: url(../img/values/you-me-we-background.jpg);
+    background-repeat:no-repeat; 
+    background-size: 200px auto; 
+    
+}
+#liberte_dialog {
+    background-image: url(../img/values/liberte-background.jpg);
+    background-repeat:no-repeat; 
+    background-size: 200px auto; 
+    
+}
+#value_dialog {
+    background-image: url(../img/values/value_background.jpg);
+    background-repeat:no-repeat; 
+    background-size: 200px auto; 
+    
+}
+#transparency_dialog{
+    background-image: url(../img/values/transparency.gif);
+    background-repeat:no-repeat; 
+    background-size: 200px auto; 
+    
+}
+
 #contact {
   background-image: url(../img/map-image.png);
      background-position: center;
