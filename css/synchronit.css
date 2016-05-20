@@ -48,6 +48,78 @@
     background-size: 200px auto; 
     
 }
+#alvaro_dialog {
+    background-image: url(../img/team/large/alvaro.jpg);
+    background-repeat:no-repeat; 
+    background-size: 200px auto; 
+}
+
+#ana_dialog {
+    background-image: url(../img/team/large/ana.jpg);
+    background-repeat:no-repeat; 
+    background-size: 200px auto; 
+}
+
+#fernando_dialog {
+    background-image: url(../img/team/large/fernandoG.jpg);
+    background-repeat:no-repeat; 
+    background-size: 200px auto;
+}
+
+#brian_dialog {
+background-image: url(../img/team/large/brian.jpg);
+    background-repeat:no-repeat; 
+    background-size: 200px auto;
+}
+
+#dan_dialog {
+    background-image: url(../img/team/large/dan.jpg);
+    background-repeat:no-repeat; 
+    background-size: 200px auto;
+}
+
+#federico_dialog {
+    background-image: url(../img/team/large/federicoB.jpg);
+    background-repeat:no-repeat; 
+    background-size: 200px auto;
+}
+
+#jonatan_dialog {
+       background-image: url(../img/team/large/jona.jpg);
+    background-repeat:no-repeat; 
+    background-size: 200px auto;
+}
+#leandro_dialog {
+    background-image: url(../img/team/large/leandro.jpg);
+    background-repeat:no-repeat; 
+    background-size: 200px auto;
+}
+#lucia_dialog {
+    background-image: url(../img/team/large/lucia.jpg);
+    background-repeat:no-repeat; 
+    background-size: 200px auto;
+}
+#marcos_dialog {
+    background-image: url(../img/team/large/marcosp.jpg);
+    background-repeat:no-repeat; 
+    background-size: 200px auto;
+}
+
+#marina_dialog {
+        background-image: url(../img/team/large/marina.jpg);
+    background-repeat:no-repeat; 
+    background-size: 200px auto;
+}
+#martin_dialog {
+    background-image: url(../img/team/large/martin.JPG);
+    background-repeat:no-repeat; 
+    background-size: 200px auto;
+}
+#pablo_dialog {
+    background-image: url(../img/team/large/pablo.jpg);
+    background-repeat:no-repeat; 
+    background-size: 200px auto;
+}
 
 #contact {
   background-image: url(../img/map-image.png);
