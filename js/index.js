@@ -8,6 +8,18 @@ $.extend({
         };
         
         var attachBehavior = function () {
+            $('#contact-btn').bind('click', function(){
+                var formData = $('#contact-form').serialize();
+                $.ajax({
+                type: 'POST',
+                url: '/contact.php',
+                cache: false,
+                data: $('#contact-form').serialize(),
+                dataType: 'json',
+                success: function (result) {}
+                });
+            });
+            
             $.ajax({
                 type: 'GET',
                 url: 'http://dev.synchronit.com/appbase-webconsole/json?command=Get%20PEOPLE',
