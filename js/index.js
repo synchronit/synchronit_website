@@ -9,17 +9,39 @@ $.extend({
         
         var attachBehavior = function () {
             $('#contact-btn').bind('click', function(){
-                
+                if(checkFields() == false)
+                {
+                    self.showMessage('You must fill the required fields');
+                    return;
+                }
                 $.ajax({
-                type: 'POST',
-                url: 'contact.php',
-                cache: false,
-                data: $('#contact-form').serialize(),
-                dataType: 'json',
-                success: function (result) {}
-                });
+                    type: 'POST',
+                    url: 'contact.php',
+                    cache: false,
+                    data: $('#contact-form').serialize(),
+                    dataType: 'json',
+                    success: function (result) {
+                            cleanFields();
+                            $('#answer-token').val(result.token);
+                            $('#answer').attr('placeholder',result.question);
+                        
+                            if(result.success == true){
+                                self.showMessage('You message has been send');
+                            }
+                            else{
+                                self.showMessage('Some problem sending your message');
+                            }
+                        }
+                    });
             });
             
+            self.getCaptcha();
+            
+            self.getTeamMembers();          
+            
+        }
+        
+        self.getCaptcha = function(){
             $.ajax({
                 type: 'GET',
                 url: 'contact.php?get_capcha=true',
@@ -31,7 +53,9 @@ $.extend({
                     $('#answer').attr('placeholder',result.question);
                 }
                 });
-                        
+        };
+        
+        self.getTeamMembers = function(){
             $.ajax({
                 type: 'GET',
                 url: 'http://dev.synchronit.com/appbase-webconsole/json?command=Get%20PEOPLE',
@@ -64,7 +88,31 @@ $.extend({
                     var scene = new ScrollMagic.Scene({ triggerElement: "#team-section" }).setTween(tween).addTo(smController);
                 }
             });
+        };
+        
+        self.showMessage = function(message){
+            var response = '<h2 class="text-second">'+ message + '</h2>';
+            $('#send-message').html(response);
+            $('#send-message').show();
         }
+        
+        var cleanFields = function(){
+          $('input[name=name]').val('');  
+          $('input[name=from]').val('');
+          $('input[name=subject]').val('');
+          $('textarea[name=message]').val('');
+          $('input[name=answer]').val('');
+        };
+        
+        var checkFields = function(){
+            var fromr = $('input[name=from]').val(); 
+            var subject = $('input[name=subject]').val(); 
+            var message = $('textarea[name=message]').val(); 
+            var answer = $('input[name=answer]').val(); 
+            if(fromr == '' || subject == '' || message == '' || answer == '' )
+                return false;
+            return true;
+        };
     }
 });
 

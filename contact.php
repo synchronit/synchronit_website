@@ -25,8 +25,8 @@ if($getCode == true){
 $answerResponse = $_POST['answer-response'];
 $userAnswer = $_POST['answer'];
 
-$capt_token 		= hash_hmac("sha1", $answer, $capt_secret);
-if($userAnswer != $answerResponse)
+$userAnswerToken 		= hash_hmac("sha1", $userAnswer, $capt_secret);
+if($userAnswerToken != $answerResponse)
 {
     $answer 			= $number1 + $number2;
     $capt_token 		= hash_hmac("sha1", $answer, $capt_secret);
@@ -65,12 +65,14 @@ $mail->Subject = 'Thank you for contact us!';
 
 $mail->msgHTML(file_get_contents(__DIR__ .'/messages/contactUs.html'));
 
+ob_start();
 if(!$mail->send()) {
+    ob_clean();
     $errorResponseArray = Array('success'=> false, 'message'=> 'Message could not be sent.', 'error' => $mail->ErrorInfo);   
    echo json_encode($errorResponseArray);
    exit;
 }
-
+ob_clean();
 //echo 'Message has been sent';
 
 $mail = new PHPMailer;
@@ -100,12 +102,19 @@ $mail->isHTML(true);                                  // Set email format to HTM
 $mail->Subject = 'Mensaje desde el sitio web - ' .$subject;
 $mail->Body    = ' Nombre: '.$name.'</br> Mensaje: '.$message;
 
+ob_start();
 if(!$mail->send()) {
+    ob_clean();
   $errorResponseArray = Array('success'=> false, 'message'=> 'Message could not be sent.', 'error' => $mail->ErrorInfo);   
    echo json_encode($errorResponseArray);
    exit;
 }
 
-$responseArray = Array('success'=> true, 'message'=> 'Message has been sent');   
-echo json_encode($errorResponseArray);
+ob_clean();
+$answer = $number1 + $number2;
+$capt_token = hash_hmac("sha1", $answer, $capt_secret);
+$captcha_question	= $number1 . " + " . $number2 . " = ?";
+
+$responseArray = Array('success'=> true, 'message'=> 'Message has been sent', 'token'=> $capt_token, 'question' => $captcha_question);   
+echo json_encode($responseArray);
 exit;
