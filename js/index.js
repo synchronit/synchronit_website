@@ -9,10 +9,10 @@ $.extend({
         
         var attachBehavior = function () {
             $('#contact-btn').bind('click', function(){
-                var formData = $('#contact-form').serialize();
+                
                 $.ajax({
                 type: 'POST',
-                url: '/contact.php',
+                url: 'contact.php',
                 cache: false,
                 data: $('#contact-form').serialize(),
                 dataType: 'json',
@@ -20,6 +20,18 @@ $.extend({
                 });
             });
             
+            $.ajax({
+                type: 'GET',
+                url: 'contact.php?get_capcha=true',
+                cache: false,
+                //data: $('#contact-form').serialize(),
+                dataType: 'json',
+                success: function (result) {
+                    $('#answer-token').val(result.token);
+                    $('#answer').attr('placeholder',result.question);
+                }
+                });
+                        
             $.ajax({
                 type: 'GET',
                 url: 'http://dev.synchronit.com/appbase-webconsole/json?command=Get%20PEOPLE',
