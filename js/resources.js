@@ -8,6 +8,37 @@ $.extend({
         };
         
         var attachBehavior = function () {
+             $('#send-btn').bind('click', function(){
+                 if(self.checkFields() == false ){
+                     self.showMessage('You must type all fields');
+                     return;
+                 }
+                 
+                 var name = $('input[name=name]').val(); 
+                 var mail = $('input[name=mail]').val();
+                 
+                 $.ajax({
+                        type: 'GET',
+                        url: 'http://dev.synchronit.com/appbase-webconsole/json',//command=Create%20New%20SUBSCRIPTIONS%20(%20' + name + ',%20' + mail + '%20)',
+                        cache: false,                        
+                        dataType: 'json',
+                        data:{
+                            command:'Create New SUBSCRIPTIONS ( "' + name + '", "' + mail + '" )'
+                        },
+                        success: function (result) {
+                            self.cleanFields();
+                            
+                            if(result.code == 102){
+                                self.showMessage('Your subscription has been stored successfuly');
+                            }
+                            else{
+                                self.showMessage('Problem stored your subscription');
+                            }
+                        }
+                    });
+                 
+             });
+             
            $.ajax({
                 type: 'GET',
                 url: 'http://dev.synchronit.com/appbase-webconsole/json?command=Get%20BOOKS',
@@ -36,6 +67,25 @@ $.extend({
                     }
                 }
             });
+        };
+        
+        self.showMessage = function(message){
+            var response = '<h2 class="text-second">'+ message + '</h2>';
+            $('#send-message').html(response);
+            $('#send-message').show();
+        }
+        self.cleanFields = function(){
+            $('input[name=name]').val(''); 
+            $('input[name=mail]').val(''); 
+        }
+        
+        self.checkFields = function(){
+            var name = $('input[name=name]').val(); 
+            var mail = $('input[name=mail]').val(); 
+            
+            if((name == '' || name == undefined) || (mail == '' || mail == undefined))
+                return false;
+            return true;
         };
     }
 

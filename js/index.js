@@ -17,6 +17,66 @@
 //                success: function (result) {
 //                    var headers = result.resultSet.headers;
 //                    var rows = result.resultSet.rows;
+=======
+        var attachBehavior = function () {
+            $('#contact-btn').bind('click', function(){
+                if(checkFields() == false)
+                {
+                    self.showMessage('You must fill the required fields');
+                    return;
+                }
+                $.ajax({
+                    type: 'POST',
+                    url: 'contact.php',
+                    cache: false,
+                    data: $('#contact-form').serialize(),
+                    dataType: 'json',
+                    success: function (result) {
+                            cleanFields();
+                            $('#answer-token').val(result.token);
+                            $('#answer').attr('placeholder',result.question);
+                        
+                            if(result.success == true){
+                                self.showMessage('You message has been send');
+                            }
+                            else{
+                                self.showMessage('Some problem sending your message');
+                            }
+                        }
+                    });
+            });
+            
+            self.getCaptcha();
+            
+            self.getTeamMembers();          
+            
+        }
+        
+        self.getCaptcha = function(){
+            $.ajax({
+                type: 'GET',
+                url: 'contact.php?get_capcha=true',
+                cache: false,
+                //data: $('#contact-form').serialize(),
+                dataType: 'json',
+                success: function (result) {
+                    $('#answer-token').val(result.token);
+                    $('#answer').attr('placeholder',result.question);
+                }
+                });
+        };
+        
+        self.getTeamMembers = function(){
+            $.ajax({
+                type: 'GET',
+                url: 'http://dev.synchronit.com/appbase-webconsole/json?command=Get%20PEOPLE',
+                cache: false,
+                //data: {catIs: catId},
+                dataType: 'json',
+                success: function (result) {
+                    var headers = result.resultSet.headers;
+                    var rows = result.resultSet.rows;
+>>>>>>> contact-form
                     
 //                    var panelBlock = '<div class="col-lg-3 col-md-4  col-sm-4 col-xs-6 team-item">';
 //                    var closedDiv = '</div>'                    
