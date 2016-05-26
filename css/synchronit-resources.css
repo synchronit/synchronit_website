@@ -142,6 +142,9 @@ color:white;
     background-image: url(../img/team/yasim.jpg)  ;
 }
 
+.table th, .table td { 
+     border-top: none !important; 
+ }
 
 
 
