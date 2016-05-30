@@ -55,24 +55,24 @@ $.extend({
                     var headers = result.resultSet.headers;
                     var rows = result.resultSet.rows;
                     
-                    var panelBlock = '<div class="panel panel-default">';
+                   
                     var closedDiv = '</div>'
                     for(var i=0; i< rows.length; i++){
-                        var panel = '<div class="panel-body">';
-                        var panelImage = '<div class="col-lg-2 col-md-3  col-sm-3 col-xs-5"><img src="./img/books/' + rows[i][8] + '"/>' + closedDiv;
-                        var panelData = '<div class="col-lg-9 col-md-8  col-sm-8 col-xs-10">';
+                        var panel = '<div class="list-group-item row">';
+                        var panelImage = '<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"><img class="img-responsive" style="padding-top:30px" src="./img/books/' + rows[i][8] + '"/>' + closedDiv;
+                        var panelData = '<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10">';
                         var tableData = '<table class="table">';
-                        var bookTitle = '<tr><td>Title</td><td>' + rows[i][0] + '</td></tr>';
+                        var bookTitle = '<tr><td></td><td><h3>' + rows[i][0] + '</h3></td></tr>';
                         var bookSummary = '<tr><td>Summary</td><td>' + rows[i][3] + '</td></tr>';
                         var bookComments = '<tr><td>Comments</td><td>' + rows[i][4] + '</td></tr>';
                         var bookLevel = '<tr><td>Level</td><td>' + rows[i][5] + '</td></tr>';
                         var bookAudience = '<tr><td>Audience</td><td>' + rows[i][6] + '</td></tr>';
                         var bookWyl = '<tr><td>What you learn</td><td>' + rows[i][7] + '</td></tr>';
-                        var bookAuthor = '<tr><td>Author</td><td>' + rows[i][1] + '</td></tr>';
+                        var bookAuthor = '<tr><td>Author</td><td><a href="'+rows[i][2]+'">' + rows[i][1] + '</a></td></tr>';
                         
                         var tableElement = tableData + bookTitle + bookSummary + bookComments + bookLevel + bookAudience + bookWyl + bookAuthor + '</table>'
                         
-                        var element = panelBlock + panel + panelImage + tableElement + closedDiv + closedDiv;  
+                        var element =  panel + panelImage +panelData + tableElement + closedDiv + closedDiv;  
                         $('#resourceStore').append(element)
                     }
                 }
