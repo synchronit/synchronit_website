@@ -68,7 +68,17 @@ $.extend({
                         var bookLevel = '<tr><td>Level</td><td>' + rows[i][5] + '</td></tr>';
                         var bookAudience = '<tr><td>Audience</td><td>' + rows[i][6] + '</td></tr>';
                         var bookWyl = '<tr><td>What you learn</td><td>' + rows[i][7] + '</td></tr>';
-                        var bookAuthor = '<tr><td>Author</td><td><a href="'+rows[i][2]+'">' + rows[i][1] + '</a></td></tr>';
+                        
+                        var bookAuthor = '<tr><td>Author</td><td>';
+                        
+                        var authorArray = (rows[i][1]).toString().split(";")
+                        var authorUrlArray = (rows[i][2]).toString().split(";")
+                        for(var j = 0; j < authorArray.length; j++){
+                            bookAuthor += j > 0 ? ', ': '';
+                            var authorElement = '<a href="'+ authorUrlArray[j] +'">' + authorArray[j] + '</a>';   
+                            bookAuthor += authorElement; 
+                        }
+                        bookAuthor += '</td></tr>';
                         
                         var tableElement = tableData + bookTitle + bookSummary + bookComments + bookLevel + bookAudience + bookWyl + bookAuthor + '</table>'
                         
