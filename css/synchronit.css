@@ -8,7 +8,7 @@
 }
 
 #about {
-  background-image: url(../img/office2.jpg);
+  background-image: url(../img/office1.jpg);
      background-position: center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -139,20 +139,20 @@ background-image: url(../img/team/large/brian.jpg);
 
 .navbar-brand {
   background-size: cover !important ;
-  width: 160px !important;
+  width: 175px !important;
 }
 
 .navbar-default .navbar-brand {
-  background: url(../img/small-3.png) no-repeat;
+  background: url(../img/blue-transparent.png) no-repeat;
 }
 
 .navbar-inverse .navbar-brand, .navbar-default.affix .navbar-brand {
-  background: url(../img/small-inverse-3.png) no-repeat;
+  background: url(../img/blue-inverse.png) no-repeat;
 }
 
 @media (max-width: 767px) {
     .navbar-default .navbar-brand {
-         background: url(../img/small-inverse-3.png) no-repeat;
+         background: url(../img/blue-inverse.png) no-repeat;
     }
 }
 
