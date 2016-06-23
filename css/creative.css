@@ -517,3 +517,17 @@ body {
 .panel-creative-black > .panel-footer + .panel-collapse > .panel-body {
   border-bottom-color: #000;
 }
+
+.panel-creative-blue{
+    border-color: #0A435F;
+}
+
+.panel-creative-blue > .panel-heading{
+    color: #fff;
+    background: #2C6987;
+}
+
+.panel-creative-blue > .panel-heading .badge{
+    background: #966F09;
+    color: white;
+}

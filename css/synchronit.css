@@ -1,3 +1,17 @@
+.background-primary-color{
+    background: #2C6987;;
+}
+.background-secondary-color{
+    background: #D5AC3F;
+}
+
+.font-primary-color{
+    color: #185674;
+}
+.font-secondary-color{
+    color: #B78D1E;
+}
+
 #about, #contact{
 	width: 100%;
     min-height: auto;
