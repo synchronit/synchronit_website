@@ -1,143 +1,165 @@
-.background-primary-color{
-    background: #2C6987;;
+.background-primary-color {
+    background: #2C6987;
+    ;
 }
-.background-secondary-color{
+
+.background-secondary-color {
     background: #D5AC3F;
 }
 
-.font-primary-color{
+.font-primary-color {
     color: #185674;
 }
-.font-secondary-color{
+
+.font-secondary-color {
     color: #B78D1E;
 }
 
-#about, #contact{
-	width: 100%;
+#about,
+#contact {
+    width: 100%;
     min-height: auto;
     text-align: center;
     color: #fff;
- 
-
 }
 
 #about {
-  background-image: url(../img/office1.jpg);
-     background-position: center;
+    background-image: url(../img/office1.jpg);
+    background-position: center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
-     text-shadow: 1px 1px 1px #000;
-      background-attachment: fixed;
+    text-shadow: 1px 1px 1px #000;
+    background-attachment: fixed;
 }
 
 #about a {
-    color:#fff;
-    }
-#modals-values .modal-content .modal-header, #modals-values .modal-content .modal-body   {
-    margin-left:200px;
-    }
+    color: #fff;
+}
+
+#modals-values .modal-content .modal-header,
+#modals-values .modal-content .modal-body {
+    margin-left: 200px;
+}
+
 #youandi_dialog {
     background-image: url(../img/values/you-me-we-background.jpg);
-    background-repeat:no-repeat; 
-    background-size: 200px auto; 
-    
+    background-repeat: no-repeat;
+    background-size: 200px auto;
 }
+
 #liberte_dialog {
     background-image: url(../img/values/liberte-background.jpg);
-    background-repeat:no-repeat; 
-    background-size: 200px auto; 
-    
+    background-repeat: no-repeat;
+    background-size: 200px auto;
 }
+
 #value_dialog {
     background-image: url(../img/values/value_background.jpg);
-    background-repeat:no-repeat; 
-    background-size: 200px auto; 
-    
+    background-repeat: no-repeat;
+    background-size: 200px auto;
 }
-#transparency_dialog{
+
+#transparency_dialog {
     background-image: url(../img/values/transparency.gif);
-    background-repeat:no-repeat; 
-    background-size: 200px auto; 
-    
+    background-repeat: no-repeat;
+    background-size: 200px auto;
 }
+
 #alvaro_dialog {
     background-image: url(../img/team/large/alvaro.jpg);
-    background-repeat:no-repeat; 
-    background-size: 200px auto; 
+    background-repeat: no-repeat;
+    background-size: 200px auto;
 }
 
 #ana_dialog {
     background-image: url(../img/team/large/ana.jpg);
-    background-repeat:no-repeat; 
-    background-size: 200px auto; 
+    background-repeat: no-repeat;
+    background-size: 200px auto;
 }
 
 #fernando_dialog {
     background-image: url(../img/team/large/fernandoG.jpg);
-    background-repeat:no-repeat; 
+    background-repeat: no-repeat;
     background-size: 200px auto;
 }
 
 #brian_dialog {
-background-image: url(../img/team/large/brian.jpg);
-    background-repeat:no-repeat; 
+    background-image: url(../img/team/large/brian.jpg);
+    background-repeat: no-repeat;
     background-size: 200px auto;
 }
 
 #dan_dialog {
     background-image: url(../img/team/large/dan.jpg);
-    background-repeat:no-repeat; 
+    background-repeat: no-repeat;
     background-size: 200px auto;
 }
 
 #federico_dialog {
     background-image: url(../img/team/large/federicoB.jpg);
-    background-repeat:no-repeat; 
+    background-repeat: no-repeat;
     background-size: 200px auto;
 }
 
 #jonatan_dialog {
-       background-image: url(../img/team/large/jona.jpg);
-    background-repeat:no-repeat; 
+    background-image: url(../img/team/large/jona.jpg);
+    background-repeat: no-repeat;
     background-size: 200px auto;
 }
+
 #leandro_dialog {
     background-image: url(../img/team/large/leandro.jpg);
-    background-repeat:no-repeat; 
+    background-repeat: no-repeat;
     background-size: 200px auto;
 }
+
 #lucia_dialog {
     background-image: url(../img/team/large/lucia.jpg);
-    background-repeat:no-repeat; 
+    background-repeat: no-repeat;
     background-size: 200px auto;
 }
+
 #marcos_dialog {
     background-image: url(../img/team/large/marcosp.jpg);
-    background-repeat:no-repeat; 
+    background-repeat: no-repeat;
     background-size: 200px auto;
 }
 
 #marina_dialog {
-        background-image: url(../img/team/large/marina.jpg);
-    background-repeat:no-repeat; 
+    background-image: url(../img/team/large/marina.jpg);
+    background-repeat: no-repeat;
     background-size: 200px auto;
 }
+
 #martin_dialog {
     background-image: url(../img/team/large/martin.JPG);
-    background-repeat:no-repeat; 
+    background-repeat: no-repeat;
     background-size: 200px auto;
 }
+
 #pablo_dialog {
     background-image: url(../img/team/large/pablo.jpg);
-    background-repeat:no-repeat; 
+    background-repeat: no-repeat;
+    background-size: 200px auto;
+}
+
+#jorge_dialog {
+    background-image: url(../img/team/large/jorge.jpg);
+    background-repeat: no-repeat;
+    background-size: 200px auto;
+}
+
+#ramon_dialog {
+    background-image: url(../img/team/large/ramon.jpg);
+    background-repeat: no-repeat;
     background-size: 200px auto;
 }
 
 #contact {
-  background-image: url(../img/map-image.png);
-     background-position: center;
+    background-image: url(../img/map-image.png);
+    background-position: center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -145,58 +167,57 @@ background-image: url(../img/team/large/brian.jpg);
     background-attachment: fixed;
 }
 
- #contact address {
-        color:#000;
-        text-align:left;
-    }
-
+#contact address {
+    color: #000;
+    text-align: left;
+}
 
 .navbar-brand {
-  background-size: cover !important ;
-  width: 175px !important;
+    background-size: cover !important;
+    width: 175px !important;
 }
 
 .navbar-default .navbar-brand {
-  background: url(../img/blue-transparent.png) no-repeat;
+    background: url(../img/blue-transparent.png) no-repeat;
 }
 
-.navbar-inverse .navbar-brand, .navbar-default.affix .navbar-brand {
-  background: url(../img/blue-inverse.png) no-repeat;
+.navbar-inverse .navbar-brand,
+.navbar-default.affix .navbar-brand {
+    background: url(../img/blue-inverse.png) no-repeat;
 }
 
 @media (max-width: 767px) {
     .navbar-default .navbar-brand {
-         background: url(../img/blue-inverse.png) no-repeat;
+        background: url(../img/blue-inverse.png) no-repeat;
     }
 }
 
-
 .img-rounded-50 {
-border-radius: 50%;
+    border-radius: 50%;
 }
 
 .margin-10 {
-margin:10px;
+    margin: 10px;
 }
 
 #contact-form {
-text-align:left;
-color:#000;
+    text-align: left;
+    color: #000;
 }
 
 #team-section {
-padding-top:60px;
-color:white;
-
+    padding-top: 60px;
+    color: white;
 }
 
-.team-item > div{
-  margin: 10px;
-  height:150px;
-  background-position :center;
-  background-size: cover;
-  border-radius:10%;
+.team-item > div {
+    margin: 10px;
+    height: 150px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10%;
 }
+
 
 /*.team-item .team-middle-bg {
     padding:10px;
@@ -259,10 +280,6 @@ color:white;
     background-image: url(../img/team/yasim.jpg)  ;
 }*/
 
-
-
-
-
 .Flexible-container {
     position: relative;
     padding-bottom: 80%;
@@ -282,7 +299,5 @@ color:white;
 }
 
 a {
-    outline:none !important;
+    outline: none !important;
 }
-                     
-
