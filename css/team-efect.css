@@ -125,6 +125,14 @@
     background-image: url(../img/team/yasim.jpg);
 }
 
+.ch-img-jorge {
+    background-image: url(../img/team/jorge.jpg);
+}
+
+.ch-img-ramon {
+    background-image: url(../img/team/ramon.jpg);
+}
+
 .ch-info h3 {
     color: #fff;
     text-transform: uppercase;
