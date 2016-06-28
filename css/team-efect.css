@@ -133,6 +133,10 @@
     background-image: url(../img/team/ramon.jpg);
 }
 
+.ch-img-fede{
+     background-image: url(../img/team/fede.jpg);
+}
+
 .ch-info h3 {
     color: #fff;
     text-transform: uppercase;
