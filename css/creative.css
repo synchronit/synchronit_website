@@ -16,7 +16,7 @@ body {
 
 hr {
     max-width: 50px;
-    border-color: #966F09;
+    border-color: #256D9B;
     border-width: 3px;
 }
 
@@ -25,7 +25,7 @@ hr.light {
 }
 
 a {
-    color: #D5AC3F;
+    color: #EBA12C;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
@@ -42,17 +42,18 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+    font-family: 'Khand',sans-serif;
 }
 
 p {
     margin-bottom: 20px;
     font-size: 16px;
     line-height: 1.5;
+    font-family: 'Titillium Web', sans-serif;
 }
 
 .bg-primary {
-    background-color: #D5AC3F;
+    background-color: #EBA12C;
 }
 
 .bg-dark {
@@ -78,7 +79,8 @@ aside {
 
 .navbar-default {
     border-color: rgba(34,34,34,.05);
-    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+    font-family: 'Khand', sans-serif;
+    font-weight: 400;
     background-color: #fff;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
@@ -100,8 +102,8 @@ aside {
 .navbar-default .nav > li>a,
 .navbar-default .nav>li>a:focus {
     text-transform: uppercase;
-    font-size: 13px;
-    font-weight: 700;
+    font-size: large;
+    font-weight: 400;
     color: #222;
 }
 
@@ -138,7 +140,7 @@ aside {
 
     .navbar-default .nav > li>a,
     .navbar-default .nav>li>a:focus {
-        color: rgba(255,255,255,.7);
+        color: rgba(255,255,255,.9);
     }
 
     .navbar-default .nav > li>a:hover,
@@ -173,18 +175,54 @@ aside {
 }
 
 header {
+  background: linear-gradient(
+                     rgba(20,20,20, .6), 
+                     rgba(20,20,20, .6)),
+                     linear-gradient(
+                     rgba(0,0,0, 1), 
+                     rgba(0,0,0, 0)),
+                     url(../img/nuevas/portada_clara.jpg);
+   background: -moz-linear-gradient(
+                     rgba(20,20,20, .6), 
+                     rgba(20,20,20, .6)),
+                     -moz-linear-gradient(
+                     rgba(0,0,0, 1), 
+                     rgba(0,0,0, 0)),
+                     url(../img/nuevas/portada_clara.jpg);
+   background: -webkit-linear-gradient(
+                     rgba(20,20,20, .6), 
+                     rgba(20,20,20, .6)),
+                     -webkit-linear-gradient(
+                     rgba(0,0,0, 1), 
+                     rgba(0,0,0, 0)),
+                     url(../img/nuevas/portada_clara.jpg);
+   background: -o-linear-gradient(
+                     rgba(20,20,20, .6), 
+                     rgba(20,20,20, .6)),
+                     -o-linear-gradient(
+                     rgba(0,0,0, 1), 
+                     rgba(0,0,0, 0)),
+                     url(../img/nuevas/portada_clara.jpg);
+   background: -ms-linear-gradient(
+                     rgba(20,20,20, .6), 
+                     rgba(20,20,20, .6)),
+                     -ms-linear-gradient(
+                     rgba(0,0,0, 1), 
+                     rgba(0,0,0, 0)),
+                     url(../img/nuevas/portada_clara.jpg);
+
     position: relative;
     width: 100%;
     min-height: auto;
     text-align: center;
     color: #fff;
-    background-image: url(../img/office3-cold.jpg);
-    background-position: center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-     background-attachment: fixed;
+    background-position: center, top, center;
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover, cover;
+    -webkit-background-size: cover, 100% 250px;
+    -moz-background-size: cover,cover;
+    -o-background-size: cover,cover;
+    background-attachment: fixed;
    
 }
 
@@ -329,7 +367,7 @@ header .header-content .header-content-inner p {
 }
 
 .text-primary {
-    color: #D5AC3F;
+    color: #EBA12C;
 }
 
 .no-gutter > [class*=col-] {
@@ -391,9 +429,9 @@ fieldset[disabled] .btn-default.active {
 }
 
 .btn-primary {
-    border-color: #D5AC3F;
+    border-color: #17202F;
     color: #fff;
-    background-color: #D5AC3F;
+    background-color: #2495D7;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
@@ -406,7 +444,7 @@ fieldset[disabled] .btn-default.active {
 .btn-primary.active,
 .open > .dropdown-toggle.btn-primary {
     border-color: #966F09;
-    background-color: #D5AC3F;
+    background-color: #EBA12C;
     color: #fff;
 }
 
@@ -435,7 +473,7 @@ fieldset[disabled] .btn-primary:active,
 .btn-primary[disabled].active,
 fieldset[disabled] .btn-primary.active {
     border-color: #966F09;
-    background-color: #D5AC3F;
+    background-color: #EBA12C;
 }
 
 .btn-primary .badge {
@@ -486,7 +524,7 @@ body {
 }
 .panel-creative > .panel-heading {
   color: #fff;
-  background-color: #D5AC3F;
+  background-color: #EBA12C;
   border-color: #966F09;
 }
 .panel-creative > .panel-heading + .panel-collapse > .panel-body {

@@ -1,19 +1,72 @@
+h1 span.slogan_software, h1 span.slogan_wedo {
+    font-size: 1.250em !important;
+    font-weight: 300 !important;
+}
+
+h1 span.slogan_wedoitagile{
+    font-size: 0.90em !important;
+     font-weight: 300 !important;
+}
+
 .background-primary-color {
-    background: #2C6987;
-    ;
+    background: #256d9B;
 }
 
 .background-secondary-color {
-    background: #D5AC3F;
+    background: #EBA12C;
 }
 
 .font-primary-color {
     color: #185674;
 }
 
+#coffee{
+    background-image: url(../img/nuevas/textura.png);
+    background-size: cover;
+    background-position: center;
+}
+
 .font-secondary-color {
     color: #B78D1E;
 }
+
+.titilium-italic{
+    font-family: 'Titillium Web', sans-serif;
+    font-style: italic;
+}
+
+.service-box img {
+    margin-bottom: -20px;
+    width:100px;
+}
+
+.btn-blue {
+    border-color: #17202F;
+    color: #fff;
+    background-color: #17202F;
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    transition: all .35s;
+}
+
+.btn-blue:hover,
+.btn-blue:focus,
+.btn-blue.focus,
+.btn-blue:active,
+.btn-blue.active,
+.open > .dropdown-toggle.btn-blue {
+    border-color: #2495D7;
+    background-color: #2495D7;
+    color: #fff;
+}
+
+.btn-blue:active,
+.btn-blue.active,
+.open > .dropdown-toggle.btn-blue {
+    background-image: none;
+}
+
+
 
 #about,
 #contact {
@@ -24,14 +77,50 @@
 }
 
 #about {
-    background-image: url(../img/office1.jpg);
-    background-position: center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-    text-shadow: 1px 1px 1px #000;
+    background: linear-gradient(
+                     rgba(20,20,20, .6), 
+                     rgba(20,20,20, .6)),
+                     linear-gradient(
+                     rgba(0,0,0, 1), 
+                     rgba(0,0,0, 0)),
+                     url(../img/nuevas/ofic_clara.jpg);
+   background: -moz-linear-gradient(
+                     rgba(20,20,20, .6), 
+                     rgba(20,20,20, .6)),
+                     -moz-linear-gradient(
+                     rgba(0,0,0, 1), 
+                     rgba(0,0,0, 0)),
+                     url(../img/nuevas/ofic_clara.jpg);
+   background: -webkit-linear-gradient(
+                     rgba(20,20,20, .6), 
+                     rgba(20,20,20, .6)),
+                     -webkit-linear-gradient(
+                     rgba(0,0,0, 1), 
+                     rgba(0,0,0, 0)),
+                     url(../img/nuevas/ofic_clara.jpg);
+   background: -o-linear-gradient(
+                     rgba(20,20,20, .6), 
+                     rgba(20,20,20, .6)),
+                     -o-linear-gradient(
+                     rgba(0,0,0, 1), 
+                     rgba(0,0,0, 0)),
+                     url(../img/nuevas/ofic_clara.jpg);
+   background: -ms-linear-gradient(
+                     rgba(20,20,20, .6), 
+                     rgba(20,20,20, .6)),
+                     -ms-linear-gradient(
+                     rgba(0,0,0, 1), 
+                     rgba(0,0,0, 0)),
+                     url(../img/nuevas/ofic_clara.jpg);
+                     
+    background-position: center, top, center;
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover, cover;
+    -webkit-background-size: cover, 100% 250px;
+    -moz-background-size: cover,cover;
+    -o-background-size: cover,cover;
     background-attachment: fixed;
+
 }
 
 #about a {
@@ -158,13 +247,17 @@
 }
 
 #contact {
-    background-image: url(../img/map-image.png);
+    background: url(../img/map-image.png);
+    background-color: #256D9B;
     background-position: center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
-    background-attachment: fixed;
+}
+
+#contact-form-section{
+    background-color: #256D9B;
 }
 
 #contact address {
@@ -173,24 +266,29 @@
 }
 
 .navbar-brand {
-    background-size: cover !important;
-    width: 175px !important;
+    background-position: 5px 5px !important;
+    width: 150px !important;
+    background-size: 141px 40px !important;
+   
 }
-
 .navbar-default .navbar-brand {
-    background: url(../img/blue-transparent.png) no-repeat;
+    background: url(../img/nuevas/logo_negro.png) no-repeat;
 }
 
-.navbar-inverse .navbar-brand,
-.navbar-default.affix .navbar-brand {
-    background: url(../img/blue-inverse.png) no-repeat;
-}
-
-@media (max-width: 767px) {
-    .navbar-default .navbar-brand {
-        background: url(../img/blue-inverse.png) no-repeat;
+@media (min-width: 768px) {
+    .navbar-brand{
+        width: 180px !important;
+       background-size: 174px 50px !important;
+       height: 70px;
     }
+    .navbar-default.affix-top .navbar-brand {
+    background: url(../img/nuevas/logo_blanco.png) no-repeat;
+ 
 }
+    .navbar-default.affix .navbar-brand{
+    background: url(../img/nuevas/logo_negro.png) no-repeat;
+}
+
 
 .img-rounded-50 {
     border-radius: 50%;
@@ -301,3 +399,4 @@
 a {
     outline: none !important;
 }
+
