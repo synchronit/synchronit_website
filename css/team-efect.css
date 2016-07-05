@@ -1,7 +1,17 @@
+.team-item > div {
+    margin: 10px;
+    height: 150px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+
 .ch-item {
     width: 100%;
     height: 100%;
-    border-radius: 10%;
+    border-radius: 50%;
     position: relative;
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.7);
     cursor: default;
@@ -11,7 +21,7 @@
 .ch-info-wrap {
     min-width: 100%;
     min-height: 100%;
-    border-radius: 10%;
+    border-radius: 50%;
     -webkit-perspective: 800px;
     -moz-perspective: 800px;
     -o-perspective: 800px;
@@ -32,7 +42,7 @@
     position: absolute;
     min-width: 100%;
     min-height: 100%;
-    border-radius: 10%;
+    border-radius: 50%;
     -webkit-transition: all 0.4s ease-in-out;
     -moz-transition: all 0.4s ease-in-out;
     -o-transition: all 0.4s ease-in-out;
@@ -50,7 +60,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    border-radius: 10%;
+    border-radius: 50%;
     background-position: center center;
     background-size: 108%;
     -webkit-backface-visibility: hidden;
@@ -70,81 +80,84 @@
 }
 
 .ch-img-alvaro {
-    background-image: url(../img/team/alvaro.jpg);
+    background-image: url(../img/team/nuevas/alvaro.png);
 }
 
 .ch-img-ana {
-    background-image: url(../img/team/ana.jpg);
+    background-image: url(../img/team/nuevas/ana.png);
 }
 
 .ch-img-brian {
-    background-image: url(../img/team/brian.jpg);
+    background-image: url(../img/team/nuevas/brian.png);
 }
 
 .ch-img-dan {
-    background-image: url(../img/team/dan.jpg);
+    background-image: url(../img/team/nuevas/dan.png);
 }
 
 .ch-img-federico {
-    background-image: url(../img/team/federico.jpg);
+    background-image: url(../img/team/nuevas/federico.png);
 }
 
 .ch-img-fernando {
-    background-image: url(../img/team/fernando.jpg);
+    background-image: url(../img/team/nuevas/fernando.png);
 }
 
 .ch-img-jonatan {
-    background-image: url(../img/team/jonatan.jpg);
+    background-image: url(../img/team/nuevas/jonatan.png);
 }
 
 .ch-img-leandro {
-    background-image: url(../img/team/leandro.jpg);
+    background-image: url(../img/team/nuevas/leandro.png);
 }
 
 .ch-img-lucia {
-    background-image: url(../img/team/lucia.jpg);
+    background-image: url(../img/team/nuevas/lucia.png);
 }
 
 .ch-img-marcos {
-    background-image: url(../img/team/marcos.jpg);
+    background-image: url(../img/team/nuevas/marcos.png);
 }
 
 .ch-img-marina {
-    background-image: url(../img/team/marina.jpg);
+    background-image: url(../img/team/nuevas/marina.png);
 }
 
 .ch-img-martin {
-    background-image: url(../img/team/martin.jpg);
+    background-image: url(../img/team/nuevas/martin.png);
 }
 
 .ch-img-pablo {
-    background-image: url(../img/team/pablo.jpg);
+    background-image: url(../img/team/nuevas/pablo.png);
 }
 
 .ch-img-yasim {
-    background-image: url(../img/team/yasim.jpg);
+    background-image: url(../img/team/nuevas/yasim.png);
 }
 
 .ch-img-jorge {
-    background-image: url(../img/team/jorge.jpg);
+    background-image: url(../img/team/nuevas/jorge.png);
 }
 
 .ch-img-ramon {
-    background-image: url(../img/team/ramon.jpg);
+    background-image: url(../img/team/nuevas/ramon.png);
 }
 
 .ch-img-fede{
-     background-image: url(../img/team/fede.jpg);
+     background-image: url(../img/team/nuevas/fede.png);
 }
 
 .ch-info h3 {
     color: #fff;
-    text-transform: uppercase;
+    text-transform: capitalize;
+    text-align: center;
     letter-spacing: 2px;
     font-size: 14px;
     margin: 0 15px;
-    padding: 40px 0 0 0;
-    font-family: 'Open Sans', Arial, sans-serif;
+    padding: 60px 0 0 0;
+    font-family: 'Khand', sans-serif;
+    font-size:1.75em;
+    font-weight: 300 !important;
     text-shadow: 0 0 1px #fff, 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
@@ -152,9 +165,10 @@
     color: #fff;
     padding: 10px 5px;
     font-style: italic;
+    text-align: center;
     margin: 0 30px;
     font-size: 12px;
-    border-top: 1px solid rgba(255, 255, 255, 0.5);
+
 }
 
 .ch-info p a {
