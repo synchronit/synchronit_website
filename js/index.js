@@ -67,7 +67,7 @@ $.extend({
                     var headers = result.resultSet.headers;
                     var rows = result.resultSet.rows;
 
-                    var panelBlock = '<div class="col-lg-3 col-md-4  col-sm-4 col-xs-6 team-item" style="opacity: 1;">';
+                    var panelBlock = '<div class="col-lg-3 col-md-4  col-sm-4 col-xs-6 col-exsm-12 team-item" style="opacity: 1;">';
                     var closedDiv = '</div>'
                     for (var i = 0; i < rows.length; i++) {
 
