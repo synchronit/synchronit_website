@@ -130,9 +130,7 @@ $.extend({
         }
 
         var cleanFields = function() {
-            $('input[name=name]').val('');
             $('input[name=from]').val('');
-            $('input[name=subject]').val('');
             $('textarea[name=message]').val('');
             $('input[name=answer]').val('');
         };
