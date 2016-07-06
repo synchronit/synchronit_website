@@ -88,7 +88,7 @@ $.extend({
                         var infoFront = '<div class="ch-info-front"></div>'
                         var infoBack = '<div class="ch-info-back">'
                         var backUpLine = '<h3>' + rows[i][0] + ' ' + rows[i][1] + '</h3>';
-                        let titleFormated = rows[i][3].toString().replace(',', '</br>')
+                        let titleFormated = rows[i][3].toString().replaceAll(',', '</br>')
                         var backDownLine = '<p>' + titleFormated + '</p>';
                         infoBack += backUpLine + backDownLine + closedDiv
                         info += infoFront + infoBack + closedDiv;
@@ -111,6 +111,10 @@ $.extend({
         }
     }
 });
+
+String.prototype.replaceAll = function(target, replacement) {
+    return this.split(target).join(replacement);
+};
 
 $(function() {
     $.indexView.initialize();
