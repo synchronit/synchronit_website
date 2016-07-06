@@ -78,6 +78,10 @@ h1 span.slogan_wedoitagile{
 #follow div.redes:hover{
     background-color:#EAB12C;
 }
+
+#contact .panel-footer{
+    height: 100px;
+}
  
 
 .btn-blue {
