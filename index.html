@@ -185,7 +185,7 @@
                     <br />
                     <h2>Values</h2>
                     <div class="row">
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                             <a href="#" data-toggle="modal" data-target="#youandi_speech">
                                 <img src="img/values/youmewe.jpg" class="img-rounded-50 margin-10" style="width:50px; border: white solid 1px;" />
                                 <span class=" strong">
@@ -197,7 +197,7 @@
                                 <span class=" strong">Liberté, Egalité, Fraternité</span>
                             </a>
                         </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                             <a href="#" data-toggle="modal" data-target="#value_creation">
                                 <img src="img/values/valueCreation.jpg" class="img-rounded-50 margin-10" style="width:50px; border: white solid 1px;" />
                                 <span class=" strong">Value Creation</span>
@@ -254,7 +254,7 @@
     </section>
      <section id="team-section" class="background-secondary-color">
             <div class="container">
-                <h2 class="section-heading text-center">Our Team</h2>
+                <h2 class="section-heading text-center" style="color:white">Our Team</h2>
                 <hr style="border-color: white">
                 <div class="row">
                  
@@ -266,7 +266,7 @@
                                         <div class="ch-info-front"></div>
                                         <div class="ch-info-back">
                                             <h3>Alvaro Castroman</h3>
-                                            <p>CTO, Associated Consultant, Scrum Master </p>
+                                            <p>CTO<br> Associated Consultant<br> Scrum Master </p>
                                         </div>
                                     </div>
                                 </a>
@@ -301,7 +301,7 @@
                                         <div class="ch-info-front"></div>
                                         <div class="ch-info-back">
                                             <h3>Brian Tobler</h3>
-                                            <p>Associated Consultant, Scrum Master</p>
+                                            <p>Associated Consultant<br> Scrum Master</p>
                                         </div>
                                     </div>
                                 </a>
@@ -331,7 +331,7 @@
                                         <div class="ch-info-front"></div>
                                         <div class="ch-info-back">
                                             <h3>Federico Becaria</h3>
-                                            <p>Associated Consultant, Scrum Master</p>
+                                            <p>Associated Consultant<br> Scrum Master</p>
                                         </div>
                                     </div>
                                 </a>
@@ -346,7 +346,7 @@
                                         <div class="ch-info-front"></div>
                                         <div class="ch-info-back">
                                             <h3>Fernando Guigou</h3>
-                                            <p>CEO, Associated Consultant, Scrum Master</p>
+                                            <p>CEO<br> Associated Consultant<br> Scrum Master</p>
                                         </div>
                                     </div>
                                 </a>
@@ -376,7 +376,7 @@
                                         <div class="ch-info-front"></div>
                                         <div class="ch-info-back">
                                             <h3>Leandro Leites</h3>
-                                            <p>Associated Consultant, Scrum Master</p>
+                                            <p>Associated Consultant<br> Scrum Master</p>
                                         </div>
                                     </div>
                                 </a>
@@ -391,7 +391,7 @@
                                         <div class="ch-info-front"></div>
                                         <div class="ch-info-back">
                                             <h3>Lucia Marroig</h3>
-                                            <p>Associated Consultant, Scrum Master</p>
+                                            <p>Associated Consultant<br> Scrum Master</p>
                                         </div>
                                     </div>
                                 </a>
@@ -500,13 +500,58 @@
 
     
 
-    <section id="contact" class="bg-dark">
+    <section id="contact" class="bg-darkblue">
         <div class="container">
             <h2 class="section-heading "><a class="page-scroll" href="#contact-form" style="color: white;">Let's get in touch!</a></h2>
             <hr class="primary">
             <div class="row">
+                 <div class="col-lg-4 col-md-4 col-sm-12 text-center">
+                    <div class="panel panel-creative-blue">
+                        <div class="panel-heading">
+                            <h3>Uruguay</h3>
+                        </div>
+                        <div class="panel-body">
+
+                            <!-- Responsive iFrame -->
+                            <div>
+
+                                <div>
+                                    <div id='uruguay' class="Flexible-container"></div>
+
+                                </div>
+                                <script type='text/javascript'>
+                                    function init_map() {
+                                        var myOptions = {
+                                            zoom: 15,
+                                            center: new google.maps.LatLng(-34.907761543051, -56.200830003982574),
+                                            mapTypeId: google.maps.MapTypeId.ROADMAP
+                                        };
+                                        map = new google.maps.Map(document.getElementById('uruguay'), myOptions);
+                                        marker = new google.maps.Marker({
+                                            map: map,
+                                            position: new google.maps.LatLng(-34.907341, -56.198928)
+                                        });
+                                        google.maps.event.addListener(marker, 'click', function() {
+                                            infowindow.open(map, marker);
+                                        });
+                                    }
+                                    google.maps.event.addDomListener(window, 'load', init_map);
+                                </script>
+                            </div>
+                        </div>
+                        <div class="panel-footer">
+                            <address>
+                                <i class="fa fa-2x  fa-phone wow bounceIn"></i><span> +598 2904 2329</span><br />
+                                <i class="fa fa-2x   fa-map-marker wow bounceIn"></i><span>
+                                    San José 807 of. 2014
+                                </span><br /><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;11100 Montevideo, Uruguay</span>
+                                
+                            </address>
+                        </div>
+                    </div>
+                </div>
                 <div class="col-lg-4 col-md-4 col-sm-12 text-center">
-                    <div class="panel panel-creative-black">
+                    <div class="panel panel-creative-blue">
                         <div class="panel-heading">
                             <h3>Switzerland</h3>
                         </div>
@@ -553,7 +598,7 @@
 
                 </div>
                 <div class="col-md-4 col-sm-12 text-center">
-                    <div class="panel panel-default ">
+                     <div class="panel panel-creative-blue">
                         <div class="panel-heading">
                             <h3>Germany</h3>
                         </div>
@@ -597,79 +642,35 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-12 text-center">
-                    <div class="panel panel-creative-blue">
-                        <div class="panel-heading">
-                            <h3>Uruguay</h3>
-                        </div>
-                        <div class="panel-body">
-
-                            <!-- Responsive iFrame -->
-                            <div>
-
-                                <div>
-                                    <div id='uruguay' class="Flexible-container"></div>
-
-                                </div>
-                                <script type='text/javascript'>
-                                    function init_map() {
-                                        var myOptions = {
-                                            zoom: 15,
-                                            center: new google.maps.LatLng(-34.907761543051, -56.200830003982574),
-                                            mapTypeId: google.maps.MapTypeId.ROADMAP
-                                        };
-                                        map = new google.maps.Map(document.getElementById('uruguay'), myOptions);
-                                        marker = new google.maps.Marker({
-                                            map: map,
-                                            position: new google.maps.LatLng(-34.907341, -56.198928)
-                                        });
-                                        google.maps.event.addListener(marker, 'click', function() {
-                                            infowindow.open(map, marker);
-                                        });
-                                    }
-                                    google.maps.event.addDomListener(window, 'load', init_map);
-                                </script>
-                            </div>
-                        </div>
-                        <div class="panel-footer">
-                            <address>
-                                <i class="fa fa-2x  fa-phone wow bounceIn"></i><span> +598 2904 2329</span><br />
-                                <i class="fa fa-2x   fa-map-marker wow bounceIn"></i><span>
-                                    San José 807 of. 2014
-                                </span><br /><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;11100 Montevideo, Uruguay</span>
-                                
-                            </address>
-                        </div>
-                    </div>
-                </div>
+               
 
             </div>
            
             
         </div>
     </section>
-     <div id="contact-form-section" >
+     <div id="contact-form" class="bg-darkblue">
                 <form id="contact-form" class="container">
-                <div class="panel panel-default">
+                <div class="panel panel-creative-blue">
                     <div class="panel-heading">
-                        <h3><i class="fa  fa-2x fa-envelope wow bounceIn"></i>&nbsp;&nbsp;To: <a href="mailto:contact@synchronit.com">contact@synchronit.com</a></h3>
+                        <h3 style="padding-left:30px"><i class="fa  fa-2x fa-envelope wow bounceIn"></i>&nbsp;&nbsp;To: <a class="text-white" href="mailto:contact@synchronit.com">contact@synchronit.com</a></h3>
                     </div>
-                    <div class="panel-body">
+                    <div class="panel-body" style="padding: 20px 40px">
                         <div id="send-message" style="display:none">
                             <h2 class="text-second"></h2></div>
                         <input id="answer-token" name="answer-response" type="hidden" value="">
-                        <div class="form-group form-group-lg ">
+                        <!--<div class="form-group form-group-lg ">
                             <label>Your name</label>
                             <input name="name" type="text" class="form-control" placeholder="type your name..." required />
-                        </div>
+                        </div>-->
                         <div class="form-group form-group-lg ">
                             <label>Your email</label>
                             <input name="from" type="text" class="form-control" placeholder="type your email..." required />
                         </div>
-                        <div class="form-group form-group-lg ">
+                        <!--<div class="form-group form-group-lg ">
                             <label>Subject</label>
                             <input name="subject" type="text" class="form-control" placeholder="type the subject..." required />
-                        </div>
+                        </div>-->
                         <div class="form-group form-group-lg ">
                             <label>Your Message</label>
                             <textarea style="min-height:150px" name="message" class="form-control" placeholder="type your message..." required></textarea>
@@ -680,32 +681,32 @@
                             <input id="answer" name="answer" type="text" class="form-control" placeholder="" required />
                         </div>
 
-                        <input id="contact-btn" type="button" value="Send Message" class="btn btn-lg  btn-primary " />
+                        <input id="contact-btn" type="button" value="Send Message" class="btn btn-lg btn-primary " />
 
                     </div>
                 </div>
             </form>
             </div>
-    <section id="stuff" class="bg-dark">
-        <h2 class="text-center primary">Other Stuff</h2>
-        <hr class="primary" />
+    <section id="stuff" style="background-color:#202c40;">
+        <h2 class="text-center text-white"  >Other Stuff</h2>
+        <hr style="border-color:white"  />
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-center">
-                    <i class="fa fa-4x fa-file-pdf-o wow bounceIn text-primary" data-wow-delay=".1s"></i>
-                    <h6><a class="text-capitalize fa-2x" href="resources.html">Resources</a></h6>
+                    <i class="fa fa-4x fa-file-pdf-o wow bounceIn text-aqua bg-darkblue img-rounded-50" style="padding:20px;width:100px"  data-wow-delay=".1s"></i>
+                    <h6><a class="text-capitalize fa-2x  text-white" href="resources.html">Resources</a></h6>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-center ">
+                    <i class="fa fa-4x fa-graduation-cap wow bounceIn text-aqua bg-darkblue img-rounded-50" style="padding:20px;width:110px" data-wow-delay=".1s"></i>
+                    <h6><a class="text-capitalize fa-2x text-white" href="resources.html">Courses</a></h6>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-center ">
+                    <i class="fa fa-4x fa-github wow bounceIn text-aqua bg-darkblue img-rounded-50" style="padding:20px;width:100px" data-wow-delay=".1s"></i>
+                    <h6><a class="text-capitalize fa-2x  text-white" href="resources.html">Lab</a></h6>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-center">
-                    <i class="fa fa-4x fa-graduation-cap wow bounceIn text-primary" data-wow-delay=".1s"></i>
-                    <h6><a class="text-capitalize fa-2x" href="resources.html">Courses</a></h6>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-center">
-                    <i class="fa fa-4x fa-github wow bounceIn text-primary" data-wow-delay=".1s"></i>
-                    <h6><a class="text-capitalize fa-2x" href="resources.html">Lab</a></h6>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-center">
-                    <i class="fa fa-4x fa-wrench wow bounceIn text-primary" data-wow-delay=".1s"></i>
-                    <h6><a class="text-capitalize fa-2x" href="resources.html">Tools</a></h6>
+                    <i class="fa fa-4x fa-wrench wow bounceIn text-aqua bg-darkblue img-rounded-50" style="padding:20px;width:100px" data-wow-delay=".1s"></i>
+                    <h6><a class="text-capitalize fa-2x  text-white" href="resources.html">Tools</a></h6>
                 </div>
             </div>
         </div>
