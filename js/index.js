@@ -65,7 +65,17 @@ $.extend({
                 dataType: 'json',
                 success: function(result) {
                     var headers = result.resultSet.headers;
-                    var rows = result.resultSet.rows;
+                    var rows = result.resultSet.rows.sort(function(itemA, itemB) {
+                        let nameA = itemA[0] + ' ' + itemA[1];
+                        let nameB = itemB[0] + ' ' + itemB[1];
+
+                        if (nameA > nameB)
+                            return 1;
+                        if (nameA < nameB)
+                            return -1
+
+                        return 0;
+                    });
 
                     var panelBlock = '<div class="col-lg-3 col-md-4  col-sm-4 col-xs-6 col-exsm-12 team-item" style="opacity: 1;">';
                     var closedDiv = '</div>'
@@ -78,7 +88,7 @@ $.extend({
                         var infoFront = '<div class="ch-info-front"></div>'
                         var infoBack = '<div class="ch-info-back">'
                         var backUpLine = '<h3>' + rows[i][0] + ' ' + rows[i][1] + '</h3>';
-                        let titleFormated = rows[i][3].toString().replace(',', ',</br>')
+                        let titleFormated = rows[i][3].toString().replace(',', '</br>')
                         var backDownLine = '<p>' + titleFormated + '</p>';
                         infoBack += backUpLine + backDownLine + closedDiv
                         info += infoFront + infoBack + closedDiv;
