@@ -20,6 +20,19 @@ h1 span.slogan_wedoitagile{
     color: #185674;
 }
 
+.img-rounded-50 {
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+
+.margin-10 {
+    margin: 10px;
+}
+
 #coffee{
     background-image: url(../img/nuevas/textura.png);
     background-size: cover;
@@ -39,6 +52,33 @@ h1 span.slogan_wedoitagile{
     margin-bottom: -20px;
     width:100px;
 }
+
+@media(max-width:789px){
+    #about h2, #about #vision {
+        text-align: center;
+    }
+
+    #about p {
+        text-align: justify;
+    }
+
+    #about #redes{
+        float:none;
+        text-align: center;
+    }
+
+    
+}
+
+#about a.values:hover{
+    text-decoration:none;
+    color: #EAB12C;
+}
+
+#follow div.redes:hover{
+    background-color:#EAB12C;
+}
+ 
 
 .btn-blue {
     border-color: #17202F;
@@ -143,9 +183,18 @@ h1 span.slogan_wedoitagile{
 
 #modals-values .modal-content .modal-header,
 #modals-values .modal-content .modal-body {
-    margin-left: 200px;
+    text-align: center;
+
 }
 
+.modal-body{
+    padding: 0 40px;
+}
+
+.modal-content p {
+    text-align: justify;
+}
+/*
 #youandi_dialog {
     background-image: url(../img/values/you-me-we-background.jpg);
     background-repeat: no-repeat;
@@ -169,11 +218,9 @@ h1 span.slogan_wedoitagile{
     background-repeat: no-repeat;
     background-size: 200px auto;
 }
-
+/*
 #alvaro_dialog {
-    background-image: url(../img/team/large/alvaro.jpg);
-    background-repeat: no-repeat;
-    background-size: 200px auto;
+    
 }
 
 #ana_dialog {
@@ -258,7 +305,7 @@ h1 span.slogan_wedoitagile{
     background-image: url(../img/team/large/ramon.jpg);
     background-repeat: no-repeat;
     background-size: 200px auto;
-}
+}*/
 
 #contact {
     background-image: url(../img/map-image.png);
@@ -303,17 +350,8 @@ h1 span.slogan_wedoitagile{
 }
 
 
-.img-rounded-50 {
-    border-radius: 50%;
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-}
 
-.margin-10 {
-    margin: 10px;
-}
+
 
 #contact-form {
     text-align: left;
