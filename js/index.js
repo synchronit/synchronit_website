@@ -40,6 +40,19 @@ $.extend({
 
         }
 
+        var cleanFields = function() {
+            $('input[name="from"').val('');
+            $('input[name="message"').val('');
+            $('#answer').val('');
+        }
+
+        var checkFields = function() {
+            if ($('input[name="from"').val() == null || $('input[name="message"').val() | $('#answer').val())
+                return false;
+            return true;
+        }
+
+
         self.getCaptcha = function() {
             $.ajax({
                 type: 'GET',
