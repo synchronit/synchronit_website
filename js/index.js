@@ -40,6 +40,19 @@ $.extend({
 
         }
 
+        var cleanFields = function() {
+            $('input[name="from"').val('');
+            $('input[name="message"').val('');
+            $('#answer').val('');
+        }
+
+        var checkFields = function() {
+            if ($('input[name="from"').val() == null || $('input[name="message"').val() | $('#answer').val())
+                return false;
+            return true;
+        }
+
+
         self.getCaptcha = function() {
             $.ajax({
                 type: 'GET',
@@ -88,7 +101,7 @@ $.extend({
                         var infoFront = '<div class="ch-info-front"></div>'
                         var infoBack = '<div class="ch-info-back">'
                         var backUpLine = '<h3>' + rows[i][0] + ' ' + rows[i][1] + '</h3>';
-                        let titleFormated = rows[i][3].toString().replace(',', '</br>')
+                        let titleFormated = rows[i][3].toString().replaceAll(',', '</br>')
                         var backDownLine = '<p>' + titleFormated + '</p>';
                         infoBack += backUpLine + backDownLine + closedDiv
                         info += infoFront + infoBack + closedDiv;
@@ -109,8 +122,33 @@ $.extend({
                 }
             });
         }
+
+        self.showMessage = function(message) {
+            var response = '<h2 class="text-second">' + message + '</h2>';
+            $('#send-message').html(response);
+            $('#send-message').show();
+        }
+
+        var cleanFields = function() {
+            $('input[name=from]').val('');
+            $('textarea[name=message]').val('');
+            $('input[name=answer]').val('');
+        };
+
+        var checkFields = function() {
+            var fromr = $('input[name=from]').val();
+            var message = $('textarea[name=message]').val();
+            var answer = $('input[name=answer]').val();
+            if (fromr == '' || message == '' || answer == '')
+                return false;
+            return true;
+        };
     }
 });
+
+String.prototype.replaceAll = function(target, replacement) {
+    return this.split(target).join(replacement);
+};
 
 $(function() {
     $.indexView.initialize();
