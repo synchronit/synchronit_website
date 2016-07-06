@@ -78,7 +78,8 @@ $.extend({
                         var infoFront = '<div class="ch-info-front"></div>'
                         var infoBack = '<div class="ch-info-back">'
                         var backUpLine = '<h3>' + rows[i][0] + ' ' + rows[i][1] + '</h3>';
-                        var backDownLine = '<p>' + rows[i][3] + '</p>';
+                        let titleFormated = rows[i][3].toString().replace(',', ',</br>')
+                        var backDownLine = '<p>' + titleFormated + '</p>';
                         infoBack += backUpLine + backDownLine + closedDiv
                         info += infoFront + infoBack + closedDiv;
 
