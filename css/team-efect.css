@@ -147,6 +147,10 @@
      background-image: url(../img/team/nuevas/fede.png);
 }
 
+.ch-img-daniel{
+    background-image: url(../img/team/nuevas/daniel.png);
+}
+
 .ch-info h3 {
     color: #fff;
     text-transform: capitalize;
