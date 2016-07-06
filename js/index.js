@@ -122,6 +122,29 @@ $.extend({
                 }
             });
         }
+
+        self.showMessage = function(message) {
+            var response = '<h2 class="text-second">' + message + '</h2>';
+            $('#send-message').html(response);
+            $('#send-message').show();
+        }
+
+        var cleanFields = function() {
+            $('input[name=name]').val('');
+            $('input[name=from]').val('');
+            $('input[name=subject]').val('');
+            $('textarea[name=message]').val('');
+            $('input[name=answer]').val('');
+        };
+
+        var checkFields = function() {
+            var fromr = $('input[name=from]').val();
+            var message = $('textarea[name=message]').val();
+            var answer = $('input[name=answer]').val();
+            if (fromr == '' || message == '' || answer == '')
+                return false;
+            return true;
+        };
     }
 });
 
