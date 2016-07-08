@@ -1,12 +1,20 @@
 .team-item > div {
-    margin: 10px;
-    height: 150px;
+
     background-position: center;
     background-size: cover;
     border-radius: 50%;
     width: 200px;
     height: 200px;
+    float: none;
+    margin: 10px auto;
 }
+
+@media (max-width:490px){
+ .col-exsm-12{
+    width: 100% !important;
+ }
+}
+
 
 .ch-item {
     width: 100%;
@@ -145,6 +153,10 @@
 
 .ch-img-fede {
     background-image: url(../img/team/nuevas/fede.png);
+}
+
+.ch-img-daniel{
+    background-image: url(../img/team/nuevas/daniel.png);
 }
 
 .ch-info h3 {

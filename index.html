@@ -168,16 +168,13 @@
 
     <section id="about">
 
-
-
-
         <div class="container">
 
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-12 text-left">
                     <h2>Vision</h2>
 
-                    <p>
+                    <p id="vision">
                         <b class="text-uppercase">We dream,</b> to be better.<br />
                         <b class="text-uppercase">We work,</b> to reach our dreams.<br />
                         <b class="text-uppercase">We share,</b> to keep on dreaming together. <br />
@@ -185,30 +182,30 @@
                     <br />
                     <h2>Values</h2>
                     <div class="row">
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                            <a href="#" data-toggle="modal" data-target="#youandi_speech">
-                                <img src="img/values/youmewe.jpg" class="img-rounded-50 margin-10" style="width:50px; border: white solid 1px;" />
-                                <span class=" strong">
-                                                        YOU + US = The Big "WE"
-                                                    </span>
-                            </a><br />
-                            <a href="#" data-toggle="modal" data-target="#liberte_speech">
+                       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 col-exsm-12">
+                            <a href="#" data-toggle="modal" data-target="#youandi_speech" class="values">
+                                <img src="img/values/youmewe.jpg" class="img-rounded-50 margin-10 " style="width:50px; border: white solid 1px;" />
+                                <span style="margin-top: 25px;">
+                                    YOU + US = The Big "WE"
+                                </span>
+                             </a>
+                            <br>
+                            <a href="#" data-toggle="modal" data-target="#liberte_speech" class="values">
                                 <img src="img/values/liberte.jpg" class="img-rounded-50 margin-10" style="width:50px; border: white solid 1px;" />
-                                <span class=" strong">Liberté, Egalité, Fraternité</span>
+                                <span style="margin-top:10px">Liberté, Egalité, Fraternité</span>
                             </a>
                         </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                            <a href="#" data-toggle="modal" data-target="#value_creation">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 col-exsm-12">
+                            <a href="#" data-toggle="modal" data-target="#value_creation" class="values">
                                 <img src="img/values/valueCreation.jpg" class="img-rounded-50 margin-10" style="width:50px; border: white solid 1px;" />
-                                <span class=" strong">Value Creation</span>
+                                <span>Value Creation</span>
                             </a><br />
-                            <a href="#" data-toggle="modal" data-target="#transparency">
+                            <a href="#" data-toggle="modal" data-target="#transparency" class="values">
                                 <img src="img/values/transparency.gif" class="img-rounded-50 margin-10" style="width:50px; border: white solid 1px;" />
-                                <span class="strong">Transparency</span>
+                                <span>Transparency</span>
                             </a>
                         </div>
-
-                      
+                     
                     </div>
                     <br />
                     <h2>Join Us</h2>
@@ -217,11 +214,11 @@
                     </p>
                     <br />
                     <h2>Follow us</h2>
-                    <div class="clearfix">
-                        <div class="pull-left img-rounded-50 background-primary-color text-center" style="padding:10px;width:50px;margin:5px 5px 5px 0px;" >
+                    <div id="follow" class="clearfix">
+                        <div class="pull-left img-rounded-50 background-primary-color text-center redes" style="padding:10px;width:50px;margin:5px 5px 5px 0px;" >
                             <a href="https://www.linkedin.com/company/synchronit-gmbh/" class="tex"><i class="fa fa-2x fa-linkedin"></i></a>
                         </div>
-                        <div  class="pull-left img-rounded-50 background-primary-color text-center" style="padding:10px;width:50px;margin:5px;" >
+                        <!--<div  class="pull-left img-rounded-50 background-primary-color text-center" style="padding:10px;width:50px;margin:5px;" >
                             <a href="https://www.linkedin.com/company/synchronit-gmbh/" class="tex"><i class="fa fa-2x fa-twitter"></i></a>
                         </div>
                         <!--<div  class="pull-left img-rounded-50 background-primary-color text-center" style="padding:10px;width:50px;margin:5px;" >
@@ -254,10 +251,13 @@
     </section>
      <section id="team-section" class="background-secondary-color">
             <div class="container">
-                <h2 class="section-heading text-center" style="color:white">Our Team</h2>
-                <hr style="border-color: white">
+                
                 <div class="row">
-                 
+                    <div class="col-lg-12">
+                        <h2 class="section-heading text-center" style="color:white">Our Team</h2>
+                        <hr style="border-color: white">
+                    </div>
+                    
                     <!--<div class="col-lg-3 col-md-4  col-sm-4 col-xs-6 team-item">
                         <div class="ch-item ch-img-alvaro">
                             <div class="ch-info-wrap">
@@ -492,13 +492,7 @@
                     
                 </div>
             </div>
-        </section>
-
-
-
-
-
-    
+    </section>
 
     <section id="contact" class="bg-darkblue">
         <div class="container">
@@ -653,9 +647,9 @@
                 <form id="contact-form" class="container">
                 <div class="panel panel-creative-blue">
                     <div class="panel-heading">
-                        <h3 style="padding-left:30px"><i class="fa  fa-2x fa-envelope wow bounceIn"></i>&nbsp;&nbsp;To: <a class="text-white" href="mailto:contact@synchronit.com">contact@synchronit.com</a></h3>
+                        <h3 class="text-center"><i class="fa  fa-2x fa-envelope wow bounceIn"></i>&nbsp;&nbsp;To: <a class="text-white" href="mailto:contact@synchronit.com">contact@synchronit.com</a></h3>
                     </div>
-                    <div class="panel-body" style="padding: 20px 40px">
+                    <div class="panel-body" style="padding: 20px 100px">
                         <div id="send-message" style="display:none">
                             <h2 class="text-second"></h2></div>
                         <input id="answer-token" name="answer-response" type="hidden" value="">
@@ -680,40 +674,40 @@
                             <label>Security question</label>
                             <input id="answer" name="answer" type="text" class="form-control" placeholder="" required />
                         </div>
-
+                        <div class="text-center">
                         <input id="contact-btn" type="button" value="Send Message" class="btn btn-lg btn-primary " />
-
+                        </div>
                     </div>
                 </div>
             </form>
             </div>
-    <section id="stuff" style="background-color:#202c40;">
+    <section id="stuff" style="background-color:#202c40;" visible="false">
         <h2 class="text-center text-white"  >Other Stuff</h2>
         <hr style="border-color:white"  />
         <div class="container">
             <div class="row">
-                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-center">
-                    <i class="fa fa-4x fa-file-pdf-o wow bounceIn text-aqua bg-darkblue img-rounded-50" style="padding:20px;width:100px"  data-wow-delay=".1s"></i>
-                    <h6><a class="text-capitalize fa-2x  text-white" href="resources.html">Resources</a></h6>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <div class="text-center pull-right" style="margin-right:50px;">
+                        <i class="fa fa-4x fa-file-pdf-o wow bounceIn text-aqua bg-darkblue img-rounded-50" style="padding:20px;width:100px"  data-wow-delay=".1s"></i>
+                         <h6><a class="text-capitalize fa-2x  text-white" href="resources.html">Resources</a></h6>
+                    </div>               
                 </div>
-                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-center ">
+               <!-- <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-center ">
                     <i class="fa fa-4x fa-graduation-cap wow bounceIn text-aqua bg-darkblue img-rounded-50" style="padding:20px;width:110px" data-wow-delay=".1s"></i>
                     <h6><a class="text-capitalize fa-2x text-white" href="resources.html">Courses</a></h6>
+                </div>-->
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 ">
+                    <div class="text-center pull-left" style="margin-left:50px;">
+                        <i class="fa fa-4x fa-github wow bounceIn text-aqua bg-darkblue img-rounded-50" style="padding:20px;width:100px" data-wow-delay=".1s"></i>
+                        <h6><a class="text-capitalize fa-2x  text-white" href="https://github.com/synchronit/">Lab</a></h6>
+                    </div>              
                 </div>
-                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-center ">
-                    <i class="fa fa-4x fa-github wow bounceIn text-aqua bg-darkblue img-rounded-50" style="padding:20px;width:100px" data-wow-delay=".1s"></i>
-                    <h6><a class="text-capitalize fa-2x  text-white" href="resources.html">Lab</a></h6>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-center">
+                <!--<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 text-center">
                     <i class="fa fa-4x fa-wrench wow bounceIn text-aqua bg-darkblue img-rounded-50" style="padding:20px;width:100px" data-wow-delay=".1s"></i>
                     <h6><a class="text-capitalize fa-2x  text-white" href="resources.html">Tools</a></h6>
-                </div>
+                </div>-->
             </div>
         </div>
-
-
-
-
     </section>
 
     <div id="modals-values" class="disabled">
@@ -722,9 +716,11 @@
                 <div id="youandi_dialog" class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h2 class="modal-title">You+Me=the big "WE"</h2>
+                        <img src="img/nuevas/davinci.png" width="100px">
                     </div>
                     <div class="modal-body">
+                        <h2 class="modal-title">You+Me=the big "WE"</h2>
+                        <hr>
                         <p>The first pre-requisite for a successful project, is to build up a team. And this is not a one-time process. It is a permanent activity.</p>
                         <p>When we are talking about applied-intelligence, we need to consider each human being as a whole. Creativity can only be released to its full-potential, once the whole person can focus on the right issues. </p>
                         <p>People build teams in order to overcome individual limitations (as Peter Drucker used to say) therefore it is important to constantly learn, collaborate, increase common knowledge and achieve an identification with team goals that
@@ -742,9 +738,11 @@
                 <div id="liberte_dialog" class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h2 class="modal-title">Liberté, Egalité, Fraternité</h2>
+                         <img src="img/nuevas/libertad.png" width="100px">
                     </div>
                     <div class="modal-body">
+                        <h2 class="modal-title">Liberté, Egalité, Fraternité</h2>
+                          <hr>
                         <p>After more than 200 years of the French revolution that influenced so many democracies, the fundamental values that inspired it are still to be reaffirmed every day. Universal opportunity is a concept and a practice that we adhere
                             to.
                         </p>
@@ -764,9 +762,11 @@
                 <div id="value_dialog" class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h2 class="modal-title">Value Creation</h2>
+                        <img src="img/nuevas/value-creation.png" width="100px">
                     </div>
                     <div class="modal-body">
+                        <h2 class="modal-title">Value Creation</h2>
+                          <hr>
                         <p>We believe, that sharing your work with others for the creation of value means that you benefit from their work, as well as they benefit from yours.</p>
                         <p>We believe, that sharing this value is not a mathematical equation and that "the whole is more than the sum of the parts".</p>
                         <p>We believe, that proper value creation should enable a relaxed life for all members, whilst ensuring company's existence.</p>
@@ -785,11 +785,11 @@
                 <div id="transparency_dialog" class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h2 class="modal-title">Transparency</h2>
+                        <img src="img/nuevas/transparencia.png" width="100px">
                     </div>
                     <div class="modal-body clearfix">
-
-
+                        <h2 class="modal-title">Transparency</h2>
+                          <hr>
                         <p>Transparency is one of the best solutions against corruption.</p>
                         <p>And we do not mean just political or economic. We believe in value creation and fair compensation.</p>
                         <p>This is not a romantic or utopic position. It helps and forces us to focus in the creation of real value at every single moment and not just to serve tribute to past glories.</p>
@@ -806,15 +806,16 @@
         <div id="alvaro_modal" class="modal fade" tabindex="-1" role="dialog">
             <div class="modal-dialog  modal-lg">
                 <div id="alvaro_dialog" class="modal-content">
-                    <div class="modal-header">
+                    <div class="modal-header text-center">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h2 class="modal-title">Alvaro Castroman</h2>
+                        <img src="img/team/nuevas/alvaro-color.png" width="200px">
                     </div>
                     <div class="modal-body clearfix">
+                    <h2 class="modal-title">Alvaro Castroman</h2>     
+                      <hr>  
+                        <blockquote><i>Life is sailing… windsurf shows how to flow with it.</i></blockquote>
 
-                        <blockquote class="blockquote-reverse"><i>Life is sailing… windsurf shows how to flow with it.</i></blockquote>
-
-                        <p>After finishing a SW Engineering diploma at the "Universidad de la República" (UDELAR) of Uruguay, performing other studies in the University of Helsinski and working in some other SW companies, Alvaro joined a crazy group of entrepreneurs
+                        <p >After finishing a SW Engineering diploma at the "Universidad de la República" (UDELAR) of Uruguay, performing other studies in the University of Helsinski and working in some other SW companies, Alvaro joined a crazy group of entrepreneurs
                             trying to produce a web-based Open Office, the so-called "OWO" (Open Web Office) in the year 2004.</p>
                         <p>The experience lasted almost one year, costed about € 50-60K and resulted in a 2004 style-like version using RemoteScripting (AJAX was starting to use the undocumented feature of XML-RPC) and set the basis for a future project
                             in Germany.</p>
@@ -833,11 +834,12 @@
                 <div id="ana_dialog" class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h2 class="modal-title">Ana Miraldo</h2>
+                       <img src="img/team/nuevas/ana-color.png" width="200px">
                     </div>
                     <div class="modal-body clearfix">
-
-                        <blockquote class="blockquote-reverse"><i>Life is ... finding the right balance between family, work, children, fun, partner, oneself and everything, including relax, of course.</i></blockquote>
+                         <h2 class="modal-title">Ana Miraldo</h2>
+                           <hr>
+                        <blockquote ><i>Life is ... finding the right balance between family, work, children, fun, partner, oneself and everything, including relax, of course.</i></blockquote>
 
                         <p>After obtaining her Programmer Analyst diploma in 2003 at Universidad ORT, Ana started working for large public organizations in Uruguay, in different IT positions and finally, as auditor.</p>
                         <p>Later she moved to France and joined this team to apply her abilities and her determination to software testing. </p>
@@ -853,14 +855,14 @@
                 <div id="fernando_dialog" class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h2 class="modal-title">Fernando Guigou</h2>
+                        <img src="img/team/nuevas/fernando-color.png" width="200px">
                     </div>
                     <div class="modal-body clearfix">
-
-                        <blockquote class="blockquote-reverse"><i>Life is not always fair. But it usually gives another chance.</i></blockquote>
-                        <blockquote class="blockquote-reverse"><i>Life is (as my father used to say) … a Tango, and you better know how to dance it.</i></blockquote>
-                        <blockquote class="blockquote-reverse"><i>Life is just worth living it. To live is to experience. And to experience is to learn.</i></blockquote>
-                        <blockquote class="blockquote-reverse"><i>Life is a paradise that we do not always see.</i></blockquote>
+                            <h2 class="modal-title">Fernando Guigou</h2>  <hr>
+                        <blockquote ><i>Life is not always fair. But it usually gives another chance.</i></blockquote>
+                        <blockquote ><i>Life is (as my father used to say) … a Tango, and you better know how to dance it.</i></blockquote>
+                        <blockquote ><i>Life is just worth living it. To live is to experience. And to experience is to learn.</i></blockquote>
+                        <blockquote ><i>Life is a paradise that we do not always see.</i></blockquote>
                         <p>After studying IT, Psychology, selling eggs, chickens, newspapers and magazines, Fernando enjoyed 10 unforgettable years working in the IT Department (DPI) of the University Hospital of Uruguay.</p>
                         <p>Some initiatives and the continuous search of the ideal place to live brought him (in different IT roles but always doing "hands-on" development), from Uruguay to Argentina, then to Germany, now to Switzerland and maybe tomorrow
                             to Brazil … "Ojalá!" -he says, in spanish-. </p>
@@ -876,11 +878,11 @@
                 <div id="brian_dialog" class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h2 class="modal-title">Brian Tobler</h2>
+                        <img src="img/team/nuevas/brian-color.png" width="200px">
                     </div>
                     <div class="modal-body clearfix">
-
-                        <blockquote class="blockquote-reverse"><i>Life is Hakuna Matata, stop worrying about it and start dealing with it</i></blockquote>
+                            <h2 class="modal-title">Brian Tobler</h2>  <hr>
+                        <blockquote ><i>Life is Hakuna Matata, stop worrying about it and start dealing with it</i></blockquote>
                         <p>Since little I loved the IT world and it's capacity to amaze me every single day since then</p>
                         <p>In the previous years I had the luck to work with a lot of different talented people in different parts of the world (USA, ASIA, Europe, Latin America, etc), this invaluable experience helped me to adquire a set of skills, from
                             dealing with technical issues like coding, networking, and team/technical management to more natural areas like the development of interpersonal, negotiation, and mediation skills.</p>
@@ -899,11 +901,11 @@
                 <div id="dan_dialog" class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h2 class="modal-title">Dan Blanco</h2>
+                        <img src="img/team/nuevas/dan-color.png" width="200px">
                     </div>
                     <div class="modal-body clearfix">
-
-                        <blockquote class="blockquote-reverse"><i>Life is like photography. Focus is an ingredient to have a good shot.</i></blockquote>
+                          <h2 class="modal-title">Dan Blanco</h2>  <hr>
+                        <blockquote ><i>Life is like photography. Focus is an ingredient to have a good shot.</i></blockquote>
                         <p>Dan is currently studying System Engineering at the ORT University, his first IT job was as a quality assurance tester where he learned about the life cycle of software applications. After a while testing applications, he was looking
                             forward to be a part of a development team, so he changed his job in a new company where he managed to improve his skills in software development. Finally Dan came to Synchronit looking for new challenges and enhance his developer
                             skills and knowledge. </p>
@@ -920,11 +922,11 @@
                 <div id="federico_dialog" class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h2 class="modal-title">Federico Becaria</h2>
+                       <img src="img/team/nuevas/federico-color.png" width="200px">
                     </div>
                     <div class="modal-body clearfix">
-
-                        <blockquote class="blockquote-reverse"><i>Life is like a box of chocolates. You never know what you're gonna get.</i></blockquote>
+                         <h2 class="modal-title">Federico Becaria</h2>  <hr>
+                        <blockquote ><i>Life is like a box of chocolates. You never know what you're gonna get.</i></blockquote>
                         <p>After getting his Software Engineering diploma at the "Universidad de la República" (UDELAR) of Uruguay, Federico worked in a variety of projects for different companies. Among others, he has experience with bank systems, management
                             systems for state-owned companies, and credit card management systems. Thanks to some of those projects, he had the chance to travel and work in countries such as Mexico, Spain and Germany. </p>
                         <p>This diversity of projects is the consequence of his constant search for “his place” in the computer world which has led him to work with a lot of interesting people and with different languages and technologies.</p>
@@ -944,11 +946,11 @@
                 <div id="jonatan_dialog" class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h2 class="modal-title">Jonatan Aguirre</h2>
+                        <img src="img/team/nuevas/jonatan-color.png" width="200px">
                     </div>
                     <div class="modal-body clearfix">
-
-                        <blockquote class="blockquote-reverse"><i>Life is like the wind, constantly changing, with soft breezes and strong storms.</i></blockquote>
+                             <h2 class="modal-title">Jonatan Aguirre</h2>  <hr>
+                        <blockquote ><i>Life is like the wind, constantly changing, with soft breezes and strong storms.</i></blockquote>
                         <p>After taking the decision that would mark the rest of my life, I started my studies in SW Engineering at the "Universidad de la República" (UDELAR) of Uruguay. I am currently studying the last year of the career.</p>
                         <p>I worked at another software company for 2 years and finally I started to work with this amazing group of people at the beginning of 2012. </p>
                     </div>
@@ -963,11 +965,11 @@
                 <div id="leandro_dialog" class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h2 class="modal-title">Leandro Leites</h2>
+                        <img src="img/team/nuevas/leandro-color.png" width="200px">
                     </div>
                     <div class="modal-body clearfix">
-
-                        <blockquote class="blockquote-reverse"><i>Life is learning … if you are not learning, you are dead.</i></blockquote>
+                           <h2 class="modal-title">Leandro Leites</h2>  <hr>
+                        <blockquote ><i>Life is learning … if you are not learning, you are dead.</i></blockquote>
                         <p>After one year and a half of SW Engineering studies, he left the career telling everyone he will not write software again in his entire life.</p>
                         <p>Four years and an Analyst in Economics diploma later, Leandro starts developing software by its own to automate process and reports in one of the biggest financial companies of Uruguay.</p>
                         <p>Later he works in two software companies to improve his software developer skills, both companies leaders in their respective industry in US, automotive and e-learning.</p>
@@ -985,11 +987,11 @@
                 <div id="lucia_dialog" class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h2 class="modal-title">Lucia Marroig </h2>
+                        <img src="img/team/nuevas/lucia-color.png" width="200px">
                     </div>
                     <div class="modal-body clearfix">
-
-                        <blockquote class="blockquote-reverse"><i>Life is problems. Living is solving problems.</i></blockquote>
+                             <h2 class="modal-title">Lucia Marroig </h2>  <hr>
+                        <blockquote ><i>Life is problems. Living is solving problems.</i></blockquote>
                         <p>A great passion for technology and the desire to understand and participate actively in the application of the latest trends to solve real life problems, made up Lucia's mind to study Software Engineering. </p>
                         <p>While conducting her studies, at early stages of her career, she began to develop for a Uruguayan software company, serving daily thousands of users in over twenty countries. There, she managed to earn experience, learn new technologies
                             and contribute with her own ideas to improve and maintain the product. </p>
@@ -1007,11 +1009,11 @@
                 <div id="marcos_dialog" class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h2 class="modal-title">Marcos Perez</h2>
+                        <img src="img/team/nuevas/marcos-color.png" width="200px">
                     </div>
                     <div class="modal-body clearfix">
-
-                        <blockquote class="blockquote-reverse"><i>Life is like a aurora borealis … It’s extremely short and extremely beautiful.</i></blockquote>
+                            <h2 class="modal-title">Marcos Perez</h2>  <hr>
+                        <blockquote ><i>Life is like a aurora borealis … It’s extremely short and extremely beautiful.</i></blockquote>
 
                         <p>Since the beginning I always loved to solve problems creating systems, learning, etc. Always trying to create something to make things easier or better. On high school I finally I had Internet 24x7 :) and then I started to learn
                             about hardware and PC repair and since then I continued with programming from where I continue to explore and discover new things with every line I put in a code.</p>
@@ -1030,11 +1032,11 @@
                 <div id="marina_dialog" class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h2 class="modal-title">Marina Acosta </h2>
+                        <img src="img/team/nuevas/marina-color.png" width="200px">
                     </div>
                     <div class="modal-body clearfix">
-
-                        <blockquote class="blockquote-reverse"><i>Life is what you imagine, what you do and what you feel, so dream, work and enjoy it.</i></blockquote>
+                             <h2 class="modal-title">Marina Acosta </h2>  <hr>
+                        <blockquote ><i>Life is what you imagine, what you do and what you feel, so dream, work and enjoy it.</i></blockquote>
                         <p>When the time of choosing a career came, Marina had a variety of options she would like to select. After many talks with her parents, friends, teachers, and basically everyone in her way, the decision was taken: Software Engineering.
                         </p>
                         <p>During her years as a student, she had passed through some ups and downs about her choise, until one day she found herself working in the construction of a school software in a very passionated way, having the desire of finding
@@ -1053,11 +1055,11 @@
                 <div id="martin_dialog" class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h2 class="modal-title">Martin Reyes  </h2>
+                        <img src="img/team/nuevas/martin-color.png" width="200px">
                     </div>
                     <div class="modal-body clearfix">
-
-                        <blockquote class="blockquote-reverse"><i>Life is like gambling, it's not like you'll win every game, but as long as you have a chip in your hand it's not over yet…</i></blockquote>
+                          <h2 class="modal-title">Martin Reyes  </h2>  <hr>
+                        <blockquote ><i>Life is like gambling, it's not like you'll win every game, but as long as you have a chip in your hand it's not over yet…</i></blockquote>
                         <p>After moving alone to another city at the age of 17, which was an enriching experience, Martin started his studies in SW Engineering at the "Universidad de la República" (UDELAR) of Uruguay.
                         </p>
                         <p>He started his career in Genexus Consulting as a SQA, and despite having a great year there, he realized that Quality Assurance was not what he really wanted to do and that he needed a change of scenery.</p>
@@ -1070,34 +1072,17 @@
             </div>
 
         </div>
-        <div id="pablo_modal" class="modal fade" tabindex="-1" role="dialog">
-            <div class="modal-dialog  modal-lg">
-                <div id="pablo_dialog" class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h2 class="modal-title">Pablo Palmer </h2>
-                    </div>
-                    <div class="modal-body clearfix">
-
-                        <blockquote class="blockquote-reverse"><i>Life is about everything.</i></blockquote>
-
-                    </div>
-
-                </div>
-                <!-- /.modal-content -->
-            </div>
-
-        </div>
+       
         <div id="jorge_modal" class="modal fade" tabindex="-1" role="dialog">
             <div class="modal-dialog  modal-lg">
                 <div id="jorge_dialog" class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h2 class="modal-title">Jorge Vega </h2>
+                        <img src="img/team/nuevas/jorge-color.png" width="200px">
                     </div>
                     <div class="modal-body clearfix">
-
-                        <blockquote class="blockquote-reverse"><i>Life is a time journey. Don't loose to much and enjoy it!!!.</i></blockquote>
+                           <h2 class="modal-title">Jorge Vega </h2>  <hr>
+                        <blockquote ><i>Life is a time journey. Don't loose to much and enjoy it!!!.</i></blockquote>
                         <p>For over seven years he has served in various roles in the software development process primarily as a leader, architect and developer. He has been active in computerization projects and enterprise architecture like SOA, BPM and
                             BI systems. Their greater experience as a developer is in .Net technologies such as Asp.Net MVC, Microsoft SharePoint Server, WCF and WPF</p>
                         <p> He is interested in agile lean software development process, TDD, leadership and psychology, as well as agile methodologies and best practices of software development.</p>
@@ -1116,21 +1101,20 @@
                 <div id="ramon_dialog" class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h2 class="modal-title">Ramón González </h2>
+                      <img src="img/team/nuevas/ramon-color.png" width="200px">
                     </div>
                     <div class="modal-body clearfix">
-
-                        <blockquote class="blockquote-reverse">
-                            <i>“Your work is going to fill a large part of your life, and the only way to be truly satisfied is to do what you believe is great work. And the only way to do great work is to love what you do.”</i><br><br>
+                          <h2 class="modal-title">Ramón González </h2>  <hr>
+                        <blockquote >
                             <i>
-“You can't connect the dots looking forward; you can only connect them looking backwards. So you have to trust that the dots will somehow connect in your future.” </i>
+                            “You can't connect the dots looking forward; you can only connect them looking backwards. So you have to trust that the dots will somehow connect in your future.” </i>
 
-<br><br><b>Steve Jobs</b><br>
+                            <b>&nbsp;Steve Jobs</b><br>
 
-</blockquote>
-<p class="text-justify">Graduated in the Computer Science University (UCI) in Havana, 2008, has been working on software development since. Ramon has been enrolled in a ERP solution for Nickel Industry in Cuba as programmer in .NET technology and since 2010 is been working as a freelance developer with clients in Cuba and abroad. </p><p class="text-justify">
-He is interested in learn and share as much as possible from teamwork mates, as well as personal and professional growth by learning new things and becoming a better person each day.
-</p>
+                            </blockquote>
+                            <p class="text-justify">Graduated in the Computer Science University (UCI) in Havana, 2008, has been working on software development since. Ramon has been enrolled in a ERP solution for Nickel Industry in Cuba as programmer in .NET technology and since 2010 is been working as a freelance developer with clients in Cuba and abroad. </p><p class="text-justify">
+                            He is interested in learn and share as much as possible from teamwork mates, as well as personal and professional growth by learning new things and becoming a better person each day.
+                            </p>
 
 
                         <p></p>

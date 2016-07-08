@@ -90,7 +90,7 @@ $.extend({
                         return 0;
                     });
 
-                    var panelBlock = '<div class="col-lg-3 col-md-4  col-sm-4 col-xs-6 team-item" style="opacity: 1;">';
+                    var panelBlock = '<div class="col-lg-3 col-md-4  col-sm-4 col-xs-6 col-exsm-12 team-item" style="opacity: 1;">';
                     var closedDiv = '</div>'
                     for (var i = 0; i < rows.length; i++) {
 
