@@ -70,7 +70,7 @@ $.extend({
         self.getTeamMembers = function() {
             $.ajax({
                 type: 'GET',
-                url: 'http://dev.synchronit.com/appbase-webconsole/json',
+                url: 'http://prod.synchronit.com/appbase-webconsole/json',
                 cache: false,
                 data: {
                     command: ' GET PEOPLE with  isActive = true'
