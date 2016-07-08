@@ -131,17 +131,12 @@ aside {
     .navbar-default .navbar-header .navbar-brand {
         color: rgba(255, 255, 255, .7);
     }
-    .navbar-default .navbar-header .navbar-brand:hover,
-    .navbar-default .navbar-header .navbar-brand:focus {
-        color: #fff;
+    
+    .navbar-default .nav > li>a:hover{
+        color: #EBA12C;
     }
-    .navbar-default .nav > li>a,
-    .navbar-default .nav>li>a:focus {
-        color: rgba(255, 255, 255, .9);
-    }
-    .navbar-default .nav > li>a:hover,
-    .navbar-default .nav>li>a:focus:hover {
-        color: #fff;
+    .navbar-default .nav > li>a{
+        color: black;
     }
     .navbar-default.affix {
         border-color: rgba(34, 34, 34, .05);

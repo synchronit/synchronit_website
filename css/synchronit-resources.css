@@ -33,24 +33,27 @@
 }
 
 .navbar-brand {
-    background-size: cover !important;
-    width: 180px !important;
-    height: 50px;
+    background-position: 5px 5px !important;
+    width: 150px !important;
+    background-size: 141px 40px !important;
+   
 }
-
 .navbar-default .navbar-brand {
-    background: url(../img/blue-inverse.png) no-repeat;
+    background: url(../img/nuevas/logo_negro.png) no-repeat;
 }
 
-.navbar-inverse .navbar-brand,
-.navbar-default.affix .navbar-brand {
-    background: url(../img/blue-inverse.png) no-repeat;
-}
-
-@media (max-width: 767px) {
-    .navbar-default .navbar-brand {
-        background: url(../img/blue-inverse.png) no-repeat;
+@media (min-width: 768px) {
+    .navbar-brand{
+        width: 180px !important;
+       background-size: 174px 50px !important;
+       height: 70px;
     }
+    .navbar-default.affix-top .navbar-brand {
+    background: url(../img/nuevas/logo_negro.png) no-repeat;
+ 
+}
+    .navbar-default.affix .navbar-brand{
+    background: url(../img/nuevas/logo_negro.png) no-repeat;
 }
 
 .img-rounded-50 {
