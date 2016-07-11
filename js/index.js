@@ -80,8 +80,8 @@ $.extend({
                 success: function(result) {
                     var headers = result.resultSet.headers;
                     var rows = result.resultSet.rows.sort(function(itemA, itemB) {
-                        let nameA = itemA[0] + ' ' + itemA[1];
-                        let nameB = itemB[0] + ' ' + itemB[1];
+                        var nameA = itemA[0] + ' ' + itemA[1];
+                        var nameB = itemB[0] + ' ' + itemB[1];
 
                         if (nameA > nameB)
                             return 1;
@@ -102,7 +102,7 @@ $.extend({
                         var infoFront = '<div class="ch-info-front"></div>'
                         var infoBack = '<div class="ch-info-back">'
                         var backUpLine = '<h3>' + rows[i][0] + ' ' + rows[i][1] + '</h3>';
-                        let titleFormated = rows[i][3].toString().replaceAll(',', '</br>')
+                        var titleFormated = rows[i][3].toString().replaceAll(',', '</br>')
                         var backDownLine = '<p>' + titleFormated + '</p>';
                         infoBack += backUpLine + backDownLine + closedDiv
                         info += infoFront + infoBack + closedDiv;
