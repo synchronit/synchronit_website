@@ -19,7 +19,7 @@ $.extend({
                     type: 'POST',
                     url: 'contact.php',
                     cache: false,
-                    data: $('#contact-form').serialize(),
+                    data: $('form#contact-form').serialize(),
                     dataType: 'json',
                     success: function(result) {
                         cleanFields();
