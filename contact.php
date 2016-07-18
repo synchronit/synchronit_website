@@ -31,7 +31,11 @@ if($userAnswerToken != $answerResponse)
     $answer 			= $number1 + $number2;
     $capt_token 		= hash_hmac("sha1", $answer, $capt_secret);
     $captcha_question	= $number1 . " + " . $number2 . " = ?";
-    $errorResponseArray = Array('success'=> false, 'message' => '<p class="gdh_qc_warn">' . 'Wron answer' . '</p>', 'token'=> $capt_token, 'question' => $captcha_question);
+    $errorResponseArray = Array('success'=> false, 
+    'message' => '<p class="gdh_qc_warn">' . 'Wron answer' . '</p>', 
+    'token'=> $capt_token, 
+    'question' => $captcha_question,
+    'answer' => userAnswer);
     echo json_encode($errorResponseArray);
     exit;
 }
