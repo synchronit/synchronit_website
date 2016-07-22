@@ -2,7 +2,7 @@ $.extend({
     indexView: new function() {
         var self = this;
         var smController = new ScrollMagic.Controller();
-        var appBaseUrl = "http://prod.synchronit.com/appbase-webconsole/json";
+        var appBaseUrl = "http://dev.synchronit.com/appbase-webconsole/json";
 
         self.initialize = function() {
             attachBehavior();
@@ -95,12 +95,13 @@ $.extend({
                     var closedDiv = '</div>'
                     for (var i = 0; i < rows.length; i++) {
 
-                        var block = '<div class="ch-item ch-img-' + rows[i][5] + '" ><div class="ch-info-wrap">';
+                        var block = '<div class="ch-item ch-img-' + rows[i][7] + '" ><div class="ch-info-wrap">';
 
-                        var aLink = '<a href="#" data-toggle="modal" data-target="#' + rows[i][5] + '_modal">';
+                        var aLink = '<a href="#" data-toggle="modal" data-target="#' + rows[i][7] + '_modal">';
                         var info = '<div class="ch-info">';
                         var infoFront = '<div class="ch-info-front"></div>'
                         var infoBack = '<div class="ch-info-back">'
+                        var name = rows[i][0] + ' ' + rows[i][1];
                         var backUpLine = '<h3>' + rows[i][0] + ' ' + rows[i][1] + '</h3>';
                         var titleFormated = rows[i][3].toString().replaceAll(',', '</br>')
                         var backDownLine = '<p>' + titleFormated + '</p>';
@@ -110,6 +111,8 @@ $.extend({
                         block += aLink + info + '</a>' + closedDiv + closedDiv;
                         var element = panelBlock + block + closedDiv;
                         $('.row', '#team-section ').append(element);
+                        var itemDialog = createModal(rows[i][5], rows[i][6], name, rows[i][7]);
+                        $('#modals-values').append(itemDialog);
                     }
 
                     var tween = TweenMax.staggerFrom(".team-item", 0.8, {
@@ -122,6 +125,27 @@ $.extend({
                     }).setTween(tween).addTo(smController);
                 }
             });
+        }
+
+        function createModal(modalPicture, modalText, peopleName, invariant) {
+
+            var closedDiv = '</div>'
+            var dialog = '<div id="' + invariant + '_modal" class="modal fade" tabindex="-1" role="dialog">';
+            var modal = '<div class="modal-dialog  modal-lg">';
+            var modalContentDialog = '<div id="' + invariant + '_dialog" class="modal-content">';
+            var modalHeader = '<div class="modal-header text-center">';
+            var headerBtn = '<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>';
+            var imgHeader = '<img src="' + modalPicture + '" width="200px">';
+            var modalBodyBox = '<div class="modal-body clearfix">';
+            var bodyTitle = '<h2 class="modal-title">' + peopleName + '</h2><hr>';
+
+            modalBodyBox += bodyTitle + modalText + closedDiv;
+            modalHeader += headerBtn + imgHeader + closedDiv;
+            modalContentDialog += modalHeader + modalBodyBox + closedDiv;
+            modal += modalContentDialog + closedDiv;
+            dialog += modal + closedDiv;
+
+            return dialog;
         }
 
         self.showMessage = function(message) {
