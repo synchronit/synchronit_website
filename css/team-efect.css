@@ -1,5 +1,4 @@
 .team-item > div {
-
     background-position: center;
     background-size: cover;
     border-radius: 50%;
@@ -9,12 +8,11 @@
     margin: 10px auto;
 }
 
-@media (max-width:490px){
- .col-exsm-12{
-    width: 100% !important;
- }
+@media (max-width:490px) {
+    .col-exsm-12 {
+        width: 100% !important;
+    }
 }
-
 
 .ch-item {
     width: 100%;
@@ -24,6 +22,13 @@
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.7);
     cursor: default;
     padding: 3%;
+}
+
+.ch-item > img {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
 }
 
 .ch-info-wrap {
@@ -155,7 +160,7 @@
     background-image: url(../img/team/nuevas/fede.png);
 }
 
-.ch-img-daniel{
+.ch-img-daniel {
     background-image: url(../img/team/nuevas/daniel.png);
 }
 

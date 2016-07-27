@@ -95,8 +95,10 @@ $.extend({
                     var closedDiv = '</div>'
                     for (var i = 0; i < rows.length; i++) {
 
-                        var block = '<div class="ch-item ch-img-' + rows[i][7] + '" ><div class="ch-info-wrap">';
+                        var block = '<div class="ch-item ">';
+                        var image = '<img src="' + rows[i][4] + '" />'
 
+                        var blockA = '<div class="ch-info-wrap">';
                         var aLink = '<a href="#" data-toggle="modal" data-target="#' + rows[i][7] + '_modal">';
                         var info = '<div class="ch-info">';
                         var infoFront = '<div class="ch-info-front"></div>'
@@ -108,7 +110,7 @@ $.extend({
                         infoBack += backUpLine + backDownLine + closedDiv
                         info += infoFront + infoBack + closedDiv;
 
-                        block += aLink + info + '</a>' + closedDiv + closedDiv;
+                        block += image + blockA + aLink + info + '</a>' + closedDiv + closedDiv;
                         var element = panelBlock + block + closedDiv;
                         $('.row', '#team-section ').append(element);
                         var itemDialog = createModal(rows[i][5], rows[i][6], name, rows[i][7]);
