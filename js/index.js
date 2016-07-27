@@ -78,6 +78,9 @@ $.extend({
                 },
                 dataType: 'json',
                 success: function(result) {
+
+                    $('#loader').hide();
+
                     var headers = result.resultSet.headers;
                     var rows = result.resultSet.rows.sort(function(itemA, itemB) {
                         var nameA = itemA[0] + ' ' + itemA[1];
