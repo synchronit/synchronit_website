@@ -2,7 +2,7 @@ $.extend({
     indexView: new function() {
         var self = this;
         var smController = new ScrollMagic.Controller();
-        var appBaseUrl = "http://dev.synchronit.com/appbase-webconsole/json";
+        var appBaseUrl = "http://prod.synchronit.com/appbase-webconsole/json";
 
         self.initialize = function() {
             attachBehavior();
@@ -74,7 +74,7 @@ $.extend({
                 url: appBaseUrl,
                 cache: false,
                 data: {
-                    command: ' GET PEOPLE with  isActive = true'
+                    command: ' GET TEAM_MEMBERS with  isActive = true'
                 },
                 dataType: 'json',
                 success: function(result) {
