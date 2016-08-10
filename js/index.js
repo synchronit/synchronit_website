@@ -74,7 +74,7 @@ $.extend({
                 url: appBaseUrl,
                 cache: false,
                 data: {
-                    command: ' GET TEAM_MEMBERS with  isActive = true'
+                    command: ' GET TEAM_MEMBERS(name, lastName, email, title, pitch, invarianId, isActive) with  isActive = true'
                 },
                 dataType: 'json',
                 success: function(result) {
@@ -99,10 +99,10 @@ $.extend({
                     for (var i = 0; i < rows.length; i++) {
 
                         var block = '<div class="ch-item ">';
-                        var image = '<img class="blur" src="img/team/small/' + rows[i][7] + '.png" />'
+                        var image = '<img class="blur" src="img/team/small/' + rows[i][5] + '.png" />'
 
                         var blockA = '<div class="ch-info-wrap">';
-                        var aLink = '<a href="#" data-toggle="modal" data-target="#' + rows[i][7] + '_modal">';
+                        var aLink = '<a href="#" data-toggle="modal" data-target="#' + rows[i][5] + '_modal">';
                         var info = '<div class="ch-info">';
                         var infoFront = '<div class="ch-info-front"></div>'
                         var infoBack = '<div class="ch-info-back">'
@@ -116,7 +116,7 @@ $.extend({
                         block += image + blockA + aLink + info + '</a>' + closedDiv + closedDiv;
                         var element = panelBlock + block + closedDiv;
                         $('.row', '#team-section ').append(element);
-                        var itemDialog = createModal(rows[i][5], rows[i][6], name, rows[i][7]);
+                        var itemDialog = createModal( rows[i][4], name, rows[i][5]);
                         $('#modals-values').append(itemDialog);
                     }
 
@@ -132,7 +132,7 @@ $.extend({
             });
         }
 
-        function createModal(modalPicture, modalText, peopleName, invariant) {
+        function createModal(modalText, peopleName, invariant) {
 
             var closedDiv = '</div>'
             var dialog = '<div id="' + invariant + '_modal" class="modal fade" tabindex="-1" role="dialog">';
@@ -140,7 +140,7 @@ $.extend({
             var modalContentDialog = '<div id="' + invariant + '_dialog" class="modal-content">';
             var modalHeader = '<div class="modal-header text-center">';
             var headerBtn = '<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>';
-            var imgHeader = '<img src="' + modalPicture + '" width="200px">';
+            var imgHeader = '<img class="blur" src="img/team/small/' + invariant + '-color.png" width="200px">';
             var modalBodyBox = '<div class="modal-body clearfix">';
             var bodyTitle = '<h2 class="modal-title">' + peopleName + '</h2><hr>';
 
