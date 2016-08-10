@@ -2,7 +2,7 @@ $.extend({
     indexView: new function() {
         var self = this;
         var smController = new ScrollMagic.Controller();
-        var appBaseUrl = "http://prod.synchronit.com/appbase-webconsole/json";
+        var appBaseUrl = "http://dev.synchronit.com/appbase-webconsole/json";
 
         self.initialize = function() {
             attachBehavior();
@@ -99,7 +99,7 @@ $.extend({
                     for (var i = 0; i < rows.length; i++) {
 
                         var block = '<div class="ch-item ">';
-                        var image = '<img src="' + rows[i][4] + '" />'
+                        var image = '<img class="blur" src="img/team/small/' + rows[i][7] + '.png" />'
 
                         var blockA = '<div class="ch-info-wrap">';
                         var aLink = '<a href="#" data-toggle="modal" data-target="#' + rows[i][7] + '_modal">';

@@ -31,6 +31,11 @@
     width: 100%;
 }
 
+.blur{
+    filter: blur(2px);
+    -webkit-filter:blur(2px);
+}
+
 .ch-info-wrap {
     min-width: 100%;
     min-height: 100%;
