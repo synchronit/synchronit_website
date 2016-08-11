@@ -1,16 +1,16 @@
 $.extend({
-    indexView: new function() {
+    indexView: new function () {
         var self = this;
         var smController = new ScrollMagic.Controller();
         var appBaseUrl = "http://dev.synchronit.com/appbase-webconsole/json";
 
-        self.initialize = function() {
+        self.initialize = function () {
             attachBehavior();
         };
 
 
-        var attachBehavior = function() {
-            $('#contact-btn').bind('click', function() {
+        var attachBehavior = function () {
+            $('#contact-btn').bind('click', function () {
                 if (checkFields() == false) {
                     self.showMessage('You must fill the required fields');
                     return;
@@ -21,7 +21,7 @@ $.extend({
                     cache: false,
                     data: $('form#contact-form').serialize(),
                     dataType: 'json',
-                    success: function(result) {
+                    success: function (result) {
                         cleanFields();
                         $('#answer-token').val(result.token);
                         $('#answer').attr('placeholder', result.question);
@@ -41,34 +41,34 @@ $.extend({
 
         }
 
-        var cleanFields = function() {
+        var cleanFields = function () {
             $('input[name="from"').val('');
             $('input[name="message"').val('');
             $('#answer').val('');
         }
 
-        var checkFields = function() {
+        var checkFields = function () {
             if ($('input[name="from"').val() == null || $('input[name="message"').val() | $('#answer').val())
                 return false;
             return true;
         }
 
 
-        self.getCaptcha = function() {
+        self.getCaptcha = function () {
             $.ajax({
                 type: 'GET',
                 url: 'contact.php?get_capcha=true',
                 cache: false,
                 //data: $('#contact-form').serialize(),
                 dataType: 'json',
-                success: function(result) {
+                success: function (result) {
                     $('#answer-token').val(result.token);
                     $('#answer').attr('placeholder', result.question);
                 }
             });
         };
 
-        self.getTeamMembers = function() {
+        self.getTeamMembers = function () {
             $.ajax({
                 type: 'GET',
                 url: appBaseUrl,
@@ -77,12 +77,12 @@ $.extend({
                     command: ' GET TEAM_MEMBERS(name, lastName, email, title, pitch, invarianId, isActive) with  isActive = true'
                 },
                 dataType: 'json',
-                success: function(result) {
+                success: function (result) {
 
                     $('#loader').hide();
 
                     var headers = result.resultSet.headers;
-                    var rows = result.resultSet.rows.sort(function(itemA, itemB) {
+                    var rows = result.resultSet.rows.sort(function (itemA, itemB) {
                         var nameA = itemA[0] + ' ' + itemA[1];
                         var nameB = itemB[0] + ' ' + itemB[1];
 
@@ -99,7 +99,7 @@ $.extend({
                     for (var i = 0; i < rows.length; i++) {
 
                         var block = '<div class="ch-item ">';
-                        var image = '<img class="blur" src="img/team/small/' + rows[i][5] + '.png" />'
+                        var image = '<img id="' + rows[i][5] + '" class="blur" src="img/team/small/' + rows[i][5] + '.png" />'
 
                         var blockA = '<div class="ch-info-wrap">';
                         var aLink = '<a href="#" data-toggle="modal" data-target="#' + rows[i][5] + '_modal">';
@@ -116,8 +116,10 @@ $.extend({
                         block += image + blockA + aLink + info + '</a>' + closedDiv + closedDiv;
                         var element = panelBlock + block + closedDiv;
                         $('.row', '#team-section ').append(element);
-                        var itemDialog = createModal( rows[i][4], name, rows[i][5]);
+                        var itemDialog = createModal(rows[i][4], name, rows[i][5]);
                         $('#modals-values').append(itemDialog);
+
+                        getTeamPictures(rows[i][5]);
                     }
 
                     var tween = TweenMax.staggerFrom(".team-item", 0.8, {
@@ -140,7 +142,7 @@ $.extend({
             var modalContentDialog = '<div id="' + invariant + '_dialog" class="modal-content">';
             var modalHeader = '<div class="modal-header text-center">';
             var headerBtn = '<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>';
-            var imgHeader = '<img class="blur" src="img/team/small/' + invariant + '-color.png" width="200px">';
+            var imgHeader = '<img id="' + invariant + '-color" class="blur" src="img/team/small/' + invariant + '-color.png" width="200px">';
             var modalBodyBox = '<div class="modal-body clearfix">';
             var bodyTitle = '<h2 class="modal-title">' + peopleName + '</h2><hr>';
 
@@ -153,19 +155,38 @@ $.extend({
             return dialog;
         }
 
-        self.showMessage = function(message) {
+        var getTeamPictures = function(invariantId){
+             $.ajax({
+                type: 'GET',
+                url: appBaseUrl,
+                cache: false,
+                data: {
+                    command: ' GET TEAM_MEMBERS(picture, picture2, invarianId) with  isActive = true and invarianId = "'+ invariantId+'"'
+                },
+                dataType: 'json',
+                success: function (result) {
+                     var rows = result.resultSet.rows;
+                     if(rows.length > 0){
+                         var invariantId = rows[0][2];
+                         $('img#'+invariantId).attr('src', rows[0][0]).removeClass('blur');
+                         $('img#'+invariantId+'-color').attr('src', rows[0][1]).removeClass('blur');
+                     }
+                }});
+        }
+
+        self.showMessage = function (message) {
             var response = '<h2 class="text-second">' + message + '</h2>';
             $('#send-message').html(response);
             $('#send-message').show();
         }
 
-        var cleanFields = function() {
+        var cleanFields = function () {
             $('input[name=from]').val('');
             $('textarea[name=message]').val('');
             $('input[name=answer]').val('');
         };
 
-        var checkFields = function() {
+        var checkFields = function () {
             var fromr = $('input[name=from]').val();
             var message = $('textarea[name=message]').val();
             var answer = $('input[name=answer]').val();
@@ -176,10 +197,10 @@ $.extend({
     }
 });
 
-String.prototype.replaceAll = function(target, replacement) {
+String.prototype.replaceAll = function (target, replacement) {
     return this.split(target).join(replacement);
 };
 
-$(function() {
+$(function () {
     $.indexView.initialize();
 });
