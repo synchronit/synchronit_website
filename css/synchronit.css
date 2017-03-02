@@ -1,10 +1,15 @@
-h1 span.slogan_software, h1 span.slogan_wedo {
+h1 span.slogan_youcan {
     font-size: 1.250em !important;
     font-weight: 400 !important;
 }
 
-h1 span.slogan_wedoitagile{
-    font-size: 0.90em !important;
+h1 span.slogan_lean {
+    font-size: 1.500em !important;
+    font-weight: 500 !important;
+}
+
+h1 span.slogan_onus{
+    font-size: 1.250em !important;
      font-weight: 400 !important;
 }
 
