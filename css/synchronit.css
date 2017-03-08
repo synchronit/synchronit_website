@@ -1,17 +1,20 @@
 
 h1 span.slogan_youcan {
-    font-size: 1.250em !important;
-    font-weight: 400 !important;
+	font-family: 'Poppins', sans-serif;
+    font-size: 1.0em !important;
+	font-weight: 200 !important;
 }
 
 h1 span.slogan_lean {
-    font-size: 1.500em !important;
-    font-weight: 500 !important;
+	font-family: 'Poppins', sans-serif;
+    font-size: 1.50em !important;
+	font-weight: 500 !important;
 }
 
 h1 span.slogan_onus{
-    font-size: 1.250em !important;
-     font-weight: 400 !important;
+	font-family: 'Poppins', sans-serif;
+    font-size: 1.0em !important;
+	font-weight: 200 !important;
 }
 
 .background-primary-color {
