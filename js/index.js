@@ -48,7 +48,7 @@ $.extend({
         }
 
         var checkFields = function() {
-            if ($('input[name="from"').val() == null || $('input[name="message"').val() | $('#answer').val())
+            if ($('input[name="from"').val() == null || $('input[name="message"').val())
                 return false;
             return true;
         }
@@ -190,8 +190,7 @@ $.extend({
         var checkFields = function() {
             var fromr = $('input[name=from]').val();
             var message = $('textarea[name=message]').val();
-            var answer = $('input[name=answer]').val();
-            if (fromr == '' || message == '' || answer == '')
+            if (fromr == '' || message == '')
                 return false;
             return true;
         };
