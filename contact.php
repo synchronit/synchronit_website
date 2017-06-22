@@ -10,7 +10,7 @@ $email = $_POST['from'];
 $message = $_POST['message'];
 $subject =  $_POST['from'];
 $severIp='209.236.112.62';
-
+$severIp='mail.synchronit.com';
 
 $waitTimeoutInSeconds = 1; 
 if($fp = fsockopen($severIp,587,$errCode,$errStr,$waitTimeoutInSeconds)){   
