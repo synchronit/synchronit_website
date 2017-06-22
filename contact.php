@@ -13,7 +13,7 @@ $severIp='209.236.112.62';
 
 $mail->isSMTP();
 
-$mail->SMTPDebug = 4;// Set mailer to use SMTP
+$mail->SMTPDebug = 1;// Set mailer to use SMTP
 $mail->Host = $severIp;  // Specify main and backup server
 $mail->SMTPAuth = true;    // Enable SMTP authentication
 $mail->Username = 'contact@synchronit.com';                            // SMTP username
