@@ -22,16 +22,19 @@ $.extend({
                     data: $('form#contact-form').serialize(),
                     dataType: 'json',
                     success: function(result) {
-                        alert(result.success)
                         cleanFields();
                         $('#answer-token').val(result.token);
                         $('#answer').attr('placeholder', result.question);
 
                         if (result.success == true) {
-                            self.showMessage('You message has been send');
+                            self.showMessage("Your message has been sent");
                         } else {
-                            self.showMessage('Some problem sending your message');
+                            self.showMessage('An error occurred while sending your message');
                         }
+                    },
+                    error:function(){
+                           self.showMessage('An error occurred while sending your message');
+                        
                     }
                 });
             });
