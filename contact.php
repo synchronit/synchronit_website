@@ -12,9 +12,18 @@ $subject =  $_POST['from'];
 $severIp='209.236.112.62';
 
 
+$waitTimeoutInSeconds = 1; 
+if($fp = fsockopen($severIp,587,$errCode,$errStr,$waitTimeoutInSeconds)){   
+    echo "ping done";
+} else {
+   echo "ping error";
+} 
+fclose($fp);
+
+
 $mail->isSMTP();
 
-$mail->SMTPDebug = 1;// Set mailer to use SMTP
+$mail->SMTPDebug = 4;// Set mailer to use SMTP
 $mail->Host = $severIp;  // Specify main and backup server
 $mail->SMTPAuth = true;    // Enable SMTP authentication
 $mail->Username = 'contact@synchronit.com';                            // SMTP username
