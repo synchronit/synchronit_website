@@ -33,7 +33,7 @@ $mail->Subject = 'Thank you for contact us!';
 $mail->msgHTML(file_get_contents(__DIR__ .'/messages/contactUs.html'));
 
 if(!$mail->send()) {
-    echo '{status:"Message could not be sent. Mailer Error:"' . $mail->ErrorInfo.',success:false.}';
+    echo '{"status":"Message could not be sent. Mailer Error:"' . $mail->ErrorInfo.',"success":false}';
     exit;
 }
 
@@ -65,8 +65,8 @@ $mail->Subject = 'Mensaje desde el sitio web';
 $mail->Body    = ' Nombre: '.$name.'</br> Mensaje: '.$message;
 
 if(!$mail->send()) {
-   echo '{status:"Message could not be sent. Mailer Error:"' . $mail->ErrorInfo .',success:false.}';
+   echo '{"status":"Message could not be sent. Mailer Error:"' . $mail->ErrorInfo.',"success":false}';
    exit;
 }
 
-echo '{status:"Message has been sent",success:true}';
+echo '{"status":"Message has been sent","success":true}';

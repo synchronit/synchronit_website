@@ -22,6 +22,7 @@ $.extend({
                     data: $('form#contact-form').serialize(),
                     dataType: 'json',
                     success: function(result) {
+                        alert(result.success)
                         cleanFields();
                         $('#answer-token').val(result.token);
                         $('#answer').attr('placeholder', result.question);
@@ -44,6 +45,8 @@ $.extend({
         var cleanFields = function() {
             $('input[name="from"').val('');
             $('input[name="message"').val('');
+            $('input[name="name"').val('');
+            
             $('#answer').val('');
         }
 
@@ -184,7 +187,7 @@ $.extend({
         var cleanFields = function() {
             $('input[name=from]').val('');
             $('textarea[name=message]').val('');
-            $('input[name=answer]').val('');
+            $('input[name=name]').val('');
         };
 
         var checkFields = function() {
