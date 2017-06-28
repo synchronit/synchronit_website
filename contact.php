@@ -1,7 +1,7 @@
 ﻿<?php
 /*set_include_path('/var/www/mail');*/
 require 'mail/PHPMailerAutoload.php';
-
+header('Content-Type: application/json');
 
 $mail = new PHPMailer;
 
@@ -11,10 +11,9 @@ $message = $_POST['message'];
 $subject =  $_POST['from'];
 $severIp='209.236.112.62';
 
-
 $mail->isSMTP();
 
-$mail->SMTPDebug = 1;// Set mailer to use SMTP
+$mail->SMTPDebug = 0;// Set mailer to use SMTP
 $mail->Host = $severIp;  // Specify main and backup server
 $mail->SMTPAuth = true;    // Enable SMTP authentication
 $mail->Username = 'contact@synchronit.com';                            // SMTP username
@@ -34,12 +33,10 @@ $mail->Subject = 'Thank you for contact us!';
 $mail->msgHTML(file_get_contents(__DIR__ .'/messages/contactUs.html'));
 
 if(!$mail->send()) {
-   echo 'Message could not be sent.';
-   echo 'Mailer Error: ' . $mail->ErrorInfo;
-   exit;
+    echo '{"status":"Message could not be sent. Mailer Error:"' . $mail->ErrorInfo.',"success":false}';
+    exit;
 }
 
-echo 'Message has been sent';
 
 $mail = new PHPMailer;
 
@@ -49,7 +46,7 @@ $message = $_POST['message'];
 
 
 $mail->isSMTP();
-$mail->SMTPDebug = 1;// Set mailer to use SMTP
+$mail->SMTPDebug = 0;// Set mailer to use SMTP
 $mail->Host =  $severIp; // Specify main and backup server
 $mail->SMTPAuth = true;    // Enable SMTP authentication
 $mail->Username = 'contact@synchronit.com';                            // SMTP username
@@ -68,9 +65,8 @@ $mail->Subject = 'Mensaje desde el sitio web';
 $mail->Body    = ' Nombre: '.$name.'</br> Mensaje: '.$message;
 
 if(!$mail->send()) {
-   echo 'Message could not be sent.';
-   echo 'Mailer Error: ' . $mail->ErrorInfo;
+   echo '{"status":"Message could not be sent. Mailer Error:"' . $mail->ErrorInfo.',"success":false}';
    exit;
 }
 
-echo 'Message has been sent';
+echo '{"status":"Message has been sent","success":true}';

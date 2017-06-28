@@ -27,10 +27,14 @@ $.extend({
                         $('#answer').attr('placeholder', result.question);
 
                         if (result.success == true) {
-                            self.showMessage('You message has been send');
+                            self.showMessage("Your message has been sent");
                         } else {
-                            self.showMessage('Some problem sending your message');
+                            self.showMessage('An error occurred while sending your message');
                         }
+                    },
+                    error:function(){
+                           self.showMessage('An error occurred while sending your message');
+                        
                     }
                 });
             });
@@ -44,11 +48,13 @@ $.extend({
         var cleanFields = function() {
             $('input[name="from"').val('');
             $('input[name="message"').val('');
+            $('input[name="name"').val('');
+            
             $('#answer').val('');
         }
 
         var checkFields = function() {
-            if ($('input[name="from"').val() == null || $('input[name="message"').val() | $('#answer').val())
+            if ($('input[name="from"').val() == null || $('input[name="message"').val())
                 return false;
             return true;
         }
@@ -184,14 +190,13 @@ $.extend({
         var cleanFields = function() {
             $('input[name=from]').val('');
             $('textarea[name=message]').val('');
-            $('input[name=answer]').val('');
+            $('input[name=name]').val('');
         };
 
         var checkFields = function() {
             var fromr = $('input[name=from]').val();
             var message = $('textarea[name=message]').val();
-            var answer = $('input[name=answer]').val();
-            if (fromr == '' || message == '' || answer == '')
+            if (fromr == '' || message == '')
                 return false;
             return true;
         };
