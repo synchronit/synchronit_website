@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires"       content="0" />
+<meta http-equiv="pragma"        content="no-cache" />
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Application Base Home</title>
+
+		<script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="../js/TweenMax.min.js"></script>
+
+<script>
+
+	var maxPoints = 10;
+	
+	function move()
+	{
+		var points = [];
+		for (var i=0; i<maxPoints; i++)
+		{
+			points.push( document.getElementById('dot_'+i) );
+		}				
+		TweenMax.staggerTo(points, 2, {left:"300px", repeat:-1}, 0.2);
+	}
+	
+	$(function() 
+	{
+
+		for (var i=0; i<maxPoints; i++)
+		{
+			$("#dots_div").append("<img src='../img/green_dot.png' id='dot_"+i+"' style='position: absolute; top: 70px; left: 30px;'>");
+		}				
+
+	});
+	
+</script>
+
+</head>
+
+<body>
+
+	<input type="button" value="move" onclick="move()">
+	<div id="dots_div"></div>
+
+</body>
+
+</html>

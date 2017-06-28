@@ -1,0 +1,64 @@
+<html>
+
+<head>
+<style>
+BODY 
+{ 
+  background: url(img/the_shard_004.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+</style>
+
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="js/TweenMax.min.js"></script>
+
+	<script>
+
+		$(function() 
+		{
+			draw_line();
+		});
+
+		function draw_line()
+		{
+			var lines = [];
+			$("<div id='white_background' style='position: absolute; top: 0px; left: 50%; height:0px; width:3px; background-color: #000;'>").appendTo("body");
+			lines.push( document.getElementById('white_background') );
+			TweenMax.staggerTo(lines, 2, {height:"100%"}, 0.2, show_text );
+		}
+		
+		function show_text()
+		{
+			var text = [];
+			$("<div id='left'  style='width: 50%; height: 100%; float: left' >").appendTo("body");
+			$("<div id='right' style='width: 50%; height: 100%; float: left' >").appendTo("body");
+
+			$("<div id='logo_div' style='width: 0px; float: right; overflow: hidden; margin-top: 10%;'> ").appendTo("#left");
+			$("<img id='logo_img' src='img/synchronit_logotipo.png' > ").appendTo("#logo_div");
+
+			$("<div id='appBase_div' style='width: 0px; float: left; overflow: hidden; margin-top: 40%;'> ").appendTo("#right");
+			$("<img id='logo_img' src='img/ab_logotipo.png' style='height: 60px; float: right; '> ").appendTo("#appBase_div");
+
+			$("<div id='owo_div' style='width: 0px; float: left; overflow: hidden; margin-top: 40%;'> ").appendTo("#right");
+			$("<img id='owo_img' src='img/owo.png' style='height: 52px; float: right; margin-top: 30px;'> ").appendTo("#appBase_div");
+
+			text.push( document.getElementById('logo_div') );
+			text.push( document.getElementById('appBase_div') );
+
+			TweenMax.staggerTo( [ $("#logo_div")], 3, {width:"100%"}, 0.2 );
+			TweenMax.staggerTo( [ $("#appBase_div")], 3, {width:"300px" }, 0.2 );
+
+		}
+	</script>
+
+</head>
+
+<body>
+
+
+</body>
+
+</html>

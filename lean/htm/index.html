@@ -1,0 +1,340 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="cache-control" content="no-cache" />
+<meta http-equiv="expires"       content="0" />
+<meta http-equiv="pragma"        content="no-cache" />
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+
+<title>Synchronit</title>
+
+		<script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="../js/TweenMax.min.js"></script>
+
+<script>
+
+	var lines = [];
+	var divs = [];
+
+	$(function() 
+	{
+		draw_line();
+	});
+
+	function draw_line()
+	{
+		$("<div id='white_background' style='position: absolute; top: 50%; left: -5px; height:10px; width:0%; background-color: white; border-radius: 5px;'>").appendTo("body");
+		lines.push( $('#white_background') );
+		TweenMax.staggerTo(lines, 2, {width:"101%"}, 0.2, open);
+	}
+
+	function open()
+	{
+		$("#white_background").append("<img src='../img/synchronit_logo_lean.png' id='logo' >");
+		TweenMax.staggerTo(lines, 2, {top: "0%", height:"101%", "border-radius": "0px"}, 0.2, show_options );
+	}
+	
+	function show_options()
+	{
+		TweenMax.staggerTo( [ $('#logo') ], 2, {height: '64px'}, 0.2 )
+		TweenMax.staggerTo( [ $('#white_background') ], 2, {height: '100px'}, 0.2, open_options )
+	}
+	
+	function open_options()
+	{
+		var div_purpose = $("<div id='purpose' class='column' >");  //#8D918B - 4A051C + 9C7683
+		var div_process = $("<div id='process' class='column' style='background-color: #FF3542; width: 34%;'>");  //#DDDDDD - B0D9E8 + 718B94
+		var div_people  = $("<div id='people'  class='column' style='background-color: #4281A4;'>");  //#A8989D - 3A2E39 + 938D93
+		divs.push( div_purpose );
+		divs.push( div_process );
+		divs.push( div_people  );
+		for (var i=0; i<3; i++)
+		{
+			divs[i].appendTo("body");
+		}
+		show_text();
+		var downloadLink = "<a href='../doc/agile transformation by synchronit.pdf'><img id='download' src='../img/brochure_link.png' class='download' title='download brochure'/></a>";
+		$("#white_background").append(downloadLink);
+	}
+	
+	function show_text()
+	{
+		var plus = "<img id='down' src='../img/plus.png' style='display: block; cursor: pointer; margin: auto; clear: both; width: 10%; margin-bottom: 10%'>";
+
+		$("#purpose").append("<div id='purposeContent' class='purpose content'>");
+		$("#purposeContent").append("<div id='purposeFront' class='purposeFront front'>");
+		$("#purposeContent").append("<div id='purposeBack'  class='purposeBack  back'>");
+		
+		$("#purposeFront").append("<h3>PURPOSE</h3>");
+		$("#purposeFront").append("<img class='big_icon' src='../img/objective_transp.png'>");
+		$("#purposeFront").append("<p>Lead the Evolution.</p>");
+		$("#purposeFront").append(plus);
+		
+		$("#purposeBack").append("<h3>PURPOSE</h3>");
+		$("#purposeBack").append("<p>Leading is aligning purposes.</p>");
+		$("#purposeBack").append("<p><i>Individuals. Teams. Organization.</i></p>");
+		$("#purposeBack").append("<p><img src='../img/learn_lead.png' class='drawing'></p>");
+		
+		$("#process").append("<div id='processContent' class='process content'>");
+		$("#processContent").append("<div id='processFront' class='processFront front'>");
+		$("#processContent").append("<div id='processBack'  class='processBack  back'>");
+
+		$("#processFront").append("<h3>PROCESS</h3>");
+		$("#processFront").append("<img class='big_icon' src='../img/process_loop.png'>");
+		$("#processFront").append("<p>Lean Coaching.</p>");
+		$("#processFront").append(plus);
+		
+		$("#processBack").append("<h3>PROCESS</h3>");
+		$("#processBack").append("<p>Cross-Functional & High-Perf. Teams.</p>");
+		$("#processBack").append("<p>Incremental. Iterative. Collaborative.</p>");
+		$("#processBack").append("<p><img src='../img/coaching_green_dark.png' class='drawing'></p>");
+		
+		$("#people").append("<div id='peopleContent' class='people content'>");
+		$("#peopleContent").append("<div id='peopleFront' class='peopleFront front'>");
+		$("#peopleContent").append("<div id='peopleBack'  class='peopleBack  back'>");
+		
+		$("#peopleFront").append("<h3>PEOPLE</h3>");
+		$("#peopleFront").append("<img class='big_icon' src='../img/people_group.png'>");
+		$("#peopleFront").append("<p>Hire a Team. Learn by example.</p>");
+		$("#peopleFront").append(plus);
+		
+		$("#peopleBack").append("<h3>PEOPLE</h3>");
+		$("#peopleBack").append("<p>Teamshore. Since 2004.</p>");
+		$("#peopleBack").append("<p>Build. Measure. Learn.</p>");
+		$("#peopleBack").append("<p><img src='../img/software_development_dark.png' class='drawing'></p>");
+		
+		var blurElement = {a:20};
+
+		TweenMax.to(blurElement, 3, {a:0, onUpdate:applyBlur});
+
+		function applyBlur()
+		{
+		    TweenMax.set( divs, {webkitFilter:"blur(" + blurElement.a + "px)",filter:"blur(" + blurElement.a + "px)"});  
+		};
+
+		TweenLite.set(".column", {perspective:800});
+		TweenLite.set(".content", {transformStyle:"preserve-3d"});
+		TweenLite.set(".back", {rotationY:-180});
+		TweenLite.set([".back", ".front"], {backfaceVisibility:"hidden"});
+		
+		// Hover effect
+		$("#purpose").hover(over, out);
+		$("#process").hover(over, out);
+		$("#people").hover(over, out);
+		
+		function over()
+		{
+			TweenLite.to( $(this).find(".big_icon"), 0.4, {width:"54%"});
+		}
+		
+		function out()
+		{
+			TweenLite.to( $(this).find(".big_icon"), 0.4, {width:"50%"});
+		}
+
+		// Click event
+		for (var i=0; i<3; i++)
+		{
+			divs[i].click( function() { turn(this) } );
+		}
+	}
+
+	var derecho = true;
+
+	function turn(div)
+	{
+		var tl = new TimelineLite();
+		if (derecho)
+		{
+			tl.to(".content", 1, {rotationY:-180, repeat:0});  
+			derecho = false;  
+		}
+		else
+		{
+			tl.to(".content", 1, {rotationY:0, repeat:0});  
+			derecho = true;    
+		}
+	}
+	
+	function explain( div )
+	{
+		var tl = new TimelineLite();
+		for (var i=0; i<3; i++)
+		{
+			if (divs[i].attr('id') == div.id)
+			{
+				tl.to( divs[i], 1, {width: "100%"}, 0 );
+			}
+			else
+			{
+				tl.to( divs[i], 1, {width: "0%", left: "0px" }, 0 );
+			}
+		}
+		tl.play();
+	}
+	
+</script>
+
+<style>
+
+	BODY
+	{
+		background-color: #000;
+		margin: 0px;
+		overflow:  hidden;
+	}
+	
+	#white_background
+	{
+		overflow: hidden;
+		display: flex;
+		position: relative;
+		align-items: center;
+		justify-content: center;
+	}
+	
+	#logo
+	{
+		position: absolute;
+		margin: auto;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;	
+		max-width: 70vw;
+		max-height: 50vh;
+    }
+	
+	#grey_logo
+	{
+		position: absolute;
+		margin: auto;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;	
+	}
+	
+	#motto
+	{
+		display: block;
+		position: absolute;
+		margin: auto;
+		top: 50%;
+		font-family: 'Muli', sans-serif;
+		margin-top: 10px;
+		margin-left: 40px;
+	}
+	
+	.column
+	{
+		font-family: 'Muli', sans-serif;
+		filter:blur(20px);
+		position:relative; 
+		float: left;
+		height: calc(100% - 100px);
+		width: 33%; 
+		text-align: center;
+		margin: 0px;
+		margin-top: 100px;
+		-webkit-font-smoothing:antialiased;
+	}
+	
+	H3
+	{
+		font-size: 300%;
+	}
+	
+	.big_icon
+	{
+		display: block;
+		margin: auto;
+		width: 50%;
+	}
+	
+	.purposeFront
+	{
+		width: 100%;
+		position:absolute;
+		background-color: #5380a7;
+		padding-bottom: 100%;
+	}
+	.purposeBack
+	{
+		width: 100%;
+		position:absolute;
+		background: #4064a8;
+		padding-bottom: 100%;
+	}
+
+	.processFront
+	{
+		width: 100%;
+		position:absolute;
+		background-color: #90c814;
+		padding-bottom: 100%;
+	}
+	.processBack
+	{
+		width: 100%;
+		position:absolute;
+		background: #578e32;
+		padding-bottom: 100%;
+	}
+
+	.peopleFront
+	{
+		width: 100%;
+		position:absolute;
+		background-color: #e88c00;
+		padding-bottom: 100%;
+	}
+	.peopleBack
+	{
+		width: 100%;
+		position:absolute;
+		background: #c46220;
+		padding-bottom: 100%;
+	}
+
+	.back h3
+	{
+		color: #FFFFFF;
+	}
+	
+	.download
+	{
+		position: absolute;
+		left: -10px;
+		top: 0px;
+		height: 100px;
+		opacity: 0.4; 
+		cursor:pointer; 
+	}
+
+	.download:hover
+	{
+		opacity: 1;
+	}	
+	
+	.drawing
+	{
+		width: 80%;
+		margin: auto;
+	}
+	
+</style>
+
+</head>
+
+<body>
+
+	<div id="dots_div"></div>
+
+</body>
+
+</html>
