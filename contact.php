@@ -4,6 +4,7 @@ require 'mail/PHPMailerAutoload.php';
 header('Content-Type: application/json');
 
 $password=trim(file_get_contents("/var/www/synchronit.com/mailpwd"));
+$password='Muchachit0123';
 $mail = new PHPMailer;
 
 $name = $_POST['name'];
@@ -25,7 +26,6 @@ $mail->SMTPSecure = 'tls';                            // Enable encryption, 'ssl
 $mail->From = 'contact@synchronit.com';
 $mail->FromName = 'Synchronit Team';
 $mail->addAddress($email);  // Add a recipient
-echo $password;
 
 $mail->WordWrap = 50;                                 // Set word wrap to 50 characters
 $mail->isHTML(true);                                  // Set email format to HTML
@@ -35,7 +35,7 @@ $mail->Subject = 'Thank you for contact us!';
 $mail->msgHTML(file_get_contents(__DIR__ .'/messages/contactUs.html'));
 
 if(!$mail->send()) {
-    echo '{"status":"Message could not be sent. Mailer Error:"' . $mail->ErrorInfo.',"success":false}';
+    echo '{"status":"Message could not be sent to customer. Mailer Error:' . $mail->ErrorInfo.'","success":false}';
     exit;
 }
 
@@ -67,7 +67,7 @@ $mail->Subject = 'Mensaje desde el sitio web';
 $mail->Body    = ' Nombre: '.$name.'</br> Mensaje: '.$message;
 
 if(!$mail->send()) {
-   echo '{"status":"Message could not be sent. Mailer Error:"' . $mail->ErrorInfo.',"success":false}';
+   echo '{"status":"Message could not be sent to Synchronit. Mailer Error:' . $mail->ErrorInfo.'","success":false}';
    exit;
 }
 
