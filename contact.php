@@ -6,7 +6,7 @@ header('Content-Type: application/json');
 $password=trim(file_get_contents("/var/www/synchronit.com/mailpwd"));
 
 $mail = new PHPMailer;
-echo "The password is:".$password;
+
 $name = $_POST['name'];
 $email = $_POST['from'];
 $message = $_POST['message'];
