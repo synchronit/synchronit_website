@@ -3,6 +3,8 @@
 require 'mail/PHPMailerAutoload.php';
 header('Content-Type: application/json');
 
+$password=trim(file_get_contents("/var/www/synchronit.com/mailpwd"));
+$password='Muchachit0123';
 $mail = new PHPMailer;
 
 $name = $_POST['name'];
@@ -17,7 +19,7 @@ $mail->SMTPDebug = 0;// Set mailer to use SMTP
 $mail->Host = $severIp;  // Specify main and backup server
 $mail->SMTPAuth = true;    // Enable SMTP authentication
 $mail->Username = 'contact@synchronit.com';                            // SMTP username
-$mail->Password = 'Muchachit0123';                           // SMTP password
+$mail->Password = $password;                           // SMTP password
 $mail->Port = 587;
 $mail->SMTPSecure = 'tls';                            // Enable encryption, 'ssl' also accepted
 
@@ -33,7 +35,7 @@ $mail->Subject = 'Thank you for contact us!';
 $mail->msgHTML(file_get_contents(__DIR__ .'/messages/contactUs.html'));
 
 if(!$mail->send()) {
-    echo '{"status":"Message could not be sent. Mailer Error:"' . $mail->ErrorInfo.',"success":false}';
+    echo '{"status":"Message could not be sent to customer. Mailer Error:' . $mail->ErrorInfo.'","success":false}';
     exit;
 }
 
@@ -50,7 +52,7 @@ $mail->SMTPDebug = 0;// Set mailer to use SMTP
 $mail->Host =  $severIp; // Specify main and backup server
 $mail->SMTPAuth = true;    // Enable SMTP authentication
 $mail->Username = 'contact@synchronit.com';                            // SMTP username
-$mail->Password = 'Muchachit0123';                           // SMTP password
+$mail->Password = $password;                           // SMTP password
 $mail->Port = 587;
 $mail->SMTPSecure = 'tls';                            // Enable encryption, 'ssl' also accepted
 
@@ -65,7 +67,7 @@ $mail->Subject = 'Mensaje desde el sitio web';
 $mail->Body    = ' Nombre: '.$name.'</br> Mensaje: '.$message;
 
 if(!$mail->send()) {
-   echo '{"status":"Message could not be sent. Mailer Error:"' . $mail->ErrorInfo.',"success":false}';
+   echo '{"status":"Message could not be sent to Synchronit. Mailer Error:' . $mail->ErrorInfo.'","success":false}';
    exit;
 }
 
