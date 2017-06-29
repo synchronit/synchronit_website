@@ -3,6 +3,7 @@
 require 'mail/PHPMailerAutoload.php';
 header('Content-Type: application/json');
 
+$password=file_get_contents("/var/www/synchronit.com/mailpwd");
 $mail = new PHPMailer;
 
 $name = $_POST['name'];
@@ -17,13 +18,14 @@ $mail->SMTPDebug = 0;// Set mailer to use SMTP
 $mail->Host = $severIp;  // Specify main and backup server
 $mail->SMTPAuth = true;    // Enable SMTP authentication
 $mail->Username = 'contact@synchronit.com';                            // SMTP username
-$mail->Password = 'Muchachit0123';                           // SMTP password
+$mail->Password = $password;                           // SMTP password
 $mail->Port = 587;
 $mail->SMTPSecure = 'tls';                            // Enable encryption, 'ssl' also accepted
 
 $mail->From = 'contact@synchronit.com';
 $mail->FromName = 'Synchronit Team';
 $mail->addAddress($email);  // Add a recipient
+echo $password;
 
 $mail->WordWrap = 50;                                 // Set word wrap to 50 characters
 $mail->isHTML(true);                                  // Set email format to HTML
@@ -50,7 +52,7 @@ $mail->SMTPDebug = 0;// Set mailer to use SMTP
 $mail->Host =  $severIp; // Specify main and backup server
 $mail->SMTPAuth = true;    // Enable SMTP authentication
 $mail->Username = 'contact@synchronit.com';                            // SMTP username
-$mail->Password = 'Muchachit0123';                           // SMTP password
+$mail->Password = $password;                           // SMTP password
 $mail->Port = 587;
 $mail->SMTPSecure = 'tls';                            // Enable encryption, 'ssl' also accepted
 
