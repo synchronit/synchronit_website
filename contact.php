@@ -3,7 +3,7 @@
 require 'mail/PHPMailerAutoload.php';
 header('Content-Type: application/json');
 
-$password=file_get_contents("/var/www/synchronit.com/mailpwd");
+$password=trim(file_get_contents("/var/www/synchronit.com/mailpwd"));
 $mail = new PHPMailer;
 
 $name = $_POST['name'];
