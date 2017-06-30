@@ -32,9 +32,14 @@
 		TweenMax.staggerTo(lines, 2, {width:"101%"}, 0.2, open);
 	}
 
+	function goHome()
+	{
+		location = "http://synchronit.com/";
+	}
+	
 	function open()
 	{
-		$("#white_background").append("<img src='../img/synchronit_logo_lean.png' id='logo' >");
+		$("#white_background").append("<img src='../img/synchronit_logo_lean.png' id='logo' style='cursor: pointer;' onclick='goHome()' >");
 		TweenMax.staggerTo(lines, 2, {top: "0%", height:"101%", "border-radius": "0px"}, 0.2, show_options );
 	}
 	

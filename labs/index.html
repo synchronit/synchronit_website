@@ -30,6 +30,11 @@ BODY
 			TweenMax.staggerTo(lines, 2, {height:"100%"}, 0.2, show_text );
 		}
 		
+		function goHome()
+		{
+			location = "http://synchronit.com/";
+		}
+		
 		function show_text()
 		{
 			var text = [];
@@ -37,7 +42,7 @@ BODY
 			$("<div id='right' style='width: 50%; height: 100%; float: left' >").appendTo("body");
 
 			$("<div id='logo_div' style='width: 0px; float: right; overflow: hidden; margin-top: 10%;'> ").appendTo("#left");
-			$("<img id='logo_img' src='img/synchronit_logotipo.png' > ").appendTo("#logo_div");
+			$("<img id='logo_img' src='img/synchronit_logotipo.png' style='cursor: pointer;' onclick='goHome()' > ").appendTo("#logo_div");
 
 			$("<div id='appBase_div' style='width: 0px; float: left; overflow: hidden; margin-top: 40%;'> ").appendTo("#right");
 			$("<img id='logo_img' src='img/ab_logotipo.png' style='height: 60px; float: right; '> ").appendTo("#appBase_div");
