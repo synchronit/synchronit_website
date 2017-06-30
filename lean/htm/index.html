@@ -78,6 +78,7 @@
 		$("#purposeBack").append("<p>Leading is aligning purposes.</p>");
 		$("#purposeBack").append("<p><i>Individuals. Teams. Organization.</i></p>");
 		$("#purposeBack").append("<p><img src='../img/learn_lead.png' class='drawing'></p>");
+		$("#purposeBack").append("<div class='backDiv'><ul><li>From Command & Control &rarr; Mission Command</li><li>Start with Why.</li><li>Align Purposes.</li><li>Make clear constraints.</li><li>Visualize Progress.</li><li>Think big. Act small.</li><li>Fail fast. Learn rapidly.</li></ul></div>");
 		
 		$("#process").append("<div id='processContent' class='process content'>");
 		$("#processContent").append("<div id='processFront' class='processFront front'>");
@@ -89,9 +90,10 @@
 		$("#processFront").append(plus);
 		
 		$("#processBack").append("<h3>PROCESS</h3>");
-		$("#processBack").append("<p>Cross-Functional & High-Perf. Teams.</p>");
-		$("#processBack").append("<p>Incremental. Iterative. Collaborative.</p>");
+		$("#processBack").append("<p>The right process will produce the right results.</p>");
+		$("#processBack").append("<p><small><i>(Jeffrey Liker)</i></small></p>");
 		$("#processBack").append("<p><img src='../img/coaching_green_dark.png' class='drawing'></p>");
+		$("#processBack").append("<div class='backDiv'><ul><li>Scrum / Kanban / Lean</li><li>Cross-Functional / High-Performance Teams</li><li>Agile Ecosystem</li><li>Self-organized Teams</li><li>Incremental. Iterative. Collaborative.</li></ul></div>");
 		
 		$("#people").append("<div id='peopleContent' class='people content'>");
 		$("#peopleContent").append("<div id='peopleFront' class='peopleFront front'>");
@@ -103,9 +105,10 @@
 		$("#peopleFront").append(plus);
 		
 		$("#peopleBack").append("<h3>PEOPLE</h3>");
-		$("#peopleBack").append("<p>Teamshore. Since 2004.</p>");
-		$("#peopleBack").append("<p>Build. Measure. Learn.</p>");
+		$("#peopleBack").append("<p>First we build Teams. Eventually, we build cars.</p>");
+		$("#peopleBack").append("<p><small><i>(Toyota Champion quoted by Mary Poppendieck)</i><small></p>");
 		$("#peopleBack").append("<p><img src='../img/software_development_dark.png' class='drawing'></p>");
+		$("#peopleBack").append("<div class='backDiv'><ul><li>Teamshore</li><li>Learn by Example</li><li>DevOps.</li><li>Continuous Integration & Delivery.</li><li>From Testing to QA</li><li>Build. Measure. Learn.</li></ul></div>");
 		
 		var blurElement = {a:20};
 
@@ -122,18 +125,32 @@
 		TweenLite.set([".back", ".front"], {backfaceVisibility:"hidden"});
 		
 		// Hover effect
-		$("#purpose").hover(over, out);
-		$("#process").hover(over, out);
-		$("#people").hover(over, out);
+		$("#purposeFront").hover(overFront, outFront);
+		$("#processFront").hover(overFront, outFront);
+		$("#peopleFront").hover(overFront, outFront);
 		
-		function over()
+		$("#purposeBack").hover(overBack, outBack);
+		$("#processBack").hover(overBack, outBack);
+		$("#peopleBack").hover(overBack, outBack);
+		
+		function overFront()
 		{
 			TweenLite.to( $(this).find(".big_icon"), 0.4, {width:"54%"});
 		}
 		
-		function out()
+		function outFront()
 		{
 			TweenLite.to( $(this).find(".big_icon"), 0.4, {width:"50%"});
+		}
+
+		function overBack()
+		{
+			TweenLite.to( $(this).find(".drawing"), 0.4, {width:"0%"});
+		}
+		
+		function outBack()
+		{
+			TweenLite.to( $(this).find(".drawing"), 0.4, {width:"80%"});
 		}
 
 		// Click event
@@ -325,6 +342,14 @@
 	{
 		width: 80%;
 		margin: auto;
+	}
+	
+	.backDiv
+	{
+		color: #fff; 
+		font-weight: bold; 
+		width: 90%; 
+		text-align: left
 	}
 	
 </style>
