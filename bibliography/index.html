@@ -1,0 +1,549 @@
+<html>
+
+<style>
+body {
+    background-image: url("img/synchronit_isotipo_background.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment:fixed;
+} 
+
+.item 
+{
+    border: 2px solid #DDDDDD;
+    border-radius: 25px;
+    width: 90%; 
+    margin-left: 5%;
+    padding: 10px;
+    margin-top: 10px;
+} 
+
+.cover
+{
+	float: left;
+	width: 200px;
+}
+
+.item img
+{
+	vertical-align: middle;
+	height: 180px;
+	border: 0px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;}
+
+.content
+{
+	margin-top: 5px;
+	margin-bottom: 5px;
+	font-family: sans-serif;
+}
+
+.content td
+{
+	padding: 5px;
+	vertical-align: top;
+	line-height: 120%;
+}
+
+.title
+{
+	font-weight: bold;
+	width: 80%;
+}
+
+.header
+{
+	width: 100%;
+	position: fixed;
+	opacity: 0.8;
+	border: 0px;
+	font-family: Sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+	vertical-align: text-top;
+	color: #555555;
+}
+
+.bookList
+{
+	top: 80px;
+	border: 0px;
+	position: fixed;
+	overflow: scroll;
+	bottom: 10px;
+}
+
+.linkimg
+{
+	color: #777777;
+	font-family: Sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	vertical-align: middle;
+	margin-left: 3%;
+	visibility: hidden;
+	cursor: pointer;
+}
+
+</style>
+
+<script>
+	function lang(item, from, to)
+	{
+		document.getElementById(item + "_" + from).style.display = "none";
+		document.getElementById(item + "_" + to  ).style.display = "block";
+	}
+</script>
+
+<div class="header">
+<a href="http://synchronit.com/"><img src="img/synchronit_logotipo.png" border="0"></a>
+Recommended reading about LEAN, oriented to SW Develoment & Management
+</div>
+
+<div class="bookList">
+
+<a id="tps"></a>
+<div onmouseover="this.childNodes[0].style.visibility='visible'" onMouseOut="this.childNodes[0].style.visibility='hidden'" onClick="location='#tps'"><span class="linkimg"><img src="img/link.png"> link <a id="estplan"></a><br/></span></div>
+<div class="item">
+	<div class="cover">
+		<a href="http://www.amazon.com/Toyota-Production-System-Beyond-Large-Scale/dp/0915299143/"><img class="image" src="img/taiichi_ohno.png"/></a>
+	</div>
+	<div class="content">
+		<table>
+			<tr><td>Title</td><td class="title">Toyota Production System: Beyond Large-Scale Production</td></tr>
+			<tr><td>Summary</td><td>The origins of TPS explained. This is the original source.<br/>
+			                        First half of the book describes how the scientific method was used to build the whole TPS.<br/>
+			                        Second half goes more into car manufacturing.</td></tr>
+			<tr><td>Comments</td><td>Small book. Easy to read.</td></tr>
+			<tr><td>Level</td><td>Intermediate</td></tr>			                        
+			<tr><td>Audience</td><td>Anyone who wants to understand the roots of LEAN and TPS.</td></tr>			                        
+			<tr><td>What you will learn</td><td>How being constant and coherent with some basic, common-sense principles and the scientific method can make possible to anyone, to learn and adapt in a continuous improvement process, where excellence in all aspects is the horizon.</td></tr>			                        
+			<tr><td>Author</td><td><a href="http://en.wikipedia.org/wiki/Taiichi_Ohno">Taiichi Ohno</a></td></tr>			                        
+		</table>
+	</div>
+</div>
+
+<a id="til"></a>
+<div onmouseover="this.childNodes[0].style.visibility='visible'" onMouseOut="this.childNodes[0].style.visibility='hidden'" onClick="location='#til'"><span class="linkimg"><img src="img/link.png"> link <a id="estplan"></a><br/></span></div>
+<div class="item">
+	<div class="cover">
+		<a href="https://www.amazon.com/This-Lean-Resolving-Efficiency-Paradox/dp/919803930X/"><img class="image" src="img/this_is_lean.png"/></a>
+	</div>
+	<div class="content">
+		<table>
+			<tr><td>Title</td><td class="title">This is Lean</td></tr>
+			<tr><td>Summary</td><td>Flow Efficiency vs. Resource Efficiency. Which one is better?<br/>
+			                        Enlightening stories revealed during visits to Toyota.<br/>
+			                        A little bias into manufacturing, but a great book on important concepts.</td></tr>
+			<tr><td>Comments</td><td>Small book. Easy to read.</td></tr>
+			<tr><td>Level</td><td>Intermediate</td></tr>			                        
+			<tr><td>Audience</td><td>You aim to understand the importance of flow and other deep concepts in Lean.</td></tr>			                        
+			<tr><td>What you will learn</td><td>The difference between flow &amp; resource efficiency. The profound concept of "Jidoka".</td></tr>			                        
+			<tr><td>Author</td><td><a href="http://niklasmodig.com/">Niklas Modig</a> and <a href="http://parahlstrom.com/">P&auml;r &Acirc;hlstr&ouml;m</a></td></tr>			                        
+		</table>
+	</div>
+</div>
+
+<a id="tmtctw"></a>
+<div onmouseover="this.childNodes[0].style.visibility='visible'" onMouseOut="this.childNodes[0].style.visibility='hidden'" onClick="location='#tmtctw'"><span class="linkimg"><img src="img/link.png"> link <a id="estplan"></a><br/></span></div>
+<div class="item">
+	<div class="cover">
+		<a href="http://www.amazon.com/Machine-That-Changed-World-Revolutionizing/dp/0743299795/"><img class="image" src="img/the_machine.png"/></a>
+	</div>
+	<div class="content">
+		<table>
+			<tr><td>Title</td><td class="title">The Machine that Changed the World</td></tr>
+			<tr><td>Summary</td><td>This five-year study, done by three students of the MIT with an industry support of USD 5M, tried to find out the reasons for the japanese supremacy in the car industry (in comparison with western companies in Europe and US).<br/>
+			The study compares Craft-Production as the predecesor of Mass Production and coined the term "LEAN" Production to refer to the japanese system.<br/>
+			Lean, as the opposite of "FAT" is the term that represents the absence of inventories (the "fat") typical of most Mass Production systems and removed by JIT (just in time) in japanese -lean- ones.</td></tr>
+			<tr><td>Comments</td><td>Very interesting and big book. Historical compendium. It takes time to be read. The differences between craft, mass and lean production are perfectly described. The term "lean" is originated in this study.</td></tr>
+			<tr><td>Level</td><td>Advanced</td></tr>			                        
+			<tr><td>Audience</td><td>Anyone who wants to understand the roots of LEAN and TPS in detail and within the historic evolution.</td></tr>			                        
+			<tr><td>What you will learn</td><td>How a production system affects not only the way we work, but also how we interact, live and think. How we conceive ourselves.</td></tr>			                        
+			<tr><td>Author</td><td><a href="https://en.wikipedia.org/wiki/James_P._Womack"> James P. Womack</a>, <a href="http://www.amazon.com/s/ref=nb_sb_noss?field-keywords=daniel t jones">Daniel T. Jones (scientist)</a>, and <a href="http://www.amazon.com/s/ref=nb_sb_noss?field-keywords=daniel+roos&rh=i%3Aaps%2Ck%3Adaniel+roos">Daniel Roos</a>.</td></tr>			                        
+		</table>
+	</div>
+</div>
+
+<a id="cd"></a>
+<div onmouseover="this.childNodes[0].style.visibility='visible'" onMouseOut="this.childNodes[0].style.visibility='hidden'" onClick="location='#cd'"><span class="linkimg"><img src="img/link.png"> link <a id="estplan"></a><br/></span></div>
+<div class="item">
+	<div class="cover">
+		<a href="http://www.amazon.com/Continuous-Delivery-Deployment-Automation-Addison-Wesley/dp/0321601912/"><img class="image" src="img/continuous_delivery.png"/></a>
+	</div>
+	<div class="content">
+		<table>
+			<tr><td>Title</td><td class="title">Continuous Delivery</td></tr>
+			<tr><td>Summary</td><td>From Continuous Integration to Continuous Delivery. Everything on how to build an agile infrastructure that makes possible to constantly and smoothly deploy SW into production.
+			Tools, Processes and People interact and influence each other, so this book describes the basic setup in order to start building an agile environment.</td></tr>
+			<tr><td>Comments</td><td>This is a Reference Book. Just the index is 12 pages. You better read the index and go into details, one topic at a time.</td></tr>
+			<tr><td>Level</td><td>Advanced</td></tr>			                        
+			<tr><td>Audience</td><td>Support &amp; Operations Engineers. Release Managers.</td></tr>			                        
+			<tr><td>What you will learn</td><td>Best practices and anti-patterns in SW integration, testing and deployment.</td></tr>			                        
+			<tr><td>Author</td><td><a href="http://www.amazon.com/Jez-Humble/e/B003SNGS8E/">Jez Humble</a>, <a href="http://www.amazon.com/David-Farley/e/B003VSTZ72/">David Farley</a> (<i>foreword by</i> <a href="http://martinfowler.com/">Martin Fowler</a>)</td></tr>			                        
+		</table>
+	</div>
+</div>
+
+<a id="switch"></a>
+<div onmouseover="this.childNodes[0].style.visibility='visible'" onMouseOut="this.childNodes[0].style.visibility='hidden'" onClick="location='#switch'"><span class="linkimg"><img src="img/link.png"> link <a id="estplan"></a><br/></span></div>
+<div class="item">
+	<div class="cover">
+		<a href="http://www.amazon.com/Switch-Change-Things-When-Hard/dp/0385528752/"><img class="image" src="img/switch.png"/></a>
+	</div>
+	<div class="content">
+		<table>
+			<tr><td>Title</td><td class="title">SWITCH. How to change things, when change is hard.</td></tr>
+			<tr><td>Summary</td><td>Based on Psychological evidence, case studies and a consistent theory, this book helps us on where to focus, in order to make change happen.</td></tr>
+			<tr><td>Comments</td><td>Excellent. Solid. Educational. Inspiring. Easy and pleasant to read.</td></tr>
+			<tr><td>Level</td><td>Intermediate</td></tr>			                        
+			<tr><td>Audience</td><td>Anyone who wants to introduce changes in an organization.</td></tr>			                        
+			<tr><td>What you will learn</td><td>You will learn how to avoid simple (but important) mistakes when introducing changes in an organization.<br/>
+			How to talk to the rational and emotional beings of a person, whilst at the same time, facilitating the transition.<br/>
+			Learn the three principles: Direct the Rider, Motivate the Elephant and Shape the Path</td></tr>			                        
+			<tr><td>Author</td><td><a href="http://www.amazon.com/Chip-Heath/e/B000APJJZC/">Chip Heath</a>, <a href="http://www.amazon.com/Dan-Heath/e/B003503QMQ/">Dan Heath</a></td></tr>			                        
+		</table>
+	</div>
+</div>
+
+<a id="sapiens"></a>
+<div onmouseover="this.childNodes[0].style.visibility='visible'" onMouseOut="this.childNodes[0].style.visibility='hidden'" onClick="location='#sapiens'"><span class="linkimg"><img src="img/link.png"> link <a id="estplan"></a><br/></span></div>
+<div class="item">
+	<div class="cover">
+		<a href="https://www.amazon.com/Sapiens-Humankind-Yuval-Noah-Harari/dp/0062316095"><img class="image" src="img/sapiens.png"/></a>
+	</div>
+	<div class="content">
+		<table>
+			<tr><td>Title</td><td class="title">Sapiens. A Brief History of Humankind.</td></tr>
+			<tr><td>Summary</td><td>Evolution ... what is the real meaning? How does it happen?<br/>
+			                        What helped us to prevail over other stronger species?<br/>
+			                        An engaging story of Evolution, including cultural, political, philosophycal and many other aspects.</td></tr>
+			<tr><td>Comments</td><td>Engaging. Enlightening. Brilliant.</td></tr>
+			<tr><td>Level</td><td>All levels.</td></tr>			                        
+			<tr><td>Audience</td><td>If you want to understand the importance of cooperation ....</td></tr>			                        
+			<tr><td>What you will learn</td><td>What makes us Humans and how we interact with each other.</td></tr>			                        
+			<tr><td>Author</td><td><a href="http://www.ynharari.com/">Yuval Noah Harari</a></td></tr>			                        
+		</table>
+	</div>
+</div>
+
+<a id="the_goal"></a>
+<div onmouseover="this.childNodes[0].style.visibility='visible'" onMouseOut="this.childNodes[0].style.visibility='hidden'" onClick="location='#the_goal'"><span class="linkimg"><img src="img/link.png"> link <a id="estplan"></a><br/></span></div>
+<div class="item">
+	<div class="cover">
+		<a href="http://www.amazon.com/The-Goal-Process-Ongoing-Improvement/dp/0884271951/"><img class="image" src="img/the_goal.png"/></a>
+	</div>
+	<div class="content">
+		<table>
+			<tr><td>Title</td><td class="title">The Goal. A Process of Ongoing Improvement.</td></tr>
+			<tr><td>Summary</td><td>Instead of working more, learn how to identify and focus on the bottlenecks in order to improve the whole and work better. </td></tr>
+			<tr><td>Comments</td><td>Written in a novel style. Easy and entertaining to read.</td></tr>
+			<tr><td>Level</td><td>Introductory</td></tr>			                        
+			<tr><td>Audience</td><td>Anyone who wants to understand why working better is not working more.</td></tr>			                        
+			<tr><td>What you will learn</td><td>Local optimizations are pointless. Being too busy is not an excuse and not a goal. Not even a good sign.<br/>
+			You will learn why and how, to identify bottlenecks and focus your efforts there.</td></tr>			                        
+			<tr><td>Author</td><td><a href="http://en.wikipedia.org/wiki/Eliyahu_M._Goldratt">Eliyahu M. Goldratt</a></td></tr>			                        
+		</table>
+	</div>
+</div>
+
+<a id="tpos"></a>
+<div onmouseover="this.childNodes[0].style.visibility='visible'" onMouseOut="this.childNodes[0].style.visibility='hidden'" onClick="location='#tpos'"><span class="linkimg"><img src="img/link.png"> link <a id="estplan"></a><br/></span></div>
+<div class="item">
+	<div class="cover">
+		<a href="http://www.amazon.com/The-Power-Scrum-Jeffrey-Sutherland/dp/1463578067/"><img class="image" src="img/the_power_of_scrum.png"/></a>
+	</div>
+	<div class="content">
+		<table>
+			<tr><td>Title</td><td class="title">The Power of SCRUM.</td></tr>
+			<tr><td>Summary</td><td>The basics of Scrum, illustrated in an easy-reading novel style. </td></tr>
+			<tr><td>Comments</td><td>One of the best introductions to Scrum. Written in a novel style, easy to read. A comprehensive overview.</td></tr>
+			<tr><td>Level</td><td>Introductory</td></tr>			                        
+			<tr><td>Audience</td><td>Anyone who wants to learn scrum. This is mandatory reading previous to the SCM certification.</td></tr>			                        
+			<tr><td>What you will learn</td><td>The basics of Scrum: roles, artifacts, ceremonies. How simple and at the same time difficult it is.</td></tr>			                        
+			<tr><td>Author</td><td><a href="http://en.wikipedia.org/wiki/Jeff_Sutherland">Jeff Sutherland</a></td></tr>			                        
+		</table>
+	</div>
+</div>
+
+<a id="lsd_summary"></a>
+<div onmouseover="this.childNodes[0].style.visibility='visible'" onMouseOut="this.childNodes[0].style.visibility='hidden'" onClick="location='#lsd_summary'"><span class="linkimg"><img src="img/link.png"> link <a id="estplan"></a><br/></span></div>
+<div class="item">
+	<div class="cover">
+		<a href="http://synchronit.com/downloads/Lean_Software_Development.pdf"><img class="image" src="img/lsd_summary.png"/></a>
+	</div>
+	<div class="content">
+		<table>
+			<tr><td>Title</td><td class="title">Lean SW Development (summary, by Mary Poppendieck)</td></tr>
+			<tr><td>Summary</td><td>An excellent overview of the seven principles of Lean Software Development.</td></tr>
+			<tr><td>Comments</td><td>Written by Mary Poppendieck, this 6-pages summary gives you a very good overview of the first <a href="#lsd">book</a> of the series.</td></tr>
+			<tr><td>Level</td><td>Introductory</td></tr>			                        
+			<tr><td>Audience</td><td>Anyone interested in SW Development.</td></tr>			                        
+			<tr><td>What you will learn</td><td>The principles of LEAN when applied to SW Development.</td></tr>			                        
+			<tr><td>Author</td><td><a href="http://www.poppendieck.com/people.htm">Mary Poppendieck</a></td></tr>			                        
+		</table>
+	</div>
+</div>
+
+<a id="lsd"></a>
+<div onmouseover="this.childNodes[0].style.visibility='visible'" onMouseOut="this.childNodes[0].style.visibility='hidden'" onClick="location='#lsd'"><span class="linkimg"><img src="img/link.png"> link <a id="estplan"></a><br/></span></div>
+<div class="item">
+	<div class="cover">
+		<a href="http://www.amazon.com/Lean-Software-Development-Agile-Toolkit/dp/0321150783/"><img class="image" src="img/lsd.png"/></a>
+	</div>
+	<div class="content">
+		<table>
+			<tr><td>Title</td><td class="title">Lean SW Development -an agile toolkit-</td></tr>
+			<tr><td>Summary</td><td>A classic. The first book written by Tom & Mary Poppendieck in 2003, where the translation of Lean principles to SW were explained and the term "Lean SW Development" was coined.</td></tr>
+			<tr><td>Comments</td><td>First book of the series. The "bible" to understand Lean Software Development. There is 6 page <a href="#lsd_summary">summary</a> also.</td></tr>
+			<tr><td>Level</td><td>Introductory</td></tr>			                        
+			<tr><td>Audience</td><td>Anyone interested in SW Development.</td></tr>			                        
+			<tr><td>What you will learn</td><td>The principles of LEAN and how to apply them to SW Development, in detail.</td></tr>			                        
+			<tr><td>Author</td><td><a href="http://www.poppendieck.com/people.htm">Tom & Mary Poppendieck</a></td></tr>			                        
+		</table>
+	</div>
+</div>
+
+<a id="implementing_lsd"></a>
+<div onmouseover="this.childNodes[0].style.visibility='visible'" onMouseOut="this.childNodes[0].style.visibility='hidden'" onClick="location='#implementing_lsd'"><span class="linkimg"><img src="img/link.png"> link <a id="estplan"></a><br/></span></div>
+<div class="item">
+	<div class="cover">
+		<a href="http://www.amazon.com/Implementing-Lean-Software-Development-Concept/dp/0321437381/"><img class="image" src="img/implementing_lsd.png"/></a>
+	</div>
+	<div class="content">
+		<table>
+			<tr><td>Title</td><td class="title">Implementing Lean SW Development -from concept to cash-</td></tr>
+			<tr><td>Summary</td><td>Going deeper into the concepts of the <a href="#lsd">first book</a>, multiple case-studies help to fix concepts.</td></tr>
+			<tr><td>Comments</td><td>Second book of the series. There is a great chapter available at <a href="http://www.informit.com/articles/article.aspx?p=664147">InformIT</a> that is worth and recommended reading.</td></tr>
+			<tr><td>Level</td><td>Intermediate</td></tr>			                        
+			<tr><td>Audience</td><td>Anyone interested in SW Development.</td></tr>			                        
+			<tr><td>What you will learn</td><td>The origins of LEAN principles, how to apply them to SW Development and several case-studies.</td></tr>			                        
+			<tr><td>Author</td><td><a href="http://www.poppendieck.com/people.htm">Tom & Mary Poppendieck</a></td></tr>			                        
+		</table>
+	</div>
+</div>
+
+<a id="leading_lsd"></a>
+<div onmouseover="this.childNodes[0].style.visibility='visible'" onMouseOut="this.childNodes[0].style.visibility='hidden'" onClick="location='#leading_lsd'"><span class="linkimg"><img src="img/link.png"> link <a id="estplan"></a><br/></span></div>
+<div class="item">
+	<div class="cover">
+		<a href="http://www.amazon.com/Leading-Lean-Software-Development-Results/dp/0321620704/"><img class="image" src="img/leading_lsd.png"/></a>
+	</div>
+	<div class="content">
+		<table>
+			<tr><td>Title</td><td class="title">Leading Lean SW Development -results are not the point-</td></tr>
+			<tr><td>Summary</td><td>How to build and lead successful teams. The message is: <i>results are not the point. Developing people so that they can achieve successful results is the point</i>.</td></tr>
+			<tr><td>Comments</td><td>Third book of the series. We can observe a trend towards deeper concepts that are better elaborated in the 4th book: <a href="#lean_mindset">The Lean Mindset</a>.</td></tr>
+			<tr><td>Level</td><td>Advanced</td></tr>			                        
+			<tr><td>Audience</td><td>Anyone interested in SW Development.</td></tr>			                        
+			<tr><td>What you will learn</td><td>Deeper principles and examples of LEAN SW Development.</td></tr>			                        
+			<tr><td>Author</td><td><a href="http://www.poppendieck.com/people.htm">Tom & Mary Poppendieck</a></td></tr>			                        
+		</table>
+	</div>
+</div>
+
+<a id="lean_mindset"></a>
+<div onmouseover="this.childNodes[0].style.visibility='visible'" onMouseOut="this.childNodes[0].style.visibility='hidden'" onClick="location='#lean_mindset'"><span class="linkimg"><img src="img/link.png"> link <a id="estplan"></a><br/></span></div>
+<div class="item">
+	<div class="cover">
+		<a href="http://www.amazon.com/The-Lean-Mindset-Right-Questions/dp/0321896904/"><img class="image" src="img/lean_mindset.png"/></a>
+	</div>
+	<div class="content">
+		<table>
+			<tr><td>Title</td><td class="title">The Lean Mindset -ask the right questions-</td></tr>
+			<tr><td>Summary</td><td>How Lean influences our way of working and beyond. A brilliant analysis of the past, that makes us possible to imagine the coming future.</td></tr>
+			<tr><td>Comments</td><td>Fourth book of the series. A totally different approach, more management rather then SW Development oriented. Conceptually brilliant. A different starting point to the same topic.</td></tr>
+			<tr><td>Level</td><td>Introductory</td></tr>			                        
+			<tr><td>Audience</td><td>Anyone interested in SW Development and/or Management.</td></tr>			                        
+			<tr><td>What you will learn</td><td>How the way of thinking and the whole world is changing.</td></tr>			                        
+			<tr><td>Author</td><td><a href="http://www.poppendieck.com/people.htm">Tom & Mary Poppendieck</a></td></tr>			                        
+		</table>
+	</div>
+</div>
+
+<a id="pzen"></a>
+<div onmouseover="this.childNodes[0].style.visibility='visible'" onMouseOut="this.childNodes[0].style.visibility='hidden'" onClick="location='#pzen'"><span class="linkimg"><img src="img/link.png"> link <a id="estplan"></a><br/></span></div>
+<div class="item">
+	<div class="cover">
+		<a href="http://www.amazon.com/Presentation-Zen-Simple-Delivery-Edition/dp/0321811984/"><img class="image" src="img/presentation_zen.png"/></a>
+	</div>
+	<div class="content">
+		<table>
+			<tr><td>Title</td><td class="title">Presentation Zen</td></tr>
+			<tr><td>Summary</td><td>The best book to learn how to make consise, engaging and clear presentations.</td></tr>
+			<tr><td>Comments</td><td>If you want to spread the good news about Lean, you will also need to learn how to do it. Just have a look at the foreword by Guy Kawasaki and you will understand what the book is about.</td></tr>
+			<tr><td>Level</td><td>Introductory</td></tr>			                        
+			<tr><td>Audience</td><td>Anyone who wants to make an outstanding presentation.</td></tr>			                        
+			<tr><td>What you will learn</td><td>Why less is more. How to be concrete and have an impact.</td></tr>			                        
+			<tr><td>Author</td><td><a href="http://www.garrreynolds.com/">Garr Reynolds</a> (<i>foreword by</i> <a href="http://www.guykawasaki.com/">Guy Kawasaki</a>)</td></tr>			                        
+		</table>
+	</div>
+</div>
+
+<a id="lsu"></a>
+<div onmouseover="this.childNodes[0].style.visibility='visible'" onMouseOut="this.childNodes[0].style.visibility='hidden'" onClick="location='#lsu'"><span class="linkimg"><img src="img/link.png"> link <a id="estplan"></a><br/></span></div>
+<div class="item">
+	<div class="cover">
+		<a href="http://www.amazon.com/The-Lean-Startup-Entrepreneurs-Continuous/dp/0307887898/"><img class="image" src="img/lean_startup.png"/></a>
+	</div>
+	<div class="content">
+		<table>
+			<tr><td>Title</td><td class="title">The Lean Startup</td></tr>
+			<tr><td>Summary</td><td>How to use LEAN in order to focus and <i>do the right thing.</i><br/>
+			After developing the solution of a start-up company, the author discovers that customers think, perceive and behave different as it was expected. 
+			Then, using LEAN techniques (lean is based on the scientific method, so it basically means to question and verify each and every assumption) they realize a lot of things and share the experience in this book.</td></tr>
+			<tr><td>Comments</td><td>Excellent book. It even initiated a global movement: <a href="http://theleanstartup.com/">the lean startup</a></td></tr>
+			<tr><td>Level</td><td>Introductory</td></tr>			                        
+			<tr><td>Audience</td><td>Anyone who wants to be sure of building <i>the right thing</i>.<br/>
+					<i>This book is especially important for Product Owners.</i></td></tr>			                        
+			<tr><td>What you will learn</td><td>As Tom &amp; Mary Poppendieck say: <i>"the major waste in SW Development is building the wrong feature"</i>. <br/>
+			        So you will learn why and how to focus on a Minimum Viable Product (MVP) before building anything else (i.e. how to build the right thing).</td></tr>			                        
+			<tr><td>Author</td><td><a href="http://en.wikipedia.org/wiki/Eric_Ries">Eric Ries</a></td></tr>			                        
+		</table>
+	</div>
+</div>
+
+
+<a id="tmmm"></a>
+<div onmouseover="this.childNodes[0].style.visibility='visible'" onMouseOut="this.childNodes[0].style.visibility='hidden'" onClick="location='#tmmm'"><span class="linkimg"><img src="img/link.png"> link <a id="estplan"></a><br/></span></div>
+<div class="item">
+	<div class="cover">
+		<a href="http://www.amazon.com/Mythical-Man-Month-Software-Engineering-Anniversary/dp/0201835959/"><img class="image" src="img/mythical_man_month.png"/></a>
+	</div>
+	<div class="content">
+		<table>
+			<tr><td>Title</td><td class="title">The Mythical Man Month</td></tr>
+			<tr><td>Summary</td><td>Adding manpower to a late software project can make it even later.</td></tr>
+			<tr><td>Comments</td><td>Even though a classic in Software Engineering, if you agree with the message, you do not need to read it.<br/>
+			                         It is obvious: a 1.000 man-days project cannot be done in a single day, by hiring 1.000 people. <br/>
+			                         But this book goes beyond the obvious. Written by Fred Brooks, who managed the development of IBM's System/360, presents a solid case and has received many awards, including the U.S. National Medal of Technology in 1985 and the Turing Award in 1999, offering a solid reference on this topic.<br/>
+			                         The tendency for managers to repeat such errors in project development led Brooks to say that his book is called "The Bible of Software Engineering", because <i>"everybody quotes it, some people read it and a few people apply it."</i></td></tr>
+			<tr><td>Level</td><td>Intermediate</td></tr>			                        
+			<tr><td>Audience</td><td>Anyone who needs to understand why the bigger the team, the lower the performance.</td></tr>			                        
+			<tr><td>What you will learn</td><td>Be careful in adding more people to a project. Like in a football match, playing with too many players can transform it into chaos.</td></tr>			                        
+			<tr><td>Author</td><td><a href="http://en.wikipedia.org/wiki/Fred_Brooks">Fred Brooks</a></td></tr>			                        
+		</table>
+	</div>
+</div>
+
+
+<a id="herzberg"></a>
+<div onmouseover="this.childNodes[0].style.visibility='visible'" onMouseOut="this.childNodes[0].style.visibility='hidden'" onClick="location='#herzberg'"><span class="linkimg"><img src="img/link.png"> link <a id="estplan"></a><br/></span></div>
+<div class="item">
+	<div class="cover">
+		<a href="http://synchronit.com/downloads/freebooks/herzberg.pdf/"><img class="image" src="img/herzberg.jpg"/></a>
+	</div>
+	<div class="content">
+		<table>
+			<tr><td>Title</td><td class="title">One More Time: How Do You Motivate Employees?</td></tr>
+			<tr><td>Summary</td><td>Instead of adding external motivators even negative or positive (carrots and sticks), consider intrinsic ones like responsibility, purpose, autonomy, learning.</td></tr>
+			<tr><td>Comments</td><td>Another classic from Harvard Business Review. Excellent. Easy to read: 16 pages (only 12 of content).<br/>
+			                         A must read and an excellent complement of the video <a href="http://synchronit.com/downloads/what_really_motivates_people.html">"What really motivates people"</a> (read the book first).</td></tr>
+			<tr><td>Level</td><td>Introductory</td></tr>			                        
+			<tr><td>Audience</td><td>Anyone who wants to understand collective and individual motivation, especially in any organization.</td></tr>			                        
+			<tr><td>What you will learn</td><td>AUTONOMY. MASTERY. PURPOSE. These are the intrinsic motivators explained in the <a href="http://synchronit.com/downloads/what_really_motivates_people.html">video</a>. This book makes the distinction between external and internal motivating factors, as well as differentiating between motivating and de-motivating factors (being money one of the latest).</td></tr>			                        
+			<tr><td>Author</td><td><a href="http://en.wikipedia.org/wiki/Frederick_Herzberg">Frederick Herzberg</a></td></tr>			                        
+		</table>
+	</div>
+</div>
+
+
+<a id="liderar"></a>
+<div onmouseover="this.childNodes[0].style.visibility='visible'" onMouseOut="this.childNodes[0].style.visibility='hidden'" onClick="location='#liderar'"><span class="linkimg"><img src="img/link.png"> link <a id="estplan"></a><br/></span></div>
+<div class="item">
+	<!--  English Version -->
+	<div id="liderar_en">
+		<div class="cover">
+			<a href="http://synchronit.com/downloads/freebooks/Leadership%20and%20Creation%20v-01.pdf"><img class="image" src="img/leadership_and_creation.png"/></a>
+		</div>
+		<div class="content">
+			<table>
+				<tr><td>Title</td><td class="title">Leadership &amp; Creation <a style="font-weight: normal; font-size: 12px;" href="javascript:lang('liderar', 'en', 'es')">(ver en espa&ntilde;ol)</a></td></tr>
+				<tr><td>Summary</td><td>A broad, detailed and enlightening approach on the difficult task of leading human groups.<br/>
+										The author brings together humanist and management concepts that are normally presented separately, in a singular, inspiring and comprehensive analysis.</td></tr>
+				<tr><td>Comments</td><td>A must read for anyone insterested in leadership and reaching the motivation of each team member.</td></tr>
+				<tr><td>Level</td><td>Introductory</td></tr>			                        
+				<tr><td>Audience</td><td>Leaders, people who want to improve their skills in this direction and managers who want to understand the differences between management and leadership.</td></tr>			                        
+				<tr><td>What you will learn</td><td>Organizations are built by and with human beings, where mechanistic visions provide an incomplete model. Each person needs to be considered in its entirety and in this sense, the message is totally aligned with the LEAN way of thinking.<br/>
+				  									The only nuance is that the author focuses leadership in managers perspective, whilst LEAN and Scrum promote self-organized teams (multidisciplinary, of course).<br/>
+				  									This is a brilliant, singular book pointing in the right direction. A very good first-step for traditional managers.</td></tr>			                        
+				<tr><td>Author</td><td><a href="https://www.linkedin.com/pub/alvaro-luna/0/2a4/204">Alvaro Luna</a></td></tr>			                        
+			</table>
+		</div>
+	</div>
+	<!-- Spanish Version -->
+	<div id="liderar_es" style="display: none;">
+		<div class="cover">
+			<a href="http://www.amazon.com/Liderar-como-Dios-manda-Spanish-ebook/dp/B00ILWKR0M/"><img class="image" src="img/liderar.png"/></a>
+		</div>
+		<div class="content">
+			<table>
+				<tr><td>Title</td><td class="title">Liderar Como Dios Manda  <a style="font-weight: normal; font-size: 12px;" href="javascript:lang('liderar', 'es', 'en')">(view in english)</a></td></tr>
+				<tr><td>Summary</td><td>Un an&aacute;lisis amplio, detallado y enriquecedor sobre la dif&iacute;cil tarea de liderar grupos humanos.<br/>
+										El autor re&uacute;ne conceptos humanistas y de management que normalmente son considerados por separado, en un an&aacute;lisis singular, inspirador y comprensivo.</td></tr>
+				<tr><td>Comments</td><td>Una obra imperdible para cualquier persona que se interese por el liderazgo y/o la din&aacute;mica de grupos y organizaciones.</td></tr>
+				<tr><td>Level</td><td>Introductory</td></tr>			                        
+				<tr><td>Audience</td><td>L&iacute;deres, personas que deseen mejorar sus capacidades en esa direcci&oacute;n y gerentes que deseen entender las diferencias entre gerenciar y liderar.</td></tr>			                        
+				<tr><td>What you will learn</td><td>Las organizaciones est&aacute;n compuestas por seres humanos. Las visiones mecanicistas son excesivamente simplistas y constituyen un modelo insuficiente. Cada persona debe ser considerada en su totalidad y como tal, el mensaje est&aacute; totalmente alineado con la forma de pensar LEAN.<br/>
+				  									El &uacute;nico matiz es el hecho de que el autor focaliza la tarea de liderazgo en los gerentes, mientras que LEAN apunta un poco m&aacute;s all&aacute;, hacia los grupos autogestionados (multidisciplinary, sel-organized teams).<br/>
+				  									Pero sin lugar a dudas que es una obra brillante, &uacute;nica y que apunta en la direcci&oacute;n correcta.</td></tr>			                        
+				<tr><td>Author</td><td><a href="https://www.linkedin.com/pub/alvaro-luna/0/2a4/204">Alvaro Luna</a></td></tr>			                        
+			</table>
+		</div>
+	</div>
+</div>  
+
+<a id="aeap"></a>
+<div onmouseover="this.childNodes[0].style.visibility='visible'" onMouseOut="this.childNodes[0].style.visibility='hidden'" onClick="location='#aeap'"><span class="linkimg"><img src="img/link.png"> link <a id="estplan"></a><br/></span></div>
+<div class="item">
+	<div class="cover">
+		<a href="http://synchronit.com/downloads/freebooks/Agile%20Estimating%20and%20Planning.pdf"><img class="image" src="img/estplan.png"/></a>
+	</div>
+	<div class="content">
+		<table>
+			<tr><td>Title</td><td class="title">Agile Estimating and Planning</td></tr>
+			<tr><td>Summary</td><td>The main reference for Agile Planning.</td></tr>
+			<tr><td>Comments</td><td>Theory and practice are described in an interesting writing. Concepts are explained and then applied to a concrete case across the whole book. Very illustrative, easy to read.</td></tr>
+			<tr><td>Level</td><td>Introductory</td></tr>			                        
+			<tr><td>Audience</td><td>If you have questions about how to plan in agile projects, this is essential reading. Not all your answers (especially regarding large scale aspects) may be answered, but it is a very important first step.</td></tr>			                        
+			<tr><td>What you will learn</td><td>You will learn how to organize a project and the corresponding planning. How to manage uncertainty and understand the <a href="http://en.wikipedia.org/wiki/Cone_of_Uncertainty">"cone of uncertainty"</a> applied to Agile SW Projects.</td></tr>			                        
+			<tr><td>Author</td><td><a href="http://www.mountaingoatsoftware.com/company/about-mike-cohn">Mike Cohn</a></td></tr>			                        
+		</table>
+	</div>
+</div>  
+
+<a id="lftt"></a>
+<div onmouseover="this.childNodes[0].style.visibility='visible'" onMouseOut="this.childNodes[0].style.visibility='hidden'" onClick="location='#lftt'"><span class="linkimg"><img src="img/link.png"> link <a id="estplan"></a><br/></span></div>
+<div class="item">
+	<div class="cover">
+		<a href="http://www.amazon.com/Lean-Trenches-Managing-Large-Scale-Projects/dp/1934356859/"><img class="image" src="img/lean_from_the_trenches.png"/></a>
+	</div>
+	<div class="content">
+		<table>
+			<tr><td>Title</td><td class="title">Lean from the trenches</td></tr>
+			<tr><td>Summary</td><td>A real case-study of an Agile / LEAN Project. A concrete and comprehensive SW development case.</td></tr>
+			<tr><td>Comments</td><td>Easy to read, concrete, illustrative. It brings all concepts together in a single case-study. Brilliant.</td></tr>
+			<tr><td>Level</td><td>Intermediate. We recommend to read <a href="#tpos">The Power of Scrum</a> and <a href="#lsd_summary">Mary's summary</a> at least, in order to get the most out of this book.</td></tr>			                        
+			<tr><td>Audience</td><td>Anyone who wants to see a real case in action, where all concepts are applied, beyond "Scrum-by-the-book" and applying several LEAN principles.</td></tr>			                        
+			<tr><td>What you will learn</td><td>A lot. How to measure. What to measure (velocity, WIP, lead/cycle time, efficiency, etc.). You will see a case, where Story Points (a central concept in Scrum) are not used at all! The overall case is what in Scrum is called a "Ri State" or a Lean Project. What is important to keep in mind, is that there are no recipes: <i>it is <b>not</b> about copying anything, but understanding the underlying principles</i>. The whole case is just a demonstration of what can be achieved and one way of doing it..</td></tr>			                        
+			<tr><td>Author</td><td><a href="http://www.amazon.com/Henrik-Kniberg/e/B007AK6OT4">Henrik Kniberg</a></td></tr>			                        
+		</table>
+	</div>
+</div>  
+
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<!-- 
+<ul>
+
+<li>Specification by Example
+
+<li>Clean Code
+
+</ul>
+ -->
+ 
+</div>
+
+</html>
