@@ -9,7 +9,6 @@ body {
     width: 100%;
     height: 100%;
 }
-
 body {
     font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
 }
@@ -568,4 +567,19 @@ body {
 .panel-creative-blue > .panel-heading .badge{
     background: #966F09;
     color: white;
+}
+
+#how
+{
+	background-image: url('../img/MANOS_TEAMWORK.JPG'); 
+	background-size: 100%; 
+	background-repeat: no-repeat;
+	min-height: 100%;
+}
+
+.tips
+{
+	color: #111133;
+	font-weight: bold;
+	white-space: nowrap;
 }
