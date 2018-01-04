@@ -1,5 +1,7 @@
 <html>
 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <style>
 body {
     background-image: url("img/synchronit_isotipo_background.png");
@@ -95,7 +97,10 @@ body {
 		document.getElementById(item + "_" + from).style.display = "none";
 		document.getElementById(item + "_" + to  ).style.display = "block";
 	}
+	
 </script>
+
+<body>
 
 <div class="header">
 <a href="http://synchronit.com/"><img src="img/synchronit_logotipo.png" border="0"></a>
@@ -605,5 +610,12 @@ Recommended reading about LEAN, oriented to SW Develoment & Management
  -->
  
 </div>
+</body>
+<script>
+var scale = 'scale(1)';
+document.body.style.webkitTransform =  scale;    // Chrome, Opera, Safari
+document.body.style.msTransform     =  scale;    // IE 9
+document.body.style.transform       =  scale; 
 
+</script>
 </html>
