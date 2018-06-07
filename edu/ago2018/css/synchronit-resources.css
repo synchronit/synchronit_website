@@ -1,0 +1,160 @@
+#about,
+#contact {
+    width: 100%;
+    min-height: auto;
+    text-align: center;
+    color: #fff;
+}
+
+#about {
+    background-image: url(../img/office2.jpg);
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    text-shadow: 1px 1px 1px #000;
+    background-attachment: fixed;
+}
+
+#contact {
+    background-image: url(../img/map-image.png);
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    background-attachment: fixed;
+}
+
+#contact address {
+    color: #000;
+    text-align: left;
+}
+
+.navbar-brand {
+    background-position: 5px 5px !important;
+    width: 150px !important;
+    background-size: 141px 40px !important;
+   
+}
+.navbar-default .navbar-brand {
+    background: url(../img/nuevas/logo_negro.png) no-repeat;
+}
+
+@media (min-width: 768px) {
+    .navbar-brand{
+        width: 180px !important;
+       background-size: 174px 50px !important;
+       height: 70px;
+    }
+    .navbar-default.affix-top .navbar-brand {
+    background: url(../img/nuevas/logo_negro.png) no-repeat;
+ 
+}
+    .navbar-default.affix .navbar-brand{
+    background: url(../img/nuevas/logo_negro.png) no-repeat;
+}
+
+.img-rounded-50 {
+    border-radius: 50%;
+}
+
+.margin-10 {
+    margin: 10px;
+}
+
+#contact-form {
+    text-align: left;
+    color: #000;
+}
+
+#team-section {
+    padding-top: 60px;
+    color: white;
+}
+
+.team-item > div {
+    margin: 10px;
+    height: 150px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10%;
+}
+
+.team-item .team-middle-bg {
+    padding: 10px;
+    min-height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10%;
+}
+
+.team-item .team-inside-bg {
+    min-height: 100%;
+    border-radius: 40%;
+    background-color: white;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10%;
+}
+
+.team-item #alvaro {
+    background-image: url(../img/team/alvaro.jpg);
+}
+
+.team-item #ana {
+    background-image: url(../img/team/ana.jpg);
+}
+
+.team-item #brian {
+    background-image: url(../img/team/brian.jpg);
+}
+
+.team-item #dan {
+    background-image: url(../img/team/dan.jpg);
+}
+
+.team-item #federico {
+    background-image: url(../img/team/federico.jpg);
+}
+
+.team-item #fernando {
+    background-image: url(../img/team/fernando.jpg);
+}
+
+.team-item #jona {
+    background-image: url(../img/team/jona.jpg);
+}
+
+.team-item #leandro {
+    background-image: url(../img/team/leandro.jpg);
+}
+
+.team-item #lucia {
+    background-image: url(../img/team/lucia.jpg);
+}
+
+.team-item #marcos {
+    background-image: url(../img/team/marcos.jpg);
+}
+
+.team-item #marina {
+    background-image: url(../img/team/marina.jpg);
+}
+
+.team-item #martin {
+    background-image: url(../img/team/martin.jpg);
+}
+
+.team-item #pablo {
+    background-image: url(../img/team/pablo.jpg);
+}
+
+.team-item #yasim {
+    background-image: url(../img/team/yasim.jpg);
+}
+
+.table th,
+.table td {
+    border-top: none !important;
+}
