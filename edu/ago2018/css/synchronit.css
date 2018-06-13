@@ -106,15 +106,15 @@ h1 span.slogan_onus{
 
 
 @media(max-width:789px){
-    #about h2, #about #vision {
+    #testimonials h2, #testimonials #vision {
         text-align: center;
     }
 
-    #about p {
+    #testimonials p {
         text-align: justify;
     }
 
-    #about #redes{
+    #testimonials #redes{
         float:none;
         text-align: center;
     }
@@ -122,7 +122,7 @@ h1 span.slogan_onus{
 
 }
 
-#about a.values:hover{
+#testimonials a.values:hover{
     text-decoration:none;
     color: #EAB12C;
 }
@@ -131,7 +131,7 @@ h1 span.slogan_onus{
     background-color:#EAB12C;
 }
 
-#contact .panel-footer{
+#register .panel-footer{
     height: 100px;
 }
 
@@ -164,15 +164,15 @@ h1 span.slogan_onus{
 
 
 
-#about,
-#contact {
+#testimonials,
+#register {
     width: 100%;
     min-height: auto;
     text-align: center;
     color: #fff;
 }
 
-#about {
+#testimonials {
     background: linear-gradient(
                      rgba(20,20,20, .6),
                      rgba(20,20,20, .6)),
@@ -219,7 +219,7 @@ h1 span.slogan_onus{
 
 }
 
-#about a {
+#testimonials a {
     color: #fff;
 }
 
@@ -363,7 +363,7 @@ h1 span.slogan_onus{
     background-size: 200px auto;
 }*/
 
-#contact {
+#register {
     background-image: url(../img/map-image.png);
     background-position: center;
     -webkit-background-size: cover;
@@ -376,7 +376,7 @@ h1 span.slogan_onus{
     background-color: #17202f;
 }
 
-#contact address {
+#register address {
     color: #000;
     text-align: left;
 }
