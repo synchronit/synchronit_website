@@ -22,7 +22,7 @@ body{
 
 .flipbook-viewport .flipbook{
 	width:1200px;
-	height:900px;
+	height:700px;
 	margin: auto;
 #	left:-400px;
 #	top:-200px;
@@ -30,7 +30,7 @@ body{
 
 .flipbook-viewport .page{
 	width:600px;
-	height:900px;
+	height:700px;
 	background-color:white;
 	background-repeat:no-repeat;
 	background-size:100% 100%;
@@ -69,6 +69,6 @@ body{
 
 .flipbook-viewport .double{
 	width:1200px;
-	height:900px;
+	height:700px;
 	background-size:100% 100%;
 }
