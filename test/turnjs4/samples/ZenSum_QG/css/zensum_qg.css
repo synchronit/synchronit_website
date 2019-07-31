@@ -75,7 +75,8 @@ body{
 
 .cover-img {
    position: absolute;
-   top: 10%;
-   height: 80%;
+   top: 15%;
+   height: 60%;
    margin: auto;
+   display: block;
 }
