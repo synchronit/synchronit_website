@@ -69,18 +69,19 @@ BODY
 	font-size: 200%;
 	margin: auto;
 	cursor: pointer;
+	outline: none;
 }
 
 .button:hover
 {
-	border: 5px solid  #37657d;
 	color:  white;
 	background: #37657d;
-	text-align: center;
-	padding: 15px 32px;
-	font-size: 200%;
-	margin: auto;
-	cursor: pointer;
+}
+
+.button-hover
+{
+	color:  white;
+	background: #37657d;
 }
 
 #text
@@ -95,3 +96,22 @@ BODY
 	width: 80%;
 }
 
+#make
+{
+	display: none;
+	padding: 3%;
+	background-color: #87b5cd;
+	height: 90%;
+	position: relative;
+}
+
+#loadImg
+{
+	border-radius: 1%;
+	border: 5px dashed grey;
+	width: 90%;
+	height: 90%;
+	margin: auto;
+  	position: absolute;
+  	top: 0; left: 0; bottom: 0; right: 0;
+  }

@@ -24,17 +24,39 @@
 
 <div id="container">
 	<div id="left">
-		<button class="button" onclick="showText()">WHAT IS J.O.D.?</button>
+		<button class="button" id="buttonText" onclick="showText()">WHAT IS J.O.D.?</button>
 	</div>
 	<div id="right">
-		<button class="button">MAKE ONE</button>
+		<button class="button" id="buttonMake" onclick="showMake()">MAKE ONE</button>
 	</div>
 </div>
 
 <div id="text">
-Imagine you are working on a product that receives improvement ideas that are analyzed for a possible implementation.
-Your Jira board may look something like this:
-<img src="img/jira_001.png"></img>
+	<h2>What if ... instead of this:</h2>
+	<img src="img/kanban_large.png" width="15%"></img>
+	<h2>You could have this:</h2>
+	<img src="img/second_level_overview.png" width="20%"></img>
+	<h3>In short: JOD allows you to easily build real-time dashboards that summarize the information of multiple and large boards.</h3>
+	<h3><i>You are right, the numbers are extracted on real-time from Jira and they are an hyperlink to the tickets.</i></h3>
+	<h2>A Case Study</h2>
+	Suppose that you are working on a product.<br/>
+	The product receives improvement ideas and these ideas are analyzed for a possible implementation.<br/>
+	Your Jira board may look something like this (note: this case is based on a real-world example):<br/><br/>
+	<img src="img/jira_001.png"></img><br/>
+	Yes, all these columns are just for the "Analysis" and "Approval" parts of the process.<br/>
+	And this is not a especially complex one. Analysis could be separated into "Process" and "Technical" Analysis, for example.<br/><br/>
+	<i>Approved items go then through a refinement and also a development cycle, so the whole workflow may end up having about 20 columns.</i><br/><br/>
+	This is of course too much. Multiple teams can work in parallel and even also in different parts of the workflow (not ideal, but a reality in many cases).<br/>
+	Compare the 20 columns Jira board with the summary presented here:<br/><br/>
+	<img src="img/second_level_overview.png" width="20%"></img><br/>
+	A high-level overview helps to have an end-to-end overview, increasing alignment and bringing more clarity on where to focus.<br/><br/>
+	You got it? Then you are now ready to <a href="javascript:showMake()">MAKE ONE</a>.
+</div>
+
+<div id="make">
+
+	<div id="loadImg"></div>
+
 </div>
 
 </body>
