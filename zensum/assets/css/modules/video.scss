@@ -1,0 +1,29 @@
+/*                               ()_()                   
+                                 (. .)                  
+/----------------------------oo0--(_)--0oo-------------------------------------/
+
+/----   VIDEO     VIDEO     VIDEO     VIDEO     VIDEO     VIDEO     VIDEO   ---/
+
+                               ooo0  0ooo
+/------------------------------(  )--(  )--------------------------------------/
+/*                             (_)    (_)                                     */
+.video {
+    background-color: $video-bg;
+    margin: 0 0 30px 0;
+    position: relative;
+    
+    .video-footer {
+        background-color: $video-footer-bg;
+        height: 40px;
+        font-size: 60px;
+        text-align: right;
+        color: #CCCCCC;
+        line-height: 0px;
+        
+        i {
+            position: relative;
+            right: 10px;
+            top: -11px;
+        }
+    }
+}

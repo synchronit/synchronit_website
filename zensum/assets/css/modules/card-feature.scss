@@ -1,0 +1,68 @@
+/*                               ()_()                   
+                                 (. .)                  
+/----------------------------oo0--(_)--0oo-------------------------------------/
+
+/---     CUSTOM CARD      CUSTOM CARD      CUSTOM CARD      CUSTOM CARD     ---/
+
+                               ooo0  0ooo
+/------------------------------(  )--(  )--------------------------------------/
+/*                             (_)    (_)                                     */
+.card-feature {
+    background-color: $card-feature-bg;
+    cursor: pointer;
+    margin: 10px 0 20px 0;
+    text-align: center;
+    border-radius: $card-feature-border-radius;
+
+    @if $card-feature-all-border == false or $card-feature-bottom-border == false {
+        border: none;
+    }
+    @if $card-feature-bottom-border == true {
+        border-bottom: solid $card-feature-boder-width $card-feature-border-color;
+    }
+
+    [class^="icon-"], [class*=" icon-"] {
+        font-size: $card-feature-icon-size;
+        color: $card-feature-icon-color;
+    }
+
+    .title {
+        margin-bottom: 0;
+    }
+
+    @media(min-width: 768px) {
+
+        [class^="icon-"], [class*=" icon-"] {
+            font-size: $card-feature-icon-size + 10px;
+        }
+
+        p {
+            display: none;
+        }
+
+        &:hover {
+            background-color: $card-feature-hover-bg;
+            border-color: darken($card-feature-hover-bg, 10%);
+
+            [class^="icon-"], [class*=" icon-"] {
+                display: none;
+            }
+
+            p {
+                display: block;
+                color: white;
+            }
+
+            .title {
+                color: white;
+            }
+        }
+    }
+
+    @media(min-width: 992px) {
+
+        [class^="icon-"], [class*=" icon-"] {
+            font-size: $card-feature-icon-size + 50px;
+        }
+    }
+}

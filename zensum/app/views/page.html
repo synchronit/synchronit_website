@@ -1,0 +1,37 @@
+<div class="image-container">
+    <img ng-src="assets/img/features/{{page.cover}}" alt="">
+    <div class="icon">
+        <img ng-src="assets/img/features/{{page.icon}}" alt="">
+    </div>
+    <div class="main-heading">
+        <h1>{{page.title}}</h1>
+    </div>
+</div>
+
+<h1 class="text-xs-center heading-line">{{page.heading}}</h1>
+
+<div class="row">
+
+    <div class="col-sm-12 col-md-6">
+
+        <div class="video" ng-if="page.resource.type === 'video'">
+            <div class="embed-responsive embed-responsive-4by3">
+                <iframe class="embed-responsive-item" ng-src="{{page.resource.url}}" allowfullscreen=""></iframe>
+            </div>
+            <div class="video-footer">
+                <i class="icon-youtube"></i>
+            </div>
+        </div>
+
+        <figure ng-if="page.resource.type === 'image'">
+            <img src="assets/img/{{page.resource.url}}" alt="">
+            <figcaption class="font-italic" ng-if="page.resource.caption">
+                {{page.resource.caption}}
+            </figcaption>
+        </figure>
+
+    </div>
+
+    <div class="col-sm-12 col-md-6" ng-bind-html="page.content"></div>
+
+</div>

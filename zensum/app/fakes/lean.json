@@ -1,0 +1,12 @@
+{
+    "title": "LEAN",
+    "icon": "8.svg",
+    "cover": "feature7.jpg",
+    "heading": "Agile. Scrum. LEAN!",
+    "resource": {
+        "type": "image",
+        "url": "thumbnail.jpg",
+        "caption": ""
+    },
+    "content": "<p><img class='pull-xs-right' src='assets/img/shu_ha_ri.png' width='150'>Shu Ha Ri.<br>Do. Understand.<br>Transcend.<br></p><p class='font-italic'>As a starting point, we always use Scrum.<br><br>But after setting a baseline, we want to move forward.<br><br>This is where LEAN comes on place.<br><br>If you want to go beyond Scrum, LEAN offers a set of solid principles and values that can guide you through the journey.<br><br>Never stop improving.</p>"
+}

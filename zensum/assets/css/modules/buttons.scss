@@ -1,0 +1,33 @@
+/*                               ()_()                   
+                                 (. .)                  
+/----------------------------oo0--(_)--0oo-------------------------------------/
+
+/----    BUTTONS    BUTTONS    BUTTONS    BUTTONS    BUTTONS    BUTTONS     ---/
+
+                               ooo0  0ooo
+/------------------------------(  )--(  )--------------------------------------/
+/*                             (_)    (_)                                     */
+.btn {
+    border-radius: $btn-radius;
+    border: none;
+    outline: 0!important;
+    font-family: $btn-font;
+    font-weight: $btn-font-weight;
+    color: $btn-color;
+
+    .btn-lg {
+
+    }
+
+    &.btn-oval {
+        border-radius: 50px;
+    }
+
+    &.btn-custom {
+        @include button-variant(
+        $btn-color, 
+        $btn-custom-bg, 
+        $btn-custom-hover-bg
+        );
+    }
+}

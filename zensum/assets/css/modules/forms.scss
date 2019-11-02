@@ -1,0 +1,39 @@
+/*                               ()_()                   
+                                 (. .)                  
+/----------------------------oo0--(_)--0oo-------------------------------------/
+
+/----    FORMS    FORMS    FORMS     FORMS     FORMS     FORMS     FORMS    ---/
+
+                               ooo0  0ooo
+/------------------------------(  )--(  )--------------------------------------/
+/*                             (_)    (_)                                     */
+.form-group {
+    margin-bottom: $form-margin-bottom;
+}
+
+.form-control {
+    color: $form-color;
+    min-height: 35px;
+    box-shadow: none;
+    background-color: $form-bg;
+    border-radius: 0;
+    font-family: $form-font-family;
+    font-style: italic;
+
+    @if $form-border == false {
+        border-color: $form-bg;
+    }
+
+    &:focus {
+        border-color: $primary-color!important;
+        background-color: $form-bg;
+    }
+}
+
+textarea {
+    resize: vertical;
+}
+
+.input-message {
+    position: absolute;
+}

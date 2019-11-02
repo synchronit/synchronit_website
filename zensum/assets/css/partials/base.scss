@@ -1,0 +1,39 @@
+/*                               ()_()                   
+                                 (. .)                  
+/----------------------------oo0--(_)--0oo-------------------------------------/
+
+/---     BASE STYLES     BASE STYLES      BASE STYLES       BASE STYLES     ---/
+
+                               ooo0  0ooo
+/------------------------------(  )--(  )--------------------------------------/
+/*                             (_)    (_)                                     */
+html {
+    font-size: 16px;
+}
+
+body {
+    font-size: 1em;
+    font-family: $font2;
+    overflow-x: hidden;
+}
+
+.close-btn {
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    right: 0;
+    font-size: 60px;
+    line-height: 0;
+    color: black;
+
+    &:hover, &:focus {
+        color: #CCCCCC;
+        text-decoration: none;
+    }
+}
+
+@media(min-width: 768px) {
+    .close-btn {
+        color: white;
+    }
+}

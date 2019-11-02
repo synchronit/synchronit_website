@@ -1,0 +1,11 @@
+{
+    "title": "Practices",
+    "icon": "2.svg",
+    "cover": "feature1.jpg",
+    "heading": "Practices are applied knowledge.",
+    "resource": {
+        "type": "image",
+        "url": "continuous-delivery.png"
+    },
+    "content": "<p>If purpose is the compass for the unknown, practices are the map of the known world.</p><p>DevOps is the foundation for ZenSum.</p><p>Using common practices like Continuous Integration &amp; Delivery are essential in today's world. You cannot work agile if you need to manually test each increment.</p><p>Decoupling test specification from test implementation is in the essence of behavior-driven development.</p><p>To enter a digital world, three practices are important: automate, automate and ... automate.</p>"
+}

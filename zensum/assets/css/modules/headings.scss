@@ -1,0 +1,87 @@
+/*                               ()_()                   
+                                 (. .)                  
+/----------------------------oo0--(_)--0oo-------------------------------------/
+
+/----     HEADINGS     HEADINGS     HEADINGS      HEADINGS      HEADINGS    ---/
+
+                               ooo0  0ooo
+/------------------------------(  )--(  )--------------------------------------/
+/*                             (_)    (_)                                     */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: $headings-font;
+    color: $headings-color;
+
+    &.heading-line {
+        margin-bottom: 40px;
+        position: relative;
+        &:before {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 3px;
+            left: 0;
+            right: 0;
+            bottom: -25px;
+            margin: auto;
+            background-color: $headings-line-color;
+        }
+    }
+
+    small {
+        display: block;
+        font-size: 16px;
+        margin-top: 2px;
+    }
+}
+
+h1, .h1 {
+    font-size: $h1-size - 12;
+}
+
+h2, .h2 {
+    font-size: $h2-size - 8;
+}
+
+h3, .h3 {
+    font-size: $h3-size - 5;
+}
+
+h4, .h4 {
+    font-size: $h4-size;
+}
+
+h5, .h5 {
+    font-size: $h5-size;
+}
+
+h6, .h6 {
+    font-size: $h6-size;
+}
+
+
+@media(min-width: 768px) {
+    h1, .h1 {
+        font-size: $h1-size - 4;
+    }
+    h2, .h2 {
+        font-size: $h2-size - 4;
+    }
+    h3, .h3 {
+        font-size: $h3-size - 4;
+    }
+}
+
+@media(min-width: 992px) {
+    h1, .h1 {
+        font-size: $h1-size;
+    }
+    h2, .h2 {
+        font-size: $h2-size;
+    }
+    h3, .h3 {
+        font-size: $h3-size;
+    }
+}
+
+

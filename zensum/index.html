@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <!-- base url -->
+        <!--<base href="/">-->
+
+        <!-- meta data -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name=viewport content="width=device-width, initial-scale=1">
+
+        <!-- title and favicon -->
+        <title>ZENSUM | Making sense of IT</title>
+        <link rel="icon" href="assets/img/fav.png">
+
+        <!--[if lt IE 9]>
+        <script src="node_modules/html5shiv/dist/html5shiv.min.js"></script>
+        <script src="node_modules/respond.js/dest/respond.min.js"></script>
+        <![endif]-->
+
+    </head>
+
+    <body ng-app="teamshore">
+
+        <!-- Preloader component -->
+        <preloader></preloader>
+
+        <div class="{{pageClass}}" ng-view=""></div>
+
+        <a href="#/" class="close-btn"><i class="icon-close"></i></a>
+
+        <footer>
+            <a class="logo" href="" title="">
+                <img src="assets/img/logo.svg" alt="">
+            </a>
+
+            <ul class="list-unstyled list-inline social-links">
+                <li class="list-inline-item"><a href="" title="" class="icon-linkedin"></a></li>
+                <li class="list-inline-item"><a href="#/contact" title="" class="icon-envelope"></a></li>
+            </ul>
+        </footer>
+
+        <script src="https://maps.googleapis.com/maps/api/js"></script>
+        <script type="text/javascript" src="bundle.js"></script>
+
+    </body>
+</html>

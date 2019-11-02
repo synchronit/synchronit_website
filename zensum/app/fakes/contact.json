@@ -1,0 +1,33 @@
+{
+    "title": "Contact",
+    "icon": "10.svg",
+    "cover": "feature9.jpg",
+    "heading": "Come in Touch",
+    "location": "San José 807 of. 204 11100 Montevideo, Uruguay",
+    "countries": [
+        {
+            "country": "SWITZERLAND",
+            "city": "Baar",
+            "address": "Blegistrasse 5",
+            "flag": "switzerland.png",
+            "location": " Blegistrasse 5 CH-6340 Baar, Switzerland",
+            "active": false
+        },
+        {
+            "country": "URUGUAY",
+            "city": "Montevideo",
+            "address": "San José 807 / 204",
+            "flag": "uruguay.png",
+            "location": "San José 807 of. 204 11100 Montevideo, Uruguay",
+            "active": true
+        },
+        {
+            "country": "GERMANY",
+            "city": "Munich",
+            "address": "Trappentreustrasse 17",
+            "flag": "germany.png",
+            "location": "Trappentreustrasse 17 80330 Munich, Germany",
+            "active": false
+        }
+    ]
+}

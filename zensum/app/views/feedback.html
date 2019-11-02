@@ -1,0 +1,29 @@
+<div class="image-container">
+    <img ng-src="assets/img/features/{{page.cover}}" alt="">
+    <div class="icon">
+        <img ng-src="assets/img/features/{{page.icon}}" alt="">
+    </div>
+    <div class="main-heading">
+        <h1>{{page.title}}</h1>
+    </div>
+</div>
+
+<h1 class="text-xs-center heading-line">{{page.heading}}</h1>
+
+<p class="text-xs-center">{{page.introduction}}</p>
+
+<div class="row">
+
+    <div class="col-sm-12 col-md-4" ng-repeat="feature in page.features">
+        <div class="card card-feature">
+            <div class="card-block">
+                <i class="{{feature.icon}}"></i>
+                <div ng-bind-html="feature.description"></div>
+                <h3 class="title">{{feature.title}}</h3>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div ng-bind-html="page.content"></div>

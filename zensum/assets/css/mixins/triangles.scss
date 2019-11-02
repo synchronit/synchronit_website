@@ -1,0 +1,66 @@
+//triangle bottom center
+@mixin triangle-bottom-center($top, $bottom, $left, $right, $color) {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 0;
+    right: 0;
+    bottom: -($top + $bottom);
+    top: auto;
+    margin: auto;
+    border-top: solid $top $color;
+    border-bottom: solid $bottom transparent;
+    border-left: solid $left transparent;
+    border-right: solid $right transparent;
+}
+
+//triangle top center
+@mixin triangle-top-center($top, $bottom, $left, $right, $color) {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 0;
+    right: 0;
+    top: -($top + $bottom);
+    margin: auto;
+    border-top: solid $top transparent;
+    border-bottom: solid $bottom $color;
+    border-left: solid $left transparent;
+    border-right: solid $right transparent;
+}
+
+//triangle top right
+@mixin triangle-top-right($top, $bottom, $left, $right, $color) {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: auto;
+    right: 15px;
+    top: -($top + $bottom);
+    margin: auto;
+    border-top: solid $top transparent;
+    border-bottom: solid $bottom $color;
+    border-left: solid $left transparent;
+    border-right: solid $right transparent;
+}
+
+//triangle left center
+@mixin triangle-left-center($top, $bottom, $left, $right, $color) {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: -($left + $right);
+    top: 0;
+    bottom: 0;
+    right: auto;
+    margin: auto;
+    border-top: solid $top transparent;
+    border-bottom: solid $bottom transparent;
+    border-left: solid $left transparent;
+    border-right: solid $right $color;
+}
+

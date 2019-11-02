@@ -1,0 +1,250 @@
+/*                               ()_()
+                                 (. .)
+/----------------------------oo0--(_)--0oo-------------------------------------/
+
+/----     HOMEPAGE     HOMEPAGE     HOMEPAGE      HOMEPAGE      HOMEPAGE    ---/
+
+                               ooo0  0ooo
+/------------------------------(  )--(  )--------------------------------------/
+/*                             (_)    (_)                                     */
+.home {
+    width: 100%;
+    height: calc(100vh - 60px);
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+
+    &.ng-leave {
+        animation: slideOutLeft 0.5s;
+    }
+
+    &.ng-enter {
+        animation: slideInLeft 0.5s;
+    }
+
+    .introduction {
+        background-color: white;
+        padding: 0;
+        overflow: hidden;
+        position: relative;
+        clear: both;
+
+        .intro-content {
+            padding: 30px 15px;
+            text-align: center;
+
+            img {
+                width: 80px;
+                margin-bottom: 30px;
+            }
+
+            p {
+                font-family: $font2;
+                margin-bottom: 60px;
+            }
+
+            h1 {
+                color: $text-color1;
+                font-size: 60px;
+            }
+        }
+    }
+
+    .menu {
+        padding: 0;
+        position: relative;
+        background-color: #F5F5F5;
+
+        .principles, .practices {
+            position: relative;
+            padding-top: 40px;
+            clear: both;
+
+            p {
+                font-family: $font1;
+                letter-spacing: 2px;
+                padding: 10px 0;
+                text-align: center;
+                position: absolute;
+                top: 0;
+                right: 0;
+                left: 0;
+                height: 40px;
+
+                &:before {
+                    @include triangle-bottom-center(10px,10px,10px,10px,#F5F5F5);
+                    z-index: 2;
+                }
+            }
+
+            .menu_button {
+                width: 50%;
+                height: 220px;
+                overflow: hidden;
+                float: left;
+                position: relative;
+                text-decoration: none;
+                cursor: pointer;
+                padding: 0 2px 4px 2px;
+                border: solid 2px #F5F5F5;
+                border-bottom-width: 4px;
+
+                &:nth-child(even) {
+                    border-left: none;
+                }
+
+                &:nth-child(odd) {
+                    border-right: none;
+                }
+
+                &:hover > img {
+                    -webkit-transform: scale(1.2);
+                    -ms-transform: scale(1.2);
+                    transform: scale(1.2);
+                }
+
+                > img {
+                    min-height: 100%;
+                    min-width: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    -webkit-transition: -webkit-transform 1s linear;
+                    transition: -webkit-transform 1s linear;
+                    transition: transform 1s linear;
+                    -webkit-transition: -webkit-transform 1s linear, -webkit-transform 1s linear;
+                    transition: transform 1s linear, -webkit-transform 1s linear;
+                }
+
+                .heading {
+                    width: 125px;
+                    height: 130px;
+                    margin: auto;
+                    text-align: center;
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    top: 0;
+                    bottom: 0;
+
+                    i {
+                        color: white;
+                        font-size: 70px;
+                        display: block;
+                    }
+
+                    h2 {
+                        color: white;
+                        font-family: $font2;
+                        font-size: 16px;
+                        font-weight: 100;
+                        margin: 0;
+                        letter-spacing: 1px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media(min-width: 544px) {
+        .menu {
+            .principles, .practices {
+                .menu_button {
+                    width: 25%;
+                    border: solid 2px #F5F5F5!important;
+                    border-bottom-width: 4px!important;
+
+                    &:nth-child(2) {
+                        border-left: none!important;
+                    }
+
+                    &:last-child {
+                        border-right: none!important;
+                    }
+                }
+            }
+        }
+    }
+
+    @media(min-width: 768px) {
+        &.ng-leave {
+            animation: stay 1s;
+
+            .introduction {
+                animation: slideOutLeft 0.5s both ease-in;
+            }
+
+            .menu {
+                animation: slideOutRight 0.5s both ease-in;
+            }
+        }
+
+        &.ng-enter {
+            animation: stay 0.5s;
+
+            .introduction {
+                animation: slideInLeft 0.5s both ease-in;
+            }
+
+            .menu {
+                animation: slideInRight 0.5s both ease-in;
+            }
+        }
+
+        .introduction {
+            height: 100%;
+
+            .intro-content {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 350px;
+                margin: auto;
+            }
+        }
+
+        .menu {
+            height: 100%;
+
+            .principles, .practices {
+                height: 50%;
+
+                .menu_button {
+                    height: 100%;
+
+                    .heading {
+                        width: 110px;
+                        h2 {
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media(min-width: 992px) {
+        .introduction {
+            .intro-content {
+                height: 450px;
+
+                img {
+                    width: 120px;
+                }
+
+                h1 {
+                    font-size: 100px;
+
+                    small {
+                        font-size: 30px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "title": "SPOC",
+    "icon": "7.svg",
+    "cover": "feature6.jpg",
+    "heading": "One person. One responsible. One team.",
+    "resource": {
+        "type": "image",
+        "url": "thumbnail.jpg",
+        "caption": "*NOTE: This is a starting point. For mature teams, it might not be necessary (or even recommended not to have a SPOC), so all team members are equally responsible. But this maturity can only be achieved, after many of them have rotated in the SPOC position."
+    },
+    "content": "<p class='font-italic'><span class='text-info'>“Unus pro omnibus, omnes pro uno. (one for all, all for one)”</span><br> *motto in the central part of the dome of the Swiss Federal Palace.</p><p>A team member is always co-located and asumes full-responsibility, acting as a Single-Point-Of-Contact (SPOC) for both sides.<br><br>Teamshore means Teamwork.<br><br></p><p class='font-italic'>After building a team with a fluent & open communication within one culture, the next step is to build trust.<br><br>This is achieved through a full-responsibility on the results taken by the on-site representative, who should rotate regularly among all team members.<br><br>Having a responsible team member that successfully coordinates remote communication, is a key factor.<br><br>SPOC works as if it has several brains and arms that work overnight.</p>"
+}

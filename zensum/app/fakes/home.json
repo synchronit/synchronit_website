@@ -1,0 +1,37 @@
+{
+    "title": "ZENSUM",
+    "slogan": "Making sense of IT",
+    "subtitle": "",
+    "people": [
+        {
+          "title": "People",
+          "url": "people",
+          "icon": "icon-group",
+          "image": "feature-thumbnail5.jpg"
+        }
+    ],
+    "purposes": [
+        {
+            "title": "Purpose",
+            "url": "purposes",
+            "icon": "icon-chart",
+            "image": "compass-image-2.jpg"
+        }
+    ],
+    "processes": [
+        {
+            "title": "Processes",
+            "url": "process",
+            "icon": "icon-done",
+            "image": "process.jpg"
+        }
+    ],
+    "practices": [
+        {
+            "title": "Practices",
+            "url": "practices",
+            "icon": "icon-hands",
+            "image": "practices.jpg"
+        }
+    ]
+}

@@ -1,0 +1,27 @@
+//mixins
+@import "mixins/triangles";
+@import "mixins/buttons";
+
+//variables
+@import "variables/variables";
+
+//modules
+@import "modules/fonts";
+@import "modules/preloader";
+@import "modules/headings";
+@import "modules/buttons";
+@import "modules/forms";
+@import "modules/icons";
+@import "modules/video";
+@import "modules/figure";
+@import "modules/card-feature";
+@import "modules/animations";
+
+//partials
+@import "partials/base";
+@import "partials/pages";
+@import "partials/home";
+@import "partials/feedback";
+@import "partials/contact";
+@import "partials/footer";
+

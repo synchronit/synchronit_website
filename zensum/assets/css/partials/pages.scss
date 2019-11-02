@@ -1,0 +1,131 @@
+/*                               ()_()                   
+                                 (. .)                  
+/----------------------------oo0--(_)--0oo-------------------------------------/
+
+/----      PAGES    PAGES    PAGES    PAGES    PAGES    PAGES    PAGES      ---/
+
+                               ooo0  0ooo
+/------------------------------(  )--(  )--------------------------------------/
+/*                             (_)    (_)                                     */
+.page {
+    padding: 0 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+    height: calc(100vh - 80px);
+    width: 100vw;
+
+    &.ng-enter {
+        animation: slideInRight 0.5s;
+    }
+
+    &.ng-leave {
+        animation: slideOutRight 0.5s;
+    }
+
+    .image-container {
+        display: none;        
+    }
+
+    > h1 {
+        margin: 50px 0 60px 0;
+    }
+    
+    @media(min-width: 544px) {
+        padding: 0 50px;
+    }
+
+    @media(min-width: 768px) {
+        padding: 0 calc(240px + 15px) 0 15px;
+
+        &.ng-enter {
+            animation: fadeIn 0.5s;
+        }
+
+        &.ng-leave {
+            animation: fadeOut 0.5s;
+        }
+
+        .image-container {
+            display: block;
+            overflow: hidden;
+            position: fixed;
+            right: 0;
+            padding: 0;
+            width: 240px;
+            height: calc(100vh - 64px);
+
+            > img {
+                min-height: 100%;
+                min-width: 100%;
+            }
+
+            .icon {
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                background-color: white;
+                position: absolute;
+                top: 30px;
+                left: 0;
+                right: 0;
+                margin: auto;
+
+                img {
+                    width: 80px;
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                }
+            }
+
+            h1 {
+                position: absolute;
+                -webkit-transform: rotate(90deg);
+                -ms-transform: rotate(90deg);
+                transform: rotate(90deg);
+                width: 100vh;            
+                left: 15px;
+                top: 0;
+                transform-origin: left;
+                -webkit-transform-origin: left;
+                -moz-transform-origin: left;
+                -ms-transform-origin: left;
+                -o-transform-origin: left;
+                color: white;
+                font-size: 55px;
+                text-align: center;
+            }
+        }
+    }
+
+    @media(min-width: 992px) {
+        padding: 0 calc(340px + 15px) 0 15px;
+
+        .image-container {
+            width: 340px;
+
+            .icon {
+                width: 120px;
+                height: 120px;
+
+                img {
+                    width: 120px;
+                }
+            }
+
+            h1 {
+                font-size: 70px;
+                left: 19px;
+            }
+        }
+    }
+
+    @media(min-width: 1200px) {
+        padding: 0 calc(340px + 60px) 0 60px;
+    }
+}

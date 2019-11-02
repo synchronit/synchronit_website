@@ -1,0 +1,18 @@
+// Button styles
+@mixin button-variant($color, $background, $background-hover) {
+    color: $color;
+    background-color: $background;  
+
+    &:hover, &:active, &:focus {
+        color: $color;
+        background-color: $background-hover;  
+    }
+}
+
+// Button sizes
+@mixin button-size($padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius) {
+    padding: $padding-vertical $padding-horizontal;
+    font-size: $font-size;
+    line-height: $line-height;
+    border-radius: $border-radius;
+}

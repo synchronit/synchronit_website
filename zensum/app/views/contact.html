@@ -1,0 +1,71 @@
+<div class="image-container">
+    <img ng-src="assets/img/features/{{page.cover}}" alt="">
+    <div class="icon">
+        <img ng-src="assets/img/features/{{page.icon}}" alt="">
+    </div>
+    <h1>{{page.title}}</h1>
+</div>
+
+<h1 class="heading-line text-xs-center">{{page.heading}}</h1>
+
+<div class="row">
+
+    <div class="col-sm-12 col-md-6">
+        <ng-map class="map" center="{{page.location}}">
+            <marker position="{{page.location}}" title="hello"></marker>
+        </ng-map>
+    </div>
+
+    <div class="col-sm-12 col-md-6">
+
+        <div id="{{country.country}}" class="country" 
+             ng-repeat="country in page.countries" 
+             ng-click="reLocate(country)"
+             ng-class="{'active': country.active}">
+            <div class="flag"><img ng-src="assets/img/flags/{{country.flag}}"></div>
+            <p>{{country.country}} - {{country.city}} <small>{{country.address}}</small></p>
+        </div>
+
+    </div>
+</div>
+
+<div class="alert alert-danger" ng-if="error">
+    <strong>Error!</strong> We couldn't send your message. Please try again.
+</div>
+
+<div class="alert alert-success" ng-if="success">
+    <strong>Success!</strong> Your message has been sent successfully.
+</div>
+
+<form class="row" name="contactForm" novalidate="" ng-submit="sendEmail('http://put-url-here.com')">
+
+    <div class="form-group col-xs-12 col-md-6" ng-class="{'has-danger': (contactForm.$submitted || contactForm.name.$touched) && contactForm.name.$error.required }">
+        <input type="text" class="form-control" ng-model="name" name="name" placeholder="Name*" required="">
+
+        <div class="input-message" ng-show="contactForm.$submitted || contactForm.name.$touched">
+            <span class="text-danger" ng-show="contactForm.name.$error.required">Tell us your name.</span>
+        </div>
+    </div>
+
+    <div class="form-group col-xs-12 col-md-6" ng-class="{'has-danger': (contactForm.$submitted || contactForm.email.$touched) && (contactForm.email.$error.required || contactForm.email.$error.email) }">
+        <input type="email" class="form-control" ng-model="email" name="email" placeholder="Email*" required="">
+
+        <div class="input-message" ng-show="contactForm.$submitted || contactForm.email.$touched">
+            <span class="text-danger" ng-show="contactForm.email.$error.required">Tell us your email.</span>
+            <span class="text-danger" ng-show="contactForm.email.$error.email">This is not a valid email.</span>
+        </div>
+    </div>
+
+    <div class="form-group col-xs-12" ng-class="{'has-danger': (contactForm.$submitted || contactForm.message.$touched) && contactForm.message.$error.required }">
+        <textarea class="form-control" rows="5" ng-model="message" name="message" placeholder="Your Message*" required=""></textarea>
+
+        <div class="input-message" ng-show="contactForm.$submitted || contactForm.message.$touched">
+            <span class="text-danger" ng-show="contactForm.message.$error.required">Tell us your message.</span>
+        </div>
+    </div>
+
+    <div class="col-xs-12 text-xs-center">
+        <button class="btn btn-custom btn-lg btn-oval">SAY HELLO</button>
+    </div>
+
+</form>

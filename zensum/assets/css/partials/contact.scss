@@ -1,0 +1,68 @@
+/*                               ()_()                   
+                                 (. .)                  
+/----------------------------oo0--(_)--0oo-------------------------------------/
+
+/---      CONTACT      CONTACT      CONTACT      CONTACT      CONTACT       ---/
+
+                               ooo0  0ooo
+/------------------------------(  )--(  )--------------------------------------/
+/*                             (_)    (_)                                     */
+.contact {
+
+    h1 {
+        margin-bottom: 70px;
+    }
+
+    .map {
+        height: 240px!important;
+        margin-bottom: 30px;
+    }
+
+    .country {        
+        margin-bottom: 40px;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &.active {
+            color: $primary-color;
+        }
+
+        p {
+            font-size: 19px;
+
+            small {
+                display: block;
+            }
+        }
+
+        .flag {
+            width: 60px;
+            height: 60px;
+            margin: -2px 20px 0 0;
+            border-radius: 50%;
+            background-color: #F5F5F5;
+            position: relative;
+            float: left;
+
+            img {
+                width: 36px;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: auto;
+            }
+        }
+    }
+
+    form {
+        margin-bottom: 10px;
+
+        .btn {
+            width: 175px;
+        }   
+    }
+}

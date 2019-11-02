@@ -1,0 +1,25 @@
+{
+    "title": "Feedback",
+    "icon": "4.svg",
+    "cover": "feature3.jpg",
+    "heading": "Incrementally, Iteratively & Collaborativelly",
+    "introduction": "We love feedback. We favor it working in small steps, validating each of them and making each success a team success.",
+    "features": [
+        {
+            "title": "Incremental",
+            "icon": "icon-bars",
+            "description": "<p class='font-italic'>No “Big Bang”.<br>No surprises.<br>Small steps.<br>Firm progress.<br></p>"
+        },
+        {
+            "title": "Iterative",
+            "icon": "icon-life-cicle",
+            "description": "<p class='font-italic'>Communication flows both ways.<br>Developers validate what they do.<br>POs validate what they think.</p>"
+        },
+        {
+            "title": "Collaboration",
+            "icon": "icon-business",
+            "description": "<p class='font-italic'>We help each other<br> and learn as a team.<br>We all win or lose, together.</p>"
+        }
+    ],
+    "content": "<p class='text-xs-center'>Since SW Development is all about Formalizing Knowledge, close collaboration between Business Experts and Developers is required.</p><p class='text-xs-center'>We work as a Team. Small steps. Open communication. Close collaboration.</p><p class='text-xs-center font-italic'>Agile is based on several principles and one we like the most, is the aknowledgement of the uncertainty. We clarify things together. We build the solution together.</p><p class='text-xs-center font-italic'>Working in small Increments, we Iterate to validate them and  this increases Collaboration. We love early feedback. We fail fast and small. We learn rapidly.</p>"
+}
