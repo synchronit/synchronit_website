@@ -99,10 +99,10 @@ BODY
 #make
 {
 	display: none;
-	padding: 3%;
 	background-color: #87b5cd;
-	height: 90%;
 	position: relative;
+	height: 90%;
+	padding: 3%;
 }
 
 #loadImg

@@ -5,10 +5,12 @@
 	<title>Jira Open Dashboard</title>
 
     <link rel="stylesheet" href="css/jod.css" type="text/css">
+    <link rel="stylesheet" href="css/upload.css" type="text/css">
 
 	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript" src="js/TweenMax.min.js"></script>
 	<script type="text/javascript" src="js/jod.js"></script>	
+	<script type="text/javascript" src="js/upload.js"></script>	
 
 </head>
 
@@ -54,8 +56,22 @@
 </div>
 
 <div id="make">
-
-	<div id="loadImg"></div>
+	
+	<div class="file-upload">
+	
+		<div class="image-upload-wrap">
+			<input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
+			<div class="drag-text">
+				<h3>Drag and drop an Image here (or click) to add one with the Overview.</h3>
+			</div>
+		</div>
+		<div class="file-upload-content">
+			<img class="file-upload-image" src="#" alt="your image" />
+			<div class="image-title-wrap">
+				<button type="button" onclick="removeUpload()" class="remove-image">Remove <span class="image-title">Uploaded Image</span></button>
+			</div>
+		</div>
+	</div>
 
 </div>
 
