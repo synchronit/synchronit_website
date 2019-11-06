@@ -12,7 +12,8 @@ $email = $_POST['from'];
 $message = $_POST['message'];
 $subject =  $_POST['from'];
 //$severIp='209.236.112.62';
-$serverIp='170.249.249.127';
+//$serverIp='170.249.249.127';
+$serverIp='mail.synchronit.com';
 
 $mail->isSMTP();
 
