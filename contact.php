@@ -46,7 +46,7 @@ $mail->msgHTML(file_get_contents(__DIR__ .'/messages/contactUs.html'));
 
 if(!$mail->send()) {
 
-    echo '<br/>{"v0.0.5 status ":"Message could not be sent to customer. Mailer Error:' . $mail->ErrorInfo . '     Name:'.$name.'     Mail:'.$email.'     Message:'.$message. ' ","success":false }';
+    echo '<br/>{"v0.0.6 status ":"Message could not be sent to customer. Mailer Error:' . $mail->ErrorInfo . '     Name:'.$name.'     Mail:'.$email.'     Message:'.$message. ' ","success":false }';
     exit;
 }
 
