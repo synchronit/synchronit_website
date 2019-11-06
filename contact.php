@@ -45,7 +45,7 @@ $mail->Subject = 'Thank you for contact us!';
 $mail->msgHTML(file_get_contents(__DIR__ .'/messages/contactUs.html'));
 
 if(!$mail->send()) {
-    echo '{"status":"Message could not be sent to customer. Mailer Error:' . $mail->ErrorInfo.'","success":false}';
+    echo '{"v0.0.2 status ":"Message could not be sent to customer. Mailer Error:' . $mail->ErrorInfo.'","success":false  $mail->validateAddress($email) }';
     exit;
 }
 
