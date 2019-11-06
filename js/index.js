@@ -30,6 +30,7 @@ $.extend({
                             self.showMessage("Your message has been sent");
                         } else {
                             self.showMessage('An error occurred while sending your message');
+                            console.log(result);
                         }
                     },
                     error:function(){
