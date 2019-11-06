@@ -1,11 +1,21 @@
-﻿<?php
+<?php
 /*set_include_path('/var/www/mail');*/
 require 'mail/PHPMailerAutoload.php';
 header('Content-Type: application/json');
 
 $password=trim(file_get_contents("/var/www/synchronit.com/mailpwd"));
 
-$mail = new PHPMailer;
+class myMailer extends PHPMailer
+{
+    public static function validateAddress($address, $patternselect = 'php')
+    {
+        return parent::validateAddress($address, $patternselect);
+    }
+}
+
+$mail = new myMailer;
+
+/*   $mail = new PHPMailer;   */
 
 $name = $_POST['name'];
 $email = $_POST['from'];
@@ -58,7 +68,7 @@ $mail->SMTPSecure = 'tls';                            // Enable encryption, 'ssl
 
 $mail->From = $email;
 $mail->FromName = 'Synchronit';
-$mail->addAddress('contact@synchronit.com');  // Add a recipient
+$mail->addAddress('contact@synchronit.com');  		// Add a recipient
 
 $mail->WordWrap = 50;                                 // Set word wrap to 50 characters
 $mail->isHTML(true);                                  // Set email format to HTML
