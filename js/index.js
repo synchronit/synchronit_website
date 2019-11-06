@@ -32,9 +32,17 @@ $.extend({
                             self.showMessage('An error occurred while sending your message');
                         }
                     },
-                    error:function(){
-                           self.showMessage('An error has occurred while sending your message');
-                           console.log(error);
+                    error: function(jqXHR, textStatus, errorThrown) {
+
+                        	self.showMessage('An error has occurred while sending your message');
+
+                        	console.log('jqXHR:');
+                        	console.log(jqXHR);
+                        	console.log('textStatus:');
+                        	console.log(textStatus);
+                        	console.log('errorThrown:');
+                        	console.log(errorThrown);
+                           
                     }
                 });
             });
