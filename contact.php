@@ -35,7 +35,7 @@ $mail->SMTPSecure = 'tls';                            // Enable encryption, 'ssl
 
 $mail->From = 'contact@synchronit.com';
 $mail->FromName = 'Synchronit Team';
-$mail->addAddress($email);  // Add a recipient
+$mail->addAddress($email);  						  // Add a recipient
 
 $mail->WordWrap = 50;                                 // Set word wrap to 50 characters
 $mail->isHTML(true);                                  // Set email format to HTML
@@ -45,7 +45,7 @@ $mail->Subject = 'Thank you for contact us!';
 $mail->msgHTML(file_get_contents(__DIR__ .'/messages/contactUs.html'));
 
 if(!$mail->send()) {
-    echo '{"v0.0.3 status ":"Message could not be sent to customer. Mailer Error:' . $mail->ErrorInfo . $mail->validateAddress($email) . '","success":false }';
+    echo '{"v0.0.4 status ":"Message could not be sent to customer. Mailer Error:' . $mail->ErrorInfo . ' email:' . $email. '","success":false }';
     exit;
 }
 
