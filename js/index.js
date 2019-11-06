@@ -35,7 +35,7 @@ $.extend({
                     },
                     error:function(){
                            self.showMessage('An error occurred while sending your message');
-                        
+                           console.log(result);                        
                     }
                 });
             });
