@@ -33,7 +33,8 @@ $.extend({
                         }
                     },
                     error:function(){
-                           self.showMessage('An error occurred while sending your message');
+                           self.showMessage('An error has occurred while sending your message');
+                           Console.log(error);
                     }
                 });
             });
