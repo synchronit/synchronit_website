@@ -11,13 +11,15 @@ $name = $_POST['name'];
 $email = $_POST['from'];
 $message = $_POST['message'];
 $subject =  $_POST['from'];
-//$severIp='209.236.112.62';
-//$serverIp='170.249.249.127';
 $serverIp='mail.synchronit.com';
 
-$mail->isSMTP();
+//$severIp='209.236.112.62';
+//$serverIp='170.249.249.127';
 
-$mail->SMTPDebug = 0;// Set mailer to use SMTP
+
+$mail->isSMTP();  		// Set mailer to use SMTP
+
+$mail->SMTPDebug = 0;
 $mail->Host = $severIp;  // Specify main and backup server
 $mail->SMTPAuth = true;    // Enable SMTP authentication
 $mail->Username = 'contact@synchronit.com';                            // SMTP username
@@ -42,7 +44,7 @@ if(!$mail->send()) {
     exit;
 }
 
-
+/*
 $mail = new PHPMailer;
 
 $name = $_POST['name'];
@@ -73,5 +75,7 @@ if(!$mail->send()) {
    echo '{"status":"Message could not be sent to Synchronit. Mailer Error:' . $mail->ErrorInfo.'","success":false}';
    exit;
 }
+*/
+
 
 echo '{"status":"Message has been sent","success":true}';
