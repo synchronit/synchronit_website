@@ -34,7 +34,7 @@ $.extend({
                     },
                     error:function(){
                            self.showMessage('An error has occurred while sending your message');
-                           Console.log(error);
+                           console.log(error);
                     }
                 });
             });
