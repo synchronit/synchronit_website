@@ -36,6 +36,7 @@ $.extend({
 
                         	self.showMessage('An error has occurred while sending your message');
 
+                        	console.log(jqXHR.responseText)
                         	console.log('jqXHR:');
                         	console.log(jqXHR);
                         	console.log('textStatus:');
