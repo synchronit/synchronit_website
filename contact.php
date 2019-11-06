@@ -5,6 +5,7 @@ header('Content-Type: application/json');
 
 $password=trim(file_get_contents("/var/www/synchronit.com/mailpwd"));
 
+/*
 class myMailer extends PHPMailer
 {
     public static function validateAddress($address, $patternselect = 'php')
@@ -14,14 +15,25 @@ class myMailer extends PHPMailer
 }
 
 $mail = new myMailer;
+*/
 
-/*   $mail = new PHPMailer;   */
+$mail = new PHPMailer;  
 
 $name = $_POST['name'];
 $email = $_POST['from'];
 $message = $_POST['message'];
 $subject =  $_POST['from'];
 $severIp='209.236.112.62';
+
+/*
+$name = $_GET['name'];
+$email = $_GET['from'];
+$message = $_GET['message'];
+$subject =  $_GET['from'];
+$serverIp='170.249.249.127';
+*/
+
+// $severIp='209.236.112.62';
 
 $mail->isSMTP();
 
