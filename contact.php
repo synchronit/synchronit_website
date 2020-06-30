@@ -12,6 +12,7 @@ $email = $_POST['from'];
 $message = $_POST['message'];
 $subject =  $_POST['from'];
 $serverIp='170.249.205.50';
+$serverPort = 465;
 
 $mail->isSMTP();  		// Set mailer to use SMTP
 
@@ -20,7 +21,7 @@ $mail->Host = $serverIp;  // Specify main and backup server
 $mail->SMTPAuth = true;    // Enable SMTP authentication
 $mail->Username = 'contact@synchronit.com';                            // SMTP username
 $mail->Password = $password;                           // SMTP password
-$mail->Port = 465;
+$mail->Port = $serverPort;
 $mail->SMTPSecure = 'ssl';                            // Enable encryption, 'ssl' also accepted
 
 $mail->From = 'contact@synchronit.com';
@@ -40,7 +41,7 @@ if(!$mail->send()) {
     exit;
 }
 
-/*
+
 $mail = new PHPMailer;
 
 $name = $_POST['name'];
@@ -50,12 +51,12 @@ $message = $_POST['message'];
 
 $mail->isSMTP();
 $mail->SMTPDebug = 0;// Set mailer to use SMTP
-$mail->Host =  $severIp; // Specify main and backup server
+$mail->Host =  $serverIp; // Specify main and backup server
 $mail->SMTPAuth = true;    // Enable SMTP authentication
 $mail->Username = 'contact@synchronit.com';                            // SMTP username
 $mail->Password = $password;                           // SMTP password
-$mail->Port = 587;
-$mail->SMTPSecure = 'tls';                            // Enable encryption, 'ssl' also accepted
+$mail->Port = $serverPort;
+$mail->SMTPSecure = 'ssl';                            // Enable encryption, 'ssl' also accepted
 
 $mail->From = $email;
 $mail->FromName = 'Synchronit';
@@ -71,7 +72,7 @@ if(!$mail->send()) {
    echo '{"status":"Message could not be sent to Synchronit. Mailer Error:' . $mail->ErrorInfo.'","success":false}';
    exit;
 }
-*/
+
 
 
 echo '{"status":"Message has been sent","success":true}';
