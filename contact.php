@@ -11,21 +11,17 @@ $name = $_POST['name'];
 $email = $_POST['from'];
 $message = $_POST['message'];
 $subject =  $_POST['from'];
-$serverIp='mail.synchronit.com';
-
-//$severIp='209.236.112.62';
-//$serverIp='170.249.249.127';
-
+$serverIp='170.249.205.50';
 
 $mail->isSMTP();  		// Set mailer to use SMTP
 
 $mail->SMTPDebug = 0;
-$mail->Host = $severIp;  // Specify main and backup server
+$mail->Host = $serverIp;  // Specify main and backup server
 $mail->SMTPAuth = true;    // Enable SMTP authentication
 $mail->Username = 'contact@synchronit.com';                            // SMTP username
 $mail->Password = $password;                           // SMTP password
-$mail->Port = 587;
-$mail->SMTPSecure = 'tls';                            // Enable encryption, 'ssl' also accepted
+$mail->Port = 465;
+$mail->SMTPSecure = 'ssl';                            // Enable encryption, 'ssl' also accepted
 
 $mail->From = 'contact@synchronit.com';
 $mail->FromName = 'Synchronit Team';
